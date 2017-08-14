@@ -11,5 +11,25 @@
 |
 */
 
+/*Route::get('/', function () {
+    return view('welcome');
+});*/
+
+
 Route::get('/', 'PagesController@home');
-Route::get('booking', 'Controller@showBooking');
+
+
+
+Route::get('contact',
+    ['as' => 'contact', 'uses' => 'AboutController@create']);
+Route::post('contact',
+    ['as' => 'contact_store', 'uses' => 'AboutController@store']);
+
+
+Route::get('thankyou', function () {
+    return view('booking.thankyou');
+})->name('thankyou');
+
+Route::resource('car', 'CarController');
+
+Route::resource('booking', 'BookingController');
