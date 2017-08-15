@@ -1,5 +1,5 @@
 @extends('layout.master')
-@section('title', 'Contact Us!')
+@section('title', 'Car-Sharing')
 @section('content')
 
     <div class="row">
@@ -41,7 +41,6 @@
                   'class'=>'form-control',
                   'placeholder'=>'Your message')) !!}
     </div>
-
 
 
     <div class="form-group">
