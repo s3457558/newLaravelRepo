@@ -12,11 +12,11 @@ use App\Http\Requests\ContactFormRequest;
 
 use Illuminate\Support\Facades\Session;
 
-class AboutController extends Controller
+class ContactController extends Controller
 {
     public function create()
     {
-        return view('about.contact');
+        return view('contact');
     }
 
     public function store(ContactFormRequest $request)

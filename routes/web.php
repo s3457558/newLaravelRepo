@@ -17,13 +17,17 @@
 
 
 Route::get('/', 'PagesController@home');
+Route::get('booking', 'BookingController@create');
+Route::get('about', 'AboutPageController@create');
+Route::get('login', 'LoginPageController@create');
+Route::get('register', 'RegisterPageController@create');
 
 
 
 Route::get('contact',
-    ['as' => 'contact', 'uses' => 'AboutController@create']);
+    ['as' => 'contact', 'uses' => 'ContactController@create']);
 Route::post('contact',
-    ['as' => 'contact_store', 'uses' => 'AboutController@store']);
+    ['as' => 'contact_store', 'uses' => 'ContactController@store']);
 
 
 Route::get('thankyou', function () {
