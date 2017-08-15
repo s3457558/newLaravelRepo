@@ -28,7 +28,9 @@
     <br>
     <div class="login-form-group">
         {!! Form::label('Password') !!}
-        {!! Form::text('password', null,
+
+       <!--This ruins the formatting but we need it to be blank :( -->
+        {!! Form::password('password', null,
             array('required',
                   'class'=>'login-form-control',
                   'placeholder'=>'Enter your password')) !!}
@@ -37,6 +39,10 @@
     <div class="login-form-group">
         {!! Form::submit('Submit',
           array('class'=>'btn btn-primary')) !!}
+    </div>
+    <div>
+        <img src={{URL::asset('http://itsolutionstuff.com/upload/Laravel-5-comman.png')}}>
+
     </div>
 
     <br>
