@@ -30,10 +30,7 @@
         {!! Form::label('Password') !!}
 
        <!--This ruins the formatting but we need it to be blank :( -->
-        {!! Form::password('password', null,
-            array('required',
-                  'class'=>'login-form-control',
-                  'placeholder'=>'Enter your password')) !!}
+            {{ Form::password('password', array('placeholder' => 'Enter Your Password')) }}
     </div>
     <br>
     <div class="login-form-group">
