@@ -37,10 +37,7 @@
         {!! Form::submit('Submit',
           array('class'=>'btn btn-primary')) !!}
     </div>
-    <div>
-        <img src={{URL::asset('http://itsolutionstuff.com/upload/Laravel-5-comman.png')}}>
-
-    </div>
+    
 
     <br>
     <a href="register">Create a new account</a>
