@@ -27,21 +27,17 @@
     </div>
     <br>
     <div class="login-form-group">
-        {!! Form::label('Password') !!}
-
-       <!--This ruins the formatting but we need it to be blank :( -->
-            {{ Form::password('password', array('placeholder' => 'Enter Your Password')) }}
+            {!! Form::label('Password') !!}
+            {!! Form::text('password', null,
+                array('required',
+                      'class'=>'register-form-control',
+                      'placeholder'=>'Enter your password')) !!}
     </div>
     <br>
     <div class="login-form-group">
         {!! Form::submit('Submit',
           array('class'=>'btn btn-primary')) !!}
     </div>
-    <div>
-        <img src={{URL::asset('http://itsolutionstuff.com/upload/Laravel-5-comman.png')}}>
-
-    </div>
-
     <br>
     <a href="register">Create a new account</a>
 
