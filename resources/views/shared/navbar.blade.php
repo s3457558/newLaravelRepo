@@ -27,9 +27,10 @@
             <ul class="nav navbar-nav navbar-right">
                 <form class="navbar-form navbar-left" role="search">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search">
+                        <input type="text" class="form-control" placeholder="Search" required>
+                        <input class="searchbutton" type="button" value="Search">
                     </div>
-                    <button type="submit" class="btn btn-default">Submit</button>
+                    <!--<button type="submit" class="btn btn-default">Submit</button>-->
                 </form>
                 <li><a href="register">SignUp</a></li>
                 <li><a href="login">LogIn</a></li>
