@@ -12,7 +12,8 @@
 
             <p>The main objectives that will be achieved by the project include front-end and back-end,
                 which allows the following functionalities: Registration of users, creation of database system to save all car data and rental information, provide functionality for users to book or return a car in particular location, search available cars near the user’s location, supply a report for users about past booking information and setting up virtual data randomly.</p>
-
+            <div id="img"><img src="images/carshare.png" width='400px' ></div>
+            <style>#img{text-align: center}</style>
         </div>
     </div>
 @endsection
