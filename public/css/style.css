@@ -104,8 +104,6 @@ ul > li > a {
     font-size: 18px;
 }
 
-
-
 .search {
     padding:8px 15px;
     background:rgba(50, 50, 50, 0.2);
@@ -122,4 +120,17 @@ ul > li > a {
 .searchbutton:hover  {
     background-color:#fafafa;
     color:#207cca;
+}
+
+
+/*footer*/
+
+footer {
+    font-family: PT Serif;
+    background-color: #808A87;
+    padding: 10px;
+}
+
+footer * {
+    vertical-align: middle;
 }
