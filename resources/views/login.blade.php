@@ -41,6 +41,5 @@
     <br>
     <a href="register">Create a new account</a>
 
-
     {!! Form::close() !!}
 @endsection
