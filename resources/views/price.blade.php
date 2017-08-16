@@ -1,7 +1,10 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Lking314
- * Date: 17/8/15
- * Time: 下午10:58
- */
+@extends('master')
+@section('title', 'Car-Sharing')
+@section('content')
+    <div class="container">
+        <div class="content">
+            <div class="title">Price</div>
+            <div class="quote">This is the about us page</div>
+        </div>
+    </div>
+@endsection
