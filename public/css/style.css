@@ -1,3 +1,48 @@
+/*Home page*/
+.black,.hover-black:hover{
+    color:#fff!important;
+    background-color:#000!important
+}
+.button-left{
+    position:absolute;top:50%;
+    left:0%;
+    transform:translate(0%,-50%);
+    -ms-transform:translate(-0%,-50%)
+}
+.mbtn,.button{
+    -webkit-touch-callout:none;
+    -webkit-user-select:none;
+    -khtml-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none
+}
+.mbtn,.button{
+    border:none;
+    display:inline-block;
+    outline:0;
+    padding:50px 16px;
+    vertical-align:middle;
+    overflow:hidden;
+    text-decoration:none;
+    color:inherit;
+    background-color:inherit;
+    text-align:center;
+    cursor:pointer;white-space:nowrap
+}
+.button-right{
+    position:absolute;
+    top:50%;
+    right:0%;
+    transform:translate(0%,-50%);
+    -ms-transform:translate(0%,-50%)
+}
+.content display-container{
+    margin-left: -80px;
+    margin-right: -80px;
+}
+
+/*login page*/
 .login-form-control {
 	width: 500px;
 	display:block;
@@ -20,6 +65,7 @@
 	margin-left: -15px;
 }
 
+/*Register page*/
 .register-form-control {
 	width: 500px;
 	display:block;

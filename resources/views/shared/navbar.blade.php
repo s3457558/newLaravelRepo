@@ -8,7 +8,9 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-                <img src="images/carsharing logo.png" alt="Car-Sharing Logo" width="250" height="40">
+                <a href="{{action('PagesController@home')}}">
+                     <img src="images/carsharing logo.png" alt="Car-Sharing Logo" width="250" height="40">
+                </a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

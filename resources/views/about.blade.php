@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <div class="content">
-            <div class="title"><h1>About Us</h1></div>
+            <div class="title"><h2>About Us</h2></div>
             <br><p>The project which we have chosen to develop is the car share rental service. This is a web application that allows users to find rental cars in their local vicinity. The main benefit of the application is to allow customers to rent or share cars  in their local area for some period of time.</p>
 
             <p>The main objective of the project is to allow users to rent cars. The company will provide a number of cars.  These cars will be parked at a number of locations in the city, users  can then book and use their chosen car for a minimum of one hour and a maximum of one week.</p>
