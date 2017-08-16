@@ -38,6 +38,11 @@
         {!! Form::submit('Submit',
           array('class'=>'btn btn-primary')) !!}
     </div>
+<<<<<<< HEAD
+=======
+    
+
+>>>>>>> 7ba5ce48de4ff284b5406bada8d209ec1451c940
     <br>
     <a href="register">Create a new account</a>
 
