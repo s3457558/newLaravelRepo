@@ -19,7 +19,8 @@
 Route::get('/', 'PagesController@home');                                //home page
 Route::get('booking', 'BookingController@create');                      //booking
 Route::get('about', 'AboutPageController@create');                      //about us page
-Route::get('location','LocationController@create');
+Route::get('location','LocationController@create');                     // location page
+Route::get('price','PriceController@create');                           // price page
 
 Route::get('login',
     ['as' => 'login', 'uses' =>  'LoginPageController@create']);        // link to login in page

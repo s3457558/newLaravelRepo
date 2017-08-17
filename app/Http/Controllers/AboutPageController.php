@@ -19,5 +19,4 @@ class AboutPageController extends Controller
         return view('about');
     }
 
-
 }
