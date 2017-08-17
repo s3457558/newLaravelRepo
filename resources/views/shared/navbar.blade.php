@@ -7,6 +7,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
             </button>
                 <img src="images/carsharing logo.png" alt="Car-Sharing Logo" width="250" height="40">
         </div>
@@ -18,6 +19,7 @@
                 <li><a href="about">About Us</a></li>
                 <li><a href="/booking">Booking</a></li>
                 <li><a href="contact">Contact Us</a></li>
+                <li><a href="location">Location</a></li>
                 <li><a href="http://localhost/testlaravel/project/public/car/create">Add Car</a></li>
 
             </ul>
