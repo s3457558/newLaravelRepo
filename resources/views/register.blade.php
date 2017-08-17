@@ -51,7 +51,7 @@
     <br>
     <div class="register-form-group">
         {!! Form::label('Password') !!}
-        {!! Form::text('password', null,
+        {!! Form::password('password',
             array('required',
                   'class'=>'register-form-control',
                   'placeholder'=>'Enter your password')) !!}
@@ -59,7 +59,7 @@
     <br>
     <div class="register-form-group">
         {!! Form::label('Confirm Password') !!}
-        {!! Form::text('confirmpassword', null,
+        {!! Form::password('confirmpassword',
             array('required',
                   'class'=>'register-form-control',
                   'placeholder'=>'Confirm your password')) !!}

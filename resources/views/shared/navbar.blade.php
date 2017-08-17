@@ -9,7 +9,9 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-                <img src="images/carsharing logo.png" alt="Car-Sharing Logo" width="250" height="40">
+                <a href="{{action('PagesController@home')}}">
+                     <img src="images/carsharing logo.png" alt="Car-Sharing Logo" width="250" height="40">
+                </a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -27,9 +29,10 @@
             <ul class="nav navbar-nav navbar-right">
                 <form class="navbar-form navbar-left" role="search">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search">
+                        <input type="text" class="form-control" placeholder="Search" required>
+                        <input class="searchbutton" type="button" value="Search">
                     </div>
-                    <button type="submit" class="btn btn-default">Submit</button>
+                    <!--<button type="submit" class="btn btn-default">Submit</button>-->
                 </form>
                 <li><a href="register">SignUp</a></li>
                 <li><a href="login">LogIn</a></li>
