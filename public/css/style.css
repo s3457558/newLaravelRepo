@@ -4,10 +4,18 @@
     background-color:#000!important
 }
 .button-left{
-    position:absolute;top:50%;
+    position:absolute;
+    top:50%;
     left:0%;
     transform:translate(0%,-50%);
     -ms-transform:translate(-0%,-50%)
+}
+.button-right{
+    position:absolute;
+    top:50%;
+    right:0%;
+    transform:translate(0%,-50%);
+    -ms-transform:translate(0%,-50%)
 }
 .mbtn,.button{
     -webkit-touch-callout:none;
@@ -30,13 +38,7 @@
     text-align:center;
     cursor:pointer;white-space:nowrap
 }
-.button-right{
-    position:absolute;
-    top:50%;
-    right:0%;
-    transform:translate(0%,-50%);
-    -ms-transform:translate(0%,-50%)
-}
+
 .content display-container{
     margin-left: -80px;
     margin-right: -80px;
@@ -90,7 +92,9 @@
 	margin-right: auto;
 	margin-left: auto;
 }
-
+.navbar-form {
+    padding:  0px;
+}
 .navbar-brand {
     margin-top: -10px;
 }
@@ -129,10 +133,19 @@ footer {
     font-family: PT Serif;
     background-color: #808A87;
     padding: 10px;
-    font-center: center;
+    height: 50px;
+    margin-top: 0px;
 }
 
 footer * {
     vertical-align: middle;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+.container {
+    min-height: 100%;
 }
 
