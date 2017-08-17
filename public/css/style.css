@@ -129,8 +129,10 @@ footer {
     font-family: PT Serif;
     background-color: #808A87;
     padding: 10px;
+    font-center: center;
 }
 
 footer * {
     vertical-align: middle;
 }
+

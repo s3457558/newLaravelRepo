@@ -16,9 +16,9 @@
 <br>
 <footer>
     <div id="footer">
-        &copy; <script> document.write(new Date().getFullYear()); </script> Car-Sharing, ALL RIGHTS RESERVED |
-       <!-- <p>Student Name: Leung Chun Ki Jenkin   |   Student Number: s3444706</p>
-        <p>Student Name: Peng Gao        |   Student Number: s3457558</p> -->
+       &copy; <script> document.write(new Date().getFullYear()); </script> Car-Sharing, ALL RIGHTS RESERVED </center>
+        <!-- <p>Student Name: Leung Chun Ki Jenkin   |   Student Number: s3444706</p>
+         <p>Student Name: Peng Gao        |   Student Number: s3457558</p> -->
     </div>
 </footer>
 </body>
