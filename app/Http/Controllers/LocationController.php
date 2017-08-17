@@ -12,11 +12,12 @@ use App\Http\Requests\ContactFormRequest;
 
 use Illuminate\Support\Facades\Session;
 
-class AboutPageController extends Controller
+class locationController extends Controller
 {
     public function create()
     {
-        return view('about');
+        return view('location');
     }
+
 
 }
