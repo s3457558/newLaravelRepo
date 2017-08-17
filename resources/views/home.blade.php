@@ -12,9 +12,10 @@
                 <img class="carSlides" src="images/car3.jpg" style="width:100%">
                 <img class="carSlides" src="images/car4.jpg" style="width:100%">
                 <img class="carSlides" src="images/car5.jpg" style="width:100%">
-                <button class="button black button-left"  style="margin-top: 100px;" onclick="plusDivs(-1)">&#10094;</button>
-                <button class="button black button-right" style="margin-top: 100px;" onclick="plusDivs(1)">&#10095;</button>
+
             </div>
+            <button class="button black button-left"  style="margin-top: 100px;" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="button black button-right" style="margin-top: 100px;" onclick="plusDivs(1)">&#10095;</button>
         </div>
     </div>
 
