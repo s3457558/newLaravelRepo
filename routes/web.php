@@ -20,6 +20,7 @@ Route::get('/', 'PagesController@home');                                //home p
 Route::get('booking', 'BookingController@create');                      //booking
 Route::get('about', 'AboutPageController@create');                      //about us page
 Route::get('location','LocationController@create');
+Route::get('price','PriceController@create');
 
 Route::get('login',
     ['as' => 'login', 'uses' =>  'LoginPageController@create']);        // link to login in page
