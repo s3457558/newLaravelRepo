@@ -21,11 +21,10 @@ Route::get('about', 'AboutPageController@create');                      //about 
 Route::get('location','LocationController@create');                     // location page
 Route::get('price','PriceController@create');                           // price page
 
+
 Route::get('login',
     ['as' => 'login', 'uses' =>  'LoginPageController@create']);        // link to login in page
 Route::post('login',
-
-
     ['as' => 'login_system', 'uses' => 'LoginPageController@create']);
 
 

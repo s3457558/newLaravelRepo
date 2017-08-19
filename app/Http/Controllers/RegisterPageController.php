@@ -21,8 +21,17 @@ class RegisterPageController extends Controller
         return view('register');
     }
 
-    public function doRegister(){
+    public function doRegister(Request $request){
 
+        $this->validate($request, [
+            'username'              => 'required|Unique:users|Between:5,20|AlphaNum',
+            'password'              => array( 'required','Between:6,20','Confirmed',
+                                        'regex:/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*(_|[^\w])).+$/'),
+            'password_confirmation' => array( 'required','Between:6,20',
+                                        'regex:/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*(_|[^\w])).+$/'),
+            'firstname'             => 'required|Alpha|max:20',
+            'lastname'              => 'required|Alpha|max:20'
+        ]);
         $user = new User;
         $firstname =Input::get('firstname');
         $lastname = Input::get('lastname');

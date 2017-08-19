@@ -50,7 +50,7 @@
                   'placeholder'=>'Enter your password')) !!}
         <br>
         {!! Form::label('Confirm Password') !!}
-        {!! Form::password('confirmpzxcassword',
+        {!! Form::password('password_confirmation',
             array('required',
                   'class'=>'register-form-control',
                   'placeholder'=>'Confirm your password')) !!}
