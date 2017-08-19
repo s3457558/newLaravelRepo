@@ -88,7 +88,11 @@
 	-o-transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 	transition:border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
-
+/*about us part*/
+#img{
+    float: right;
+    margin: 10px;
+}
 /*nav bar*/
 .container-fluid {
     background-color: #f98740;
