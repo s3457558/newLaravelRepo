@@ -15,7 +15,6 @@
     return view('welcome');
 });*/
 
-
 Route::get('/', 'PagesController@home');                                //home page
 Route::get('booking', 'BookingController@create');                      //booking
 Route::get('about', 'AboutPageController@create');                      //about us page
@@ -25,12 +24,15 @@ Route::get('price','PriceController@create');                           // price
 Route::get('login',
     ['as' => 'login', 'uses' =>  'LoginPageController@create']);        // link to login in page
 Route::post('login',
-    ['as' => 'login_system', 'uses' =>  'LoginPageController@create']);
+
+
+    ['as' => 'login_system', 'uses' => 'LoginPageController@create']);
+
 
 Route::get('register',
     ['as' => 'register', 'uses' =>   'RegisterPageController@create']);                // link to register page
 Route::post('register',
-    ['as' => 'register_system', 'uses' => 'RegisterPageController@store']);
+    ['as' => 'register_system', 'uses' => 'RegisterPageController@doRegister']);
 
 Route::get('contact',                                                   // link to contact
     ['as' => 'contact', 'uses' => 'ContactController@create']);

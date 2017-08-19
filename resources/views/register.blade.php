@@ -19,59 +19,48 @@
 
     <div class="register-form-group">
         {!! Form::label('Username') !!}
-        {!! Form::text('name', null,
+        {!! Form::text('username', null,
             array('required',
                   'class'=>'register-form-control',
                   'placeholder'=>'Enter your username')) !!}
-    </div>
-    <br>
-    <div class="register-form-group">
-        {!! Form::label('Password') !!}
-        {!! Form::text('password', null,
-            array('required',
-                  'class'=>'register-form-control',
-                  'placeholder'=>'Enter your password')) !!}
-    </div>
-    <br>
-    <div class="register-form-group">
+
+        <br>
         {!! Form::label('First Name') !!}
         {!! Form::text('firstname', null,
             array('required',
                   'class'=>'register-form-control',
                   'placeholder'=>'Enter your First Name')) !!}
-    </div>
-    <br>
-    <div class="register-form-group">
+        <br>
         {!! Form::label('Last Name') !!}
         {!! Form::text('lastname', null,
             array('required',
                   'class'=>'register-form-control',
                   'placeholder'=>'Enter your Last Name')) !!}
-    </div>
-    <br>
-    <div class="register-form-group">
-        {!! Form::label('Password') !!}
+        <br>
+        {!! Form::label('Email') !!}
+        {!! Form::text('email', null,
+            array('required',
+                  'class'=>'register-form-control',
+                  'placeholder'=>'Enter your Email')) !!}
+        <br>
+        {!! Form::label('password') !!}
         {!! Form::password('password',
             array('required',
                   'class'=>'register-form-control',
                   'placeholder'=>'Enter your password')) !!}
-    </div>
-    <br>
-    <div class="register-form-group">
+        <br>
         {!! Form::label('Confirm Password') !!}
-        {!! Form::password('confirmpassword',
+        {!! Form::password('confirmpzxcassword',
             array('required',
                   'class'=>'register-form-control',
                   'placeholder'=>'Confirm your password')) !!}
-    </div>
-    <br>
-    <div class="register-form-group">
+        <br>
         {!! Form::submit('Register',
           array('class'=>'btn btn-primary')) !!}
     </div>
 
     <br>
-    <p>Have an account already? <a href="login">Click here</a> </p>
+    <p>Have an account already? <a href="login">Click here</a></p>
 
 
 
