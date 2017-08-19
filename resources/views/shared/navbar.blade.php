@@ -24,7 +24,6 @@
                 <li><a href="contact">Contact Us</a></li>
                 <li><a href="location">Location</a></li>
                 <li><a href="http://localhost/testlaravel/project/public/car/create">Add Car</a></li>
-
             </ul>
 
             <ul class="nav navbar-nav navbar-right">

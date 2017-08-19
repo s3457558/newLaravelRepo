@@ -1,4 +1,7 @@
 /*Home page*/
+.title-home > h2{
+    text-align: center;
+}
 .black,.hover-black:hover{
     color:#fff!important;
     background-color:#000!important
@@ -88,6 +91,7 @@
 
 /*nav bar*/
 .container-fluid {
+    background-color: #f98740;
 	padding: 15px;
 	margin-right: auto;
 	margin-left: auto;
@@ -106,6 +110,19 @@ ul > li > a {
     font-weight: bold;
     font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
     font-size: 18px;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #000000;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+    color: #ffffff;
+}
+
+.navbar-default{
+    margin-bottom: 0px;
+
 }
 
 .search {
@@ -131,10 +148,13 @@ ul > li > a {
 
 footer {
     font-family: PT Serif;
-    background-color: #808A87;
+    background-color: #e8e8e8;
     padding: 10px;
-    height: 50px;
     margin-top: 0px;
+    height: 40px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 footer * {
@@ -145,7 +165,22 @@ html, body {
     height: 100%;
     margin: 0;
 }
-.container {
-    min-height: 100%;
+
+
+/*other*/
+
+h2 {
+    font-weight:bold;
+    font-size: 40px;
 }
 
+.main-container{
+     background-color: #bce8f1;
+     min-height: 100%;
+     position: relative;
+ }
+
+.container{
+    padding-top: 10px;
+    padding-bottom: 40px;
+}
