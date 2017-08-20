@@ -71,7 +71,10 @@
     </div>
 
     <br>
-    <p>Have an account already? <a href="login">Click here</a> </p>
+    <div class="register-form-group">
+        <p>Have an account already? <a href="login">Click here</a> </p>
+    </div>
+
 
 
 
