@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCarsTable extends Migration
+class CreateCarBookingsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,24 +13,16 @@ class CreateCarsTable extends Migration
      */
     public function up()
     {
-        Schema::create('cars', function (Blueprint $table) {
+        Schema::create('car_bookings', function (Blueprint $table) {
             $table->increments('id');
 
             /*
              * Other columns in the table
              */
             $table->string('name');
-            $table->string('model');
-            $table->float('price');
+            $table->string('email');
             $table->timestamps();
         });
-
-//        Schema::table('car_bookings', function ($table) {
-//            $table->integer('car_id')->unsigned();
-//            $table->foreign('car_id')
-//                ->references('id')->on('cars')
-//                ->onDelete('cascade');
-//        });
     }
 
     /**
@@ -42,6 +34,5 @@ class CreateCarsTable extends Migration
     {
         Schema::dropIfExists('car_booking_details');
         Schema::dropIfExists('car_bookings');
-        Schema::dropIfExists('cars');
     }
 }
