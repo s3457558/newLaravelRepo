@@ -7,7 +7,7 @@
             <div class="title">
                 <h2>Login</h2>
              </div>
-        </div>
+
 
 
     <ul>
@@ -45,5 +45,6 @@
 
 
     {!! Form::close() !!}
+        </div>
     </div>
 @endsection
