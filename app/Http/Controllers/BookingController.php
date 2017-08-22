@@ -20,38 +20,36 @@ class BookingController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'name' => 'required',
-            'email' => 'required',
             'item_id' => 'required',
             'address_line_1' => 'required',
-            'address_line_2' => 'required',
             'suburb' => 'required',
             'state' => 'required',
-            'country' => 'required',
         ]);
 
         $allRequest = $request->all();
-        $car_booking = new CarBooking();
-        $car_booking->name = $allRequest['name'];
-        $car_booking->email = $allRequest['email'];
-        $car_booking->car_id = $allRequest['item_id'];
-        $car_booking->save();
-
         $bookingDetails = new CarBookingDetails();
         $bookingDetails->address_line_1 = $allRequest['address_line_1'];
-        $bookingDetails->address_line_2 = $allRequest['address_line_2'];
         $bookingDetails->suburb = $allRequest['suburb'];
         $bookingDetails->state = $allRequest['state'];
-        $bookingDetails->country = $allRequest['country'];
-        $bookingDetails->booking_id = $car_booking->id;
         $bookingDetails->save();
 
-        /*
-         * Using sessions
-         * */
+
+
+
+//        $allRequest = $request->all();
+//        $carDetails = new CarDetails();
+//        $carDetails->name = $allRequest['name'];
+//        $carDetails->model = $allRequest['model'];
+//        $carDetails->price = $allRequest['price'];
+//        $carDetails->save();
+
+
+
         $request->session()->put('bookingDetails', $bookingDetails);
-        $request->session()->put('name', $car_booking->name);
+//        $request->session()->put('carDetails', $carDetails);
 
         return redirect()->route('thankyou');
     }
 }
+
+

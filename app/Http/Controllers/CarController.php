@@ -23,6 +23,10 @@ class CarController extends Controller
             'model' => 'required',
         ]);
         Car::create($request->all());
+        /*
+         * Using sessions
+         * */
+
         return redirect()->route('car.create') ->with('success','Car added successfully');
     }
 }

@@ -25,12 +25,12 @@ class CreateCarsTable extends Migration
             $table->timestamps();
         });
 
-        Schema::table('car_bookings', function ($table) {
-            $table->integer('car_id')->unsigned();
-            $table->foreign('car_id')
-                ->references('id')->on('cars')
-                ->onDelete('cascade');
-        });
+//        Schema::table('car_bookings', function ($table) {
+//            $table->integer('car_id')->unsigned();
+//            $table->foreign('car_id')
+//                ->references('id')->on('cars')
+//                ->onDelete('cascade');
+//        });
     }
 
     /**
