@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Add New Car</h2>
+                <h2>Booking your car</h2>
             </div>
         </div>
     </div>
@@ -34,23 +34,11 @@
         </select>
     </div>
 
-    <div class="form-group">
-        {!! Form::label('name', 'Name') !!}
-        {!! Form::text('name', '', ['class' => 'form-control']) !!}
-    </div>
+
 
     <div class="form-group">
-        {!! Form::label('email', 'Email') !!}
-        {!! Form::text('email', '', ['class' => 'form-control']) !!}
-    </div>
-
-    <div class="form-group">
-        {!! Form::label('address_line_1', 'Address') !!}
-        {!! Form::text('address_line_1', '', ['class' => 'form-control']) !!}
-    </div>
-
-    <div class="form-group">
-        {!! Form::text('address_line_2', '', ['class' => 'form-control']) !!}
+    {!! Form::label('address_line_1', 'Address') !!}
+    {!! Form::text('address_line_1', '', ['class' => 'form-control']) !!}
     </div>
 
     <div class="form-group">
@@ -59,16 +47,35 @@
     </div>
 
     <div class="form-group">
-        {!! Form::label('state', 'State') !!}
+        {!! Form::label('state', 'Postcode') !!}
         {!! Form::text('state', '', ['class' => 'form-control']) !!}
-    </div>
-
-    <div class="form-group">
-        {!! Form::label('country', 'Country') !!}
-        {!! Form::text('country', '', ['class' => 'form-control']) !!}
     </div>
 
     <button class="btn btn-success" type="submit">Book Now!</button>
 
     {!! Form::close() !!}
 @endsection
+
+
+
+{{--<div class="form-group">--}}
+{{--{!! Form::label('name', 'Name') !!}--}}
+{{--{!! Form::text('name', '', ['class' => 'form-control']) !!}--}}
+{{--</div>--}}
+
+{{--<div class="form-group">--}}
+{{--{!! Form::label('email', 'Email') !!}--}}
+{{--{!! Form::text('email', '', ['class' => 'form-control']) !!}--}}
+{{--</div>--}}
+
+
+
+{{--<div class="form-group">--}}
+{{--{!! Form::text('address_line_2', '', ['class' => 'form-control']) !!}--}}
+{{--</div>--}}
+
+
+{{--<div class="form-group">--}}
+    {{--{!! Form::label('country', 'Country') !!}--}}
+    {{--{!! Form::text('country', '', ['class' => 'form-control']) !!}--}}
+{{--</div>--}}
