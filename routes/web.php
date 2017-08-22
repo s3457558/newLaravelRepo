@@ -26,10 +26,10 @@ Route::post('login',
 
 
 
-//Route::get('booking.create',
-//    ['as' => 'booking.create', 'uses' =>   'BookingController@create']);
-//Route::get('car.create',
-//    ['as' => 'car.create', 'uses' =>   'CarController@create']);
+Route::get('booking.create',
+    ['as' => 'booking.create', 'uses' =>   'BookingController@create']);
+Route::get('car.create',
+    ['as' => 'car.create', 'uses' =>   'CarController@create']);
 
 
 Route::get('register',
