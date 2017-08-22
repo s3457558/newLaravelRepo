@@ -7,7 +7,7 @@
                 <h2>Price</h2>
             </div>
 
-           <table width="100%">
+           <table class="content display-tablecontainer" >
                <tr>
                    <th></th>
                    <th>Name</th>

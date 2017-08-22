@@ -45,6 +45,7 @@
     position: relative;
 }
 
+
 /*login page*/
 .login-form-control {
 	width: 500px;
@@ -62,6 +63,10 @@
 	-webkit-transition:border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
 	-o-transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 	transition:border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.login-form-group{
+    position: relative;
 }
 
 
@@ -84,6 +89,9 @@
 	transition:border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
 
+.register-form-group{
+    position: relative;
+}
 
 
 /*about us page*/
@@ -113,6 +121,21 @@
     transition:border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
 
+.form-group{
+    position: relative;
+}
+
+/*price page*/
+.display-tablecontainer{
+    position: relative;
+    width: 100%;
+}
+
+/*Add car page*/
+.alert{
+    position: relative;
+}
+
 /*nav bar*/
 .container-fluid {
     background-color: #f98740;
@@ -129,6 +152,11 @@
     margin-bottom: 8px;
     margin-left: 0px;
 
+
+}
+
+.search-form-group{
+    width: 200px;
 
 }
 .navbar-brand {
@@ -219,6 +247,6 @@ h2 {
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
-
+    position: relative;
 }
 
