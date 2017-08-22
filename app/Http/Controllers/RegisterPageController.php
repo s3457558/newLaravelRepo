@@ -25,10 +25,14 @@ class RegisterPageController extends Controller
 
         $this->validate($request, [
             'username'              => 'required|Unique:users|Between:5,20|AlphaNum',
+            'postcode'              => array(
+                'regex:/^(0[289][0-9]{2})|([1345689][0-9]{3})|(2[0-8][0-9]{2})|
+                                        (290[0-9])|(291[0-4])|(7[0-4][0-9]{2})|(7[8-9][0-9]{2})$/'),
+            //  'email'
             'password'              => array( 'required','Between:6,20','Confirmed',
-                                        'regex:/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*(_|[^\w])).+$/'),
+                'regex:/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*(_|[^\w])).+$/'),
             'password_confirmation' => array( 'required','Between:6,20',
-                                        'regex:/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*(_|[^\w])).+$/'),
+                'regex:/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*(_|[^\w])).+$/'),
             'firstname'             => 'required|Alpha|max:20',
             'lastname'              => 'required|Alpha|max:20'
         ]);
