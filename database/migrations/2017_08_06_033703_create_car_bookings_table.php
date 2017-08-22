@@ -32,6 +32,7 @@ class CreateCarBookingsTable extends Migration
      */
     public function down()
     {
+        Schema::dropIfExists('car_booking_details');
         Schema::dropIfExists('car_bookings');
     }
 }

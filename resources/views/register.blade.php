@@ -37,6 +37,13 @@
                   'class'=>'register-form-control',
                   'placeholder'=>'Enter your Last Name')) !!}
         <br>
+        {!! Form::label('Postcode') !!}
+        {!! Form::text('postcode', null,
+            array('required',
+                  'class'=>'register-form-control',
+                  'placeholder'=>'Enter your postcode')) !!}
+
+        <br>
         {!! Form::label('Email') !!}
         {!! Form::text('email', null,
             array('required',
