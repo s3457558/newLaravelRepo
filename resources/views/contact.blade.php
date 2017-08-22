@@ -2,13 +2,13 @@
 @section('title', 'Car-Sharing')
 @section('content')
 
-    <div class="row">
-        <div class="col-lg-12 margin-tb">
-            <div class="pull-left">
+    <div class="container">
+        <div class="content">
+            <div class="title">
                 <h2>Contact Us!</h2>
             </div>
         </div>
-    </div>
+
 
     <ul>
         @foreach($errors->all() as $error)
@@ -58,4 +58,6 @@
     @endif
 
     {!! Form::close() !!}
+
+    </div>
 @endsection

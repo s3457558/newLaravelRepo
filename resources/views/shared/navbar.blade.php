@@ -17,24 +17,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#">Home<span class="sr-only">(current)</span></a></li>
-                {{--<li><a href="#">Booking</a></li>--}}
-                {{--<li><a href="#">About</a></li>--}}
-                {{--<li><a href="#">Contact</a></li>--}}
-                {{--<li class="dropdown">--}}
-                    {{--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Members--}}
-                        {{--<span class="caret"></span>--}}
-                    {{--</a>--}}
-                    {{--<ul class="dropdown-menu" role="menu">--}}
-                        {{--<li><a href="#">Register</a></li>--}}
-                        {{--<li><a href="#">Login</a></li>--}}
-                        {{--<li><a href="#">Something else here</a></li>--}}
-                        {{--<li class="divider"></li>--}}
-                        {{--<li><a href="#">Separated link</a></li>--}}
-                        {{--<li class="divider"></li>--}}
-                        {{--<li><a href="#">One more separated link</a></li>--}}
-                    {{--</ul>--}}
-                {{--</li>--}}
-                {{--<li class="active"><a href="#">Home<span class="sr-only">(current)</span></a></li>--}}
+
                 <li><a href="/">Home<span class="sr-only">(current)</span></a></li>
                 <li><a href="about">About Us</a></li>
                 <li><a href="price">Price</a></li>
@@ -42,8 +25,6 @@
                 <li><a href="contact">Contact Us</a></li>
                 <li><a href="location">Location</a></li>
                 <li><a href="car.create">Add Car</a></li>
-
-            </ul>
 
             <ul class="nav navbar-nav navbar-right">
                 <form class="navbar-form navbar-left" role="search">

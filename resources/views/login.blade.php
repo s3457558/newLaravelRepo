@@ -8,7 +8,7 @@
                 <h2>Login</h2>
              </div>
         </div>
-    </div>
+
 
     <ul>
         @foreach($errors->all() as $error)
@@ -39,7 +39,11 @@
           array('class'=>'btn btn-primary')) !!}
     </div>
     <br>
-    <a href="register">Create a new account</a>
+    <div class="login-form-group">
+        <a href="register">Create a new account</a>
+    </div>
+
 
     {!! Form::close() !!}
+    </div>
 @endsection

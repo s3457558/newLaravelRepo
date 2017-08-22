@@ -1,12 +1,14 @@
 /*Home page*/
+.title-home > h2{
+    text-align: center;
+}
 .black,.hover-black:hover{
     color:#fff!important;
-    background-color:#000!important
+    background-color:#000!important;
 }
 .button-left{
     position:absolute;
     top:50%;
-    left:0%;
     transform:translate(0%,-50%);
     -ms-transform:translate(-0%,-50%)
 }
@@ -39,9 +41,8 @@
     cursor:pointer;white-space:nowrap
 }
 
-.content display-container{
-    margin-left: -80px;
-    margin-right: -80px;
+.display-container{
+    position: relative;
 }
 
 /*login page*/
@@ -62,10 +63,7 @@
 	-o-transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 	transition:border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
-.title {
-	margin-right: -15px;
-	margin-left: -15px;
-}
+
 
 /*Register page*/
 .register-form-control {
@@ -86,14 +84,52 @@
 	transition:border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
 
+
+
+/*about us page*/
+#img{
+    height: auto;
+    float: right;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/*contact us page*/
+.form-control {
+    width: 500px;
+    display:block;
+    height:34px;
+    padding:6px 12px;
+    font-size:14px;
+    line-height:1.42857143;color:#555;
+    background-color:#fff;
+    background-image:none;
+    border:1px solid #ccc;
+    border-radius:4px;
+    -webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow:inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition:border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition:border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
 /*nav bar*/
 .container-fluid {
+    background-color: #f98740;
 	padding: 15px;
 	margin-right: auto;
 	margin-left: auto;
 }
 .navbar-form {
     padding:  0px;
+    width: auto;
+
+    margin-top: 8px;
+    margin-right: -15px;
+    margin-bottom: 8px;
+    margin-left: 0px;
+
+
 }
 .navbar-brand {
     margin-top: -10px;
@@ -106,6 +142,19 @@ ul > li > a {
     font-weight: bold;
     font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
     font-size: 18px;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #000000;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+    color: #ffffff;
+}
+
+.navbar-default{
+    margin-bottom: 0px;
+
 }
 
 .search {
@@ -131,10 +180,13 @@ ul > li > a {
 
 footer {
     font-family: PT Serif;
-    background-color: #808A87;
+    background-color: #e8e8e8;
     padding: 10px;
-    height: 50px;
     margin-top: 0px;
+    height: 40px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 footer * {
@@ -145,7 +197,28 @@ html, body {
     height: 100%;
     margin: 0;
 }
-.container {
-    min-height: 100%;
+
+
+/*other*/
+
+h2 {
+    font-weight:bold;
+    font-size: 40px;
+}
+
+.main-container{
+     background-color: #bce8f1;
+     min-height: 100%;
+     position: relative;
+ }
+
+.container{
+    padding-top: 10px;
+    padding-bottom: 40px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+
 }
 

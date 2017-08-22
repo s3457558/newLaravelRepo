@@ -17,16 +17,18 @@
 
 <body>
 @include('shared.navbar')
-    <div class="container">
+    <div class="main-container">
         @yield('content')
-    </div>
+
+
+    <div id="footer">
         <footer>
-            <div id="footer">
-               &copy; <script> document.write(new Date().getFullYear()); </script> Car-Sharing, ALL RIGHTS RESERVED
-                <!-- <p>Student Name: Leung Chun Ki Jenkin   |   Student Number: s3444706</p>
-                 <p>Student Name: Peng Gao        |   Student Number: s3457558</p> -->
-            </div>
+            &copy; <script> document.write(new Date().getFullYear()); </script> Car-Sharing, ALL RIGHTS RESERVED
+            <!-- <p>Student Name: Leung Chun Ki Jenkin   |   Student Number: s3444706</p>
+                    <p>Student Name: Peng Gao        |   Student Number: s3457558</p> -->
         </footer>
+    </div>
+    </div>
 </body>
 
 </html>
