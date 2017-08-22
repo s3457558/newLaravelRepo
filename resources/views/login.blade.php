@@ -8,7 +8,7 @@
                 <h2>Login</h2>
              </div>
         </div>
-    </div>
+
 
     <ul>
         @foreach($errors->all() as $error)
@@ -45,4 +45,5 @@
 
 
     {!! Form::close() !!}
+    </div>
 @endsection

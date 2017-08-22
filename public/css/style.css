@@ -66,12 +66,7 @@
 	transition:border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
 
-.login-form-group{
-padding-right: 15px;
-padding-left: 15px;
-margin-right: auto;
-margin-left: 174.600px;
-}
+
 
 /*Register page*/
 .register-form-control {
@@ -92,12 +87,8 @@ margin-left: 174.600px;
 	transition:border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
 
-.register-form-group{
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: 174.600px;
-}
+
+
 /*about us part*/
 #img{
     float: right;
@@ -197,5 +188,10 @@ h2 {
 .container{
     padding-top: 10px;
     padding-bottom: 40px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: 174.600px;
+
 }
 
