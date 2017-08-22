@@ -6,16 +6,16 @@
             <div class="title-home">
                 <h2>Welcome to Car-Sharing Website</h2>
             </div>
-            <div class="content display-container" style="margin-left: -80px; margin-right: -80px;">
+
+            <div class="content display-container">
                 <img class="carSlides" src="images/car1.jpg" style="width:100%">
                 <img class="carSlides" src="images/car2.jpg" style="width:100%">
                 <img class="carSlides" src="images/car3.jpg" style="width:100%">
                 <img class="carSlides" src="images/car4.jpg" style="width:100%">
                 <img class="carSlides" src="images/car5.jpg" style="width:100%">
-                <button class="button black button-left"  style="margin-top: 100px;" onclick="plusDivs(-1)">&#10094;</button>
-                <button class="button black button-right" style="margin-top: 100px;" onclick="plusDivs(1)">&#10095;</button>
+                <button class="button black button-left"  style="margin:auto;" onclick="plusDivs(-1)">&#10094;</button>
+                <button class="button black button-right" style="margin:auto;" onclick="plusDivs(1)">&#10095;</button>
             </div>
-
         </div>
     </div>
 

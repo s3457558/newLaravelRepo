@@ -6,6 +6,7 @@
             <div class="title">
                 <h2>Price</h2>
             </div>
+        </div>
            <table width="100%">
                <tr>
                    <th></th>
@@ -27,6 +28,6 @@
                    <td>$12 per hour</td>
                </tr>
            </table>
-        </div>
+
     </div>
 @endsection
