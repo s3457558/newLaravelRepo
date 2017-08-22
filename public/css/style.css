@@ -91,6 +91,8 @@
 
 /*about us part*/
 #img{
+    max-width: 100%;
+    height: auto;
     float: right;
     margin: 10px;
 }
