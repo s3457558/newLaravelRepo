@@ -20,7 +20,7 @@
 
                 <li><a href="/">Home<span class="sr-only">(current)</span></a></li>
                 <li><a href="about">About Us</a></li>
-                <li><a href="price">Price</a></li>
+                <li><a href="price">Price test</a></li>
                 <li><a href="booking.create">Booking</a></li>
                 <li><a href="contact">Contact Us</a></li>
                 <li><a href="location">Location</a></li>
