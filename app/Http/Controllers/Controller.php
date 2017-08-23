@@ -10,8 +10,16 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
-    public function showBooking(){
-        return View('createBooking');
+
+    public function about(){
+        return view('about');
     }
 
+    public function login(){
+        return view('login');
+    }
+
+    public function register(){
+        return view('register');
+    }
 }
