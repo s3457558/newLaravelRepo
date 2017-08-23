@@ -3,6 +3,7 @@
 @section('content')
     <div class="container">
         <div class="content">
+<<<<<<< HEAD
             <div class="title-home">
                 <h2>Welcome to Car-Sharing Website</h2>
             </div>
@@ -16,6 +17,10 @@
                 <button class="button black button-left"  style="margin:auto;" onclick="plusDivs(-1)">&#10094;</button>
                 <button class="button black button-right" style="margin:auto;" onclick="plusDivs(1)">&#10095;</button>
             </div>
+=======
+            <div class="title">Welcome to join us HEY THIS Hgs</div>
+            {{--<div class="quote">Our Home page!</div>--}}
+>>>>>>> fc9b0a2d7d945785635942d961a6f96b22d0578a
         </div>
     </div>
 
