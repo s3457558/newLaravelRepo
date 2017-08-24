@@ -20,7 +20,7 @@
 
     <div class="login-form-group">
         {!! Form::label('Username') !!}
-        {!! Form::text('name', null,
+        {!! Form::text('username', null,
             array('required',
                   'class'=>'login-form-control',
                   'placeholder'=>'Enter your username')) !!}

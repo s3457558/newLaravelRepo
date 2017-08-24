@@ -27,7 +27,7 @@ Route::get('location','LocationController@create');		//location page
 Route::get('login',
     ['as' => 'login', 'uses' =>  'LoginPageController@create']);        // link to login in page
 Route::post('login',
-    ['as' => 'login_system', 'uses' => 'LoginPageController@create']);
+    ['as' => 'login_system', 'uses' => 'LoginPageController@doLogin']);
 
 
 
