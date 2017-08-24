@@ -3,6 +3,7 @@
 @section('content')
     <div class="container">
         <div class="content">
+            <div class="size">
             <div class="title">
                 <h2>Add New Car</h2>
             </div>
@@ -27,22 +28,23 @@
 
     <div class="form-group">
         {!! Form::label('name', 'Name') !!}
-        {!! Form::text('name', '', ['class' => 'form-control']) !!}
+        {!! Form::text('name', '', ['class' => 'form-control', 'placeholder'=>'Name the car']) !!}
     </div>
 
     <div class="form-group">
         {!! Form::label('model', 'Model') !!}
-        {!! Form::text('model', '', ['class' => 'form-control']) !!}
+        {!! Form::text('model', '', ['class' => 'form-control', 'placeholder'=>'Name the model']) !!}
     </div>
 
     <div class="form-group">
         {!! Form::label('price', 'Price') !!}
-        {!! Form::text('price', '', ['class' => 'form-control']) !!}
+        {!! Form::text('price', '', ['class' => 'form-control', 'placeholder'=>'Price']) !!}
     </div>
 
     <button class="btn btn-success" type="submit">Add Car!</button>
 
     {!! Form::close() !!}
+            </div>
         </div>
     </div>
 @endsection
