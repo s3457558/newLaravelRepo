@@ -1,4 +1,4 @@
-@extends('layout.master')
+@extends('admin.master')
 @section('title', 'Add New Car')
 @section('content')
     <div class="row">
@@ -25,19 +25,20 @@
     @endif
     {!! Form::model($car, ['action' => 'CarController@store']) !!}
 
+
     <div class="form-group">
         {!! Form::label('name', 'Name') !!}
-        {!! Form::text('name', '', ['class' => 'form-control']) !!}
+        {!! Form::text('name', null,array('required','class'=>'form-control','placeholder'=>'Your add car name here')) !!}
     </div>
 
     <div class="form-group">
         {!! Form::label('model', 'Model') !!}
-        {!! Form::text('model', '', ['class' => 'form-control']) !!}
+        {!! Form::text('model', null,array('required','class'=>'form-control','placeholder'=>'Your add car model here')) !!}
     </div>
 
     <div class="form-group">
         {!! Form::label('price', 'Price') !!}
-        {!! Form::text('price', '', ['class' => 'form-control']) !!}
+        {!! Form::text('price', null,array('required','class'=>'form-control','placeholder'=>'Your add car price here')) !!}
     </div>
 
     <button class="btn btn-success" type="submit">Add Car!</button>

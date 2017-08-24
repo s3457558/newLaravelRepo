@@ -19,11 +19,12 @@ class BookingController extends Controller
 
     public function store(Request $request)
     {
+
         $this->validate($request, [
             'item_id' => 'required',
             'address_line_1' => 'required',
-            'suburb' => 'required',
-            'state' => 'required',
+            'suburb' => 'required|Unique:users|Between:10,20|AlphaNum',
+            'state' => array('regex:/^(0[289][0-9]{4})$/'),
         ]);
 
         $allRequest = $request->all();
