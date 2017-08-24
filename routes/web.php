@@ -10,6 +10,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Auth;
 
 
 Route::get('/', 'PagesController@home');                                //home page
@@ -26,8 +28,11 @@ Route::get('location','LocationController@create');		//location page
 
 Route::get('login',
     ['as' => 'login', 'uses' =>  'LoginPageController@create']);        // link to login in page
+
+
 Route::post('login',
-    ['as' => 'login_system', 'uses' => 'LoginPageController@doLogin']);
+    ['as' => 'login', 'uses' =>  'LoginPageController@doLogin']);
+
 
 
 

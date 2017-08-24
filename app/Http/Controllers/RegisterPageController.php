@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Redirect;
 
@@ -42,7 +43,7 @@ class RegisterPageController extends Controller
         $user->username = Input::get('username');
         $user->postcode = Input::get('postcode');
         $user->email = Input::get('email');
-        $user->password = Input::get('password');
+        $user->password = Hash::make(Input::get('password'));
         $user->save();
         $userName = Input::get('username');
         return view('home');

@@ -29,14 +29,18 @@ class LoginPageController extends Controller
             'password'  => 'required'
         );
 
-        $username = $request->input('username');
-        $password = 'Hello123!';
+        $email = Input::get('username');
+        $password = Input::get('password');
 
-        if(Auth::attempt(['email' => $username, 'password' => $password ])){
-            return \redirect()->intended('home');
+        if(Auth::attempt(['email' => $email, 'password' => $password ])){
+            return view('home');
         }
-        return view('login')->withErrors("ERROR logging in!");
+        return view('login')->withErrors($email);
 
+    }
+
+    public function username () {
+        return 'username';
     }
 
 

@@ -16,7 +16,7 @@
         @endforeach
     </ul>
 
-    {!! Form::open(array('route' => 'login_system', 'class' => 'form')) !!}
+    {{Form::open(array('url' => 'login')) }}
 
     <div class="login-form-group">
         {!! Form::label('Username') !!}
