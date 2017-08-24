@@ -19,5 +19,16 @@ class LoginPageController extends Controller
         return view('login');
     }
 
+    public function authenticate(){
+
+        $rules = array(
+            'username'  =>'required',
+            'password'  => 'required'
+        );
+
+
+       // $valida
+    }
+
 
 }

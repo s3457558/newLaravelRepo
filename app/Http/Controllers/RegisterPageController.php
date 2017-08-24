@@ -10,7 +10,6 @@ use App\Http\Requests;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Redirect;
 
-use App\Http\Requests\ContactFormRequest;
 
 use Illuminate\Support\Facades\Session;
 
