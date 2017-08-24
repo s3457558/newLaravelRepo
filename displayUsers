@@ -1,5 +1,0 @@
-#!/bin/bash
-mysql <<QUERY
-use testdb
-select * from users
-QUERY
