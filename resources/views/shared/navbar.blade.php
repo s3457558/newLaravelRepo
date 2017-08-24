@@ -16,15 +16,13 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home<span class="sr-only">(current)</span></a></li>
-
                 <li><a href="/">Home<span class="sr-only">(current)</span></a></li>
                 <li><a href="about">About Us</a></li>
                 <li><a href="price">Price</a></li>
                 <li><a href="booking.create">Booking</a></li>
                 <li><a href="contact">Contact Us</a></li>
                 <li><a href="location">Location</a></li>
-                <li><a href="car.create">Add Car</a></li>
+                <li><a href="car.create">Admin</a></li>
 
             <ul class="nav navbar-nav navbar-right">
                 <form class="navbar-form navbar-left" role="search">
