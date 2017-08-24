@@ -1,14 +1,14 @@
 $(document).ready(function(){
 
 	var map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: -34.397, lng: 150.644},
+          center: {lat: -37.8098478, lng: 144.9616898},
           scrollwhell: false,
           zoom: 8
         });
 	marker = new google.maps.Marker({
 		position:{
-			lat:-34.397,
-			lng:150.644
+			lat:-37.8098478,
+			lng:144.9616898
 		},
 		map:map,
 		draggable: true
