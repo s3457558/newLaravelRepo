@@ -11,9 +11,9 @@
 		<input type="text" id="searchmap"></input>
 		<div id="map"></div>
 	</div>
-	
+
 	</div>
-	
+
 	
 </div>
 

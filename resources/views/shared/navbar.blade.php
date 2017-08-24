@@ -15,8 +15,7 @@
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home<span class="sr-only">(current)</span></a></li>
+            <ul class="nav navbar-bar">
 
                 <li><a href="/">Home<span class="sr-only">(current)</span></a></li>
                 <li><a href="about">About Us</a></li>
@@ -25,18 +24,8 @@
                 <li><a href="contact">Contact Us</a></li>
                 <li><a href="location">Location</a></li>
                 <li><a href="car.create">Add Car</a></li>
-
-            <ul class="nav navbar-nav navbar-right">
-                <form class="navbar-form navbar-left" role="search">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search" required>
-                        <input class="searchbutton" type="button" value="Search">
-                    </div>
-                    <!--<button type="submit" class="btn btn-default">Submit</button>-->
-                </form>
-                <li><a href="register">SignUp</a></li>
-                <li><a href="login">LogIn</a></li>
-
+                <li style="float:right;"> <a class="register" href="register">SignUp</a></li>
+                <li style="float:right;"> <a href="login">LogIn</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
