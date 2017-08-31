@@ -15,7 +15,8 @@
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-bar">
+
                 <li><a href="/">Home<span class="sr-only">(current)</span></a></li>
                 <li><a href="about">About Us</a></li>
                 <li><a href="price">Price</a></li>

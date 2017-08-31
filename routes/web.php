@@ -17,6 +17,11 @@ Route::get('/', 'PagesController@home');                                //home p
 Route::get('about', 'AboutPageController@create');                      //about us page
 Route::get('location','LocationController@create');                     // location page
 Route::get('price','PriceController@create');                           // price page
+Route::get('location','LocationController@create');		//location page
+
+
+
+
 
 
 Route::get('login',
