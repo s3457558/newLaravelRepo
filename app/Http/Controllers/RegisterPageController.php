@@ -7,10 +7,10 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Redirect;
 
-use App\Http\Requests\ContactFormRequest;
 
 use Illuminate\Support\Facades\Session;
 
@@ -43,7 +43,8 @@ class RegisterPageController extends Controller
         $user->username = Input::get('username');
         $user->postcode = Input::get('postcode');
         $user->email = Input::get('email');
-        $user->password = Input::get('password');
+        $user->password = Hash::make(Input::get('password'));
+        $user->isAdmin = 0;
         $user->save();
 
 
@@ -51,7 +52,7 @@ class RegisterPageController extends Controller
         $request->session()->put('user', $user);
 
         $userName = Input::get('username');
-        return view('home');
+        return view('successfulRegister');
 
 
     }

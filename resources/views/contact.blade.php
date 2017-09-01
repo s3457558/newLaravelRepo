@@ -7,7 +7,7 @@
             <div class="title">
                 <h2>Contact Us!</h2>
             </div>
-        </div>
+
 
 
     <ul>
@@ -58,6 +58,6 @@
     @endif
 
     {!! Form::close() !!}
-
+        </div>
     </div>
 @endsection

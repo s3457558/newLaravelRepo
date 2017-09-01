@@ -22,19 +22,21 @@
                 <li><a href="booking.create">Booking</a></li>
                 <li><a href="contact">Contact Us</a></li>
                 <li><a href="location">Location</a></li>
-                <li><a href="admin.home">Admin</a></li>
+            @if(!\Illuminate\Support\Facades\Auth::guest())
+                     <p>Welcome, <br> {{\Illuminate\Support\Facades\Auth::user()->name}} </p>
+                    <li style="float:right;"> <a href="logout">Log Out</a></li>
+            @endif
+
+            @if( Auth::check() && Auth::user()->isAdmin )
+                    <li style="float:right;"> <a href="admin">Admin</a></li>
+            @endif
+
+
+
+                <li style="float:right;"> <a class="register" href="register">SignUp</a></li>
+                <li style="float:right;"> <a href="login">LogIn</a></li>
                 {{--subdirectory--}}
 
-            <ul class="nav navbar-nav navbar-right">
-                <form class="navbar-form navbar-left" role="search">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search" required>
-                        <input class="searchbutton" type="button" value="Search">
-                    </div>
-                    <!--<button type="submit" class="btn btn-default">Submit</button>-->
-                </form>
-                <li><a href="register">SignUp</a></li>
-                <li><a href="login">LogIn</a></li>
 
             </ul>
         </div><!-- /.navbar-collapse -->

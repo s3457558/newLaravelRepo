@@ -7,7 +7,7 @@
             <div class="title">
                 <h2>Login</h2>
              </div>
-        </div>
+
 
 
     <ul>
@@ -16,11 +16,11 @@
         @endforeach
     </ul>
 
-    {!! Form::open(array('route' => 'login_system', 'class' => 'form')) !!}
+    {{Form::open(array('url' => 'login')) }}
 
     <div class="login-form-group">
-        {!! Form::label('Username') !!}
-        {!! Form::text('name', null,
+        {!! Form::label('Email') !!}
+        {!! Form::text('email', null,
             array('required',
                   'class'=>'login-form-control',
                   'placeholder'=>'Enter your username')) !!}
@@ -45,5 +45,6 @@
 
 
     {!! Form::close() !!}
+        </div>
     </div>
 @endsection

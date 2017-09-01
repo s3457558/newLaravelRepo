@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+
 <html>
 <head>
     <title> @yield('title') </title>
-    <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD99TBIE44gmTxJSL61vN-gI-YNrvsV4xg">
+    <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD99TBIE44gmTxJSL61vN-gI-YNrvsV4xg&libraries=places">
 	 </script>
     <link rel="stylesheet" href="{{asset('css/location.css')}}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
@@ -18,6 +19,7 @@
 <body>
 @include('shared.navbar')
     <div class="main-container">
+
         @yield('content')
 
 

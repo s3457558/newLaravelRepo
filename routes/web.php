@@ -10,6 +10,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Auth;
 
 
 Route::get('/', 'PagesController@home');                                //home page
@@ -17,10 +19,14 @@ Route::get('/', 'PagesController@home');                                //home p
 Route::get('about', 'AboutPageController@create');                      //about us page
 Route::get('location','LocationController@create');                     // location page
 Route::get('price','PriceController@create');                           // price page
+Route::get('location','LocationController@create');		//location page
 
 
 
 
+Route::get('admin', ['middleware' => ['auth', 'admin'], function() {
+    return view('admin.admin');
+}]);
 
 
 
@@ -35,8 +41,14 @@ Route::get('admin.home',
 
 Route::get('login',
     ['as' => 'login', 'uses' =>  'LoginPageController@create']);        // link to login in page
+Route::get('logout', function(){
+    Auth::logout();
+    return view('logout');
+});
+
 Route::post('login',
-    ['as' => 'login_system', 'uses' => 'LoginPageController@create']);
+    ['as' => 'login', 'uses' =>  'LoginPageController@doLogin']);
+
 
 
 
