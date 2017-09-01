@@ -22,6 +22,10 @@
                 <span class="icon-bar"></span>
             </button>
             {{--<a class="navbar-brand">Car_sharing_home</a>--}}
+            {{--<a href="{{action('AdminHomeController@create')}}">--}}
+                {{--<img src="images/admin1.jpg" alt="Car-Sharing Logo" width="250" height="40">--}}
+            {{--</a>--}}
+
 
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->

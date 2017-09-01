@@ -9,7 +9,7 @@
 
 
             <div class="homeAdmin">
-                <img class="adminhome" src="admin1.jpg" style="width:100%">
+                <img class="adminhome" src="images/admin1.jpg" style="width:100%">
             </div>
 
         </div>
