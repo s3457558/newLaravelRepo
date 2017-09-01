@@ -13,6 +13,9 @@ class CreateCarBookingDetailsTable extends Migration
             $table->string('address_line_1');
             $table->string('suburb');
             $table->string('state');
+            $table->string('date');
+            $table->string('time');
+
             $table->timestamps();
         });
     }
@@ -20,6 +23,5 @@ class CreateCarBookingDetailsTable extends Migration
     {
         Schema::dropIfExists('car_booking_details');
         Schema::dropIfExists('car_bookings');
-
     }
 }

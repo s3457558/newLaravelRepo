@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Admin table</h2>
+                <h2>Booking Table</h2>
             </div>
             {{--<div class="pull-right">--}}
                 {{--<a class="btn btn-success" href="{{ route('admin.create') }}"> Create New Product</a>--}}
@@ -17,29 +17,28 @@
     @endif
     <table class="table table-bordered">
         <tr>
-            <th>User name</th>      {{--register (username)--}}
-            <th>Booking ID</th>     {{--booking ID -> $car_booking_details->id--}}
-            <th>Booking address</th>
+            <th>Booking ID</th>      {{--register (username)--}}
+            {{--<th>Booking address</th>--}}
             <th>Booking suburb</th>
             <th>Booking postcode</th>
-            {{--<th>Booking address</th>--}}
-            <th width="280px">Action (admin can view the detail about booking details and delete one of them from database)</th>
+            <th width="280px">Action</th>
         </tr>
-        @foreach ($products as $product)
+        @foreach ($car_booking_details as $booking)
             <tr>
+                {{--<td>{{ ++$i }}</td>--}}
                 <td>{{ ++$i }}</td>
-                <td>{{ $product->name}}</td>
-                <td>{{ $product->details}}</td>
+                <td>{{ $booking->suburb}}</td>
+                <td>{{ $booking->state}}</td>
                 <td>
-                    <a class="btn btn-info" href="{{ route('admin.show',$product->id) }}">Show</a>
-                    {{--<a class="btn btn-primary" href="{{ route('productCRUD.edit',$product->id) }}">Edit</a>--}}
-                    {!! Form::open(['method' => 'DELETE','route' => ['productCRUD.destroy', $product->id],'style'=>'display:inline']) !!}
+                    <a class="btn btn-info" href="{{ route('admin.show',$booking->id) }}">Show</a>
+                    <a class="btn btn-primary" href="{{ route('admin.edit',$booking->id) }}">Edit</a>
+                    {!! Form::open(['method' => 'DELETE','route' => ['admin.destroy', $booking->id],'style'=>'display:inline']) !!}
                     {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
                     {!! Form::close() !!}
                 </td>
             </tr>
         @endforeach
     </table>
-    {!! $products->render() !!}
+    {!! $car_booking_details->render() !!}
 @endsection
 

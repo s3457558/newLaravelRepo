@@ -45,6 +45,11 @@ class RegisterPageController extends Controller
         $user->email = Input::get('email');
         $user->password = Input::get('password');
         $user->save();
+
+
+
+        $request->session()->put('user', $user);
+
         $userName = Input::get('username');
         return view('home');
 

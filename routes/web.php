@@ -53,4 +53,6 @@ Route::resource('car', 'CarController');
 Route::resource('booking', 'BookingController');
 
 
-Route::resource('admin', 'AdminController'); /*admin_view*/
+Route::resource('admin', 'AdminController'); /*adminBooking_view*/
+
+Route::resource('adminUser', 'AdminUserController'); /*adminUser_view*/

@@ -50,6 +50,28 @@
         {!! Form::text('state', null,array('required','class'=>'form-control','placeholder'=>'Your postcode here')) !!}
     </div>
 
+
+    <div class="form-group">
+    {!! Form::label('date', 'Date') !!}
+    <input type = "date" name = "field1"/><br /><br />
+    {{--{!! Form::text('time', null,array('required','class'=>'form-control','placeholder'=>'Your time here')) !!}--}}
+    </div>
+
+
+
+    <div class="form-group">
+        {!! Form::label('time', 'Time') !!}
+        {{--<select name="Time" id="form-control">--}}
+            {{--<option>{{$->time}}</option>--}}
+            {{--<option>AM</option>--}}
+            {{--<option>PM</option>--}}
+        {{--</select>--}}
+        {!! Form::text('time', null,array('required','class'=>'form-control','placeholder'=>'Your time here')) !!}
+
+    </div>
+
+
+
     <button class="btn btn-success" type="submit">Book Now!</button>
 
     {!! Form::close() !!}
