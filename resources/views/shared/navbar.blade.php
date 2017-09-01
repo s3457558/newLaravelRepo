@@ -22,9 +22,9 @@
                 <li><a href="booking.create">Booking</a></li>
                 <li><a href="contact">Contact Us</a></li>
                 <li><a href="location">Location</a></li>
-                <li><a href="car.create">Admin</a></li>
                 <li> <a class="register" href="register">SignUp</a></li>
                 <li> <a class="login" href="login">LogIn</a></li>
+                <li><a href="car.create">Admin</a></li>
 
             </ul>
         </div><!-- /.navbar-collapse -->

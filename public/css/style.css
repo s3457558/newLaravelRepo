@@ -138,7 +138,7 @@
 
 /*nav bar*/
 .container-fluid {
-    background-color: #4091f9;
+
     padding: 15px;
     margin-right: auto;
     margin-left: auto;
@@ -172,7 +172,7 @@ ul > li > a {
 }
 
 .navbar-default .navbar-nav>li>a:hover {
-    color: #ffffff;
+    color: #999999;
 }
 
 .navbar-default{
@@ -190,7 +190,7 @@ ul > li > a {
 
 footer {
     font-family: PT Serif;
-    background-color: #e8e8e8;
+    background-color: #8f8f8f;
     padding: 10px;
     margin-top: 0px;
     height: 40px;
@@ -232,7 +232,7 @@ h3{
 }
 
 .container{
-    background-color: rgba(254, 234, 201, 0.88);
+    background-color: rgba(254, 234, 201, 0.78);
 
     padding-top: 10px;
     padding-bottom: 160px;
