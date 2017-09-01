@@ -16,20 +16,19 @@
     <meta name="viewport" content ="width=device-width,initial-scale=1,user-scalable=yes" />
 </head>
 
-<body>
+<body background="images/road5.jpg">
 @include('shared.navbar')
-    <div class="main-container">
-
+    <div class="main-container" >
         @yield('content')
 
 
-    <div id="footer">
-        <footer>
-            &copy; <script> document.write(new Date().getFullYear()); </script> Car-Sharing, ALL RIGHTS RESERVED
-            <!-- <p>Student Name: Leung Chun Ki Jenkin   |   Student Number: s3444706</p>
-                    <p>Student Name: Peng Gao        |   Student Number: s3457558</p> -->
-        </footer>
-    </div>
+        <div id="footer">
+            <footer>
+                &copy; <script> document.write(new Date().getFullYear()); </script> Car-Sharing, ALL RIGHTS RESERVED
+                <!-- <p>Student Name: Leung Chun Ki Jenkin   |   Student Number: s3444706</p>
+                        <p>Student Name: Peng Gao        |   Student Number: s3457558</p> -->
+            </footer>
+        </div>
     </div>
 </body>
 

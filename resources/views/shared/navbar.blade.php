@@ -9,9 +9,9 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-                <a href="{{action('PagesController@home')}}">
-                     <img src="images/carsharing logo.png" alt="Car-Sharing Logo" width="250" height="40">
-                </a>
+            <a href="{{action('PagesController@home')}}">
+                <img src="images/carsharing logo.png" alt="Car-Sharing Logo" width="250" height="40">
+            </a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -30,13 +30,8 @@
             @if( Auth::check() && Auth::user()->isAdmin )
                     <li style="float:right;"> <a href="admin">Admin</a></li>
             @endif
-
-
-
                 <li style="float:right;"> <a class="register" href="register">SignUp</a></li>
                 <li style="float:right;"> <a href="login">LogIn</a></li>
-                {{--subdirectory--}}
-
 
             </ul>
         </div><!-- /.navbar-collapse -->
