@@ -56,15 +56,24 @@ $(document).ready(function(){
             })(marker, i));
         }
 
-    markers = new google.maps.Marker({
-        position:{
-            lat:-37.8098478,
-            lng:144.9616898
-        },
-        map:map,
-        draggable: true
-    });
+    var findMeButton = $('.find-me');
+    findMeButton.on('click', function(e) {
+        e.preventDefault();
+    navigator.geolocation.getCurrentPosition(function (p) {
+        var LatLng = new google.maps.LatLng(p.coords.latitude, p.coords.longitude);
+        var mapOptions = {
+            center: LatLng,
+            zoom: 13,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        markers = new google.maps.Marker({
+            position: LatLng,
+            map: map,
+            draggable: true
+        });
 
+    });
+    });
 
     var searchBox = new google.maps.places.SearchBox(document.getElementById('searchmap'));
     google.maps.event.addListener(searchBox,'places_changed',function(){
