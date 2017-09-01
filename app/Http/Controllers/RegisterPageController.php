@@ -46,7 +46,7 @@ class RegisterPageController extends Controller
         $user->password = Hash::make(Input::get('password'));
         $user->save();
         $userName = Input::get('username');
-        return view('home');
+        return view('successfulRegister');
 
 
     }

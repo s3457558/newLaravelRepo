@@ -23,7 +23,10 @@
                 <li><a href="booking.create">Booking</a></li>
                 <li><a href="contact">Contact Us</a></li>
                 <li><a href="location">Location</a></li>
-                <li><a href="car.create">Add Car</a></li>
+                @if(!\Illuminate\Support\Facades\Auth::guest())
+                    <p>Welcome, <br> {{\Illuminate\Support\Facades\Auth::user()->name}} </p>
+
+                @endif
                 <li style="float:right;"> <a class="register" href="register">SignUp</a></li>
                 <li style="float:right;"> <a href="login">LogIn</a></li>
             </ul>

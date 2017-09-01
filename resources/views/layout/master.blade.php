@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html>
 <head>
     <title> @yield('title') </title>
@@ -18,6 +19,7 @@
 <body>
 @include('shared.navbar')
     <div class="main-container">
+
         @yield('content')
 
 
