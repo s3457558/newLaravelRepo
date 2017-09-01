@@ -19,8 +19,8 @@
     {{Form::open(array('url' => 'login')) }}
 
     <div class="login-form-group">
-        {!! Form::label('Username') !!}
-        {!! Form::text('username', null,
+        {!! Form::label('Email') !!}
+        {!! Form::text('email', null,
             array('required',
                   'class'=>'login-form-control',
                   'placeholder'=>'Enter your username')) !!}

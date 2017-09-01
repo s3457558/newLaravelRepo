@@ -29,13 +29,13 @@ class LoginPageController extends Controller
             'password'  => 'required'
         );
 
-        $email = Input::get('username');
+        $email = Input::get('email');
         $password = Input::get('password');
 
         if(Auth::attempt(['email' => $email, 'password' => $password ])){
             return view('home');
         }
-        return view('login')->withErrors($email);
+        return view('login')->withErrors('Email or password invalid');
 
     }
 
