@@ -24,7 +24,9 @@ Route::get('location','LocationController@create');		//location page
 
 
 
-
+Route::get('admin', ['middleware' => ['auth', 'admin'], function() {
+    return view('admin.admin');
+}]);
 
 Route::get('login',
     ['as' => 'login', 'uses' =>  'LoginPageController@create']);        // link to login in page

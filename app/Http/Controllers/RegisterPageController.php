@@ -44,6 +44,7 @@ class RegisterPageController extends Controller
         $user->postcode = Input::get('postcode');
         $user->email = Input::get('email');
         $user->password = Hash::make(Input::get('password'));
+        $user->isAdmin = 0;
         $user->save();
         $userName = Input::get('username');
         return view('successfulRegister');

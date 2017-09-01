@@ -27,6 +27,10 @@
                     <p>Welcome, <br> {{\Illuminate\Support\Facades\Auth::user()->name}} </p>
                     <li style="float:right;"> <a href="logout">Log Out</a></li>
                 @endif
+                @if(!\Illuminate\Support\Facades\Auth::guest())
+                    <p>Welcome, <br> {{\Illuminate\Support\Facades\Auth::user()->isAdmin()}} </p>
+                    <li style="float:right;"> <a href="admin">Admin</a></li>
+                @endif
                 <li style="float:right;"> <a class="register" href="register">SignUp</a></li>
                 <li style="float:right;"> <a href="login">LogIn</a></li>
             </ul>
