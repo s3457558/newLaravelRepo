@@ -58,10 +58,16 @@ Route::post('contact',
     ['as' => 'contact_store', 'uses' => 'ContactController@store']);
 
 
-
-
 Route::get('thankyou', function () {
-    return view('booking.thankyou');
+    return view('booking.thankyou');    /*like receipt*/
 })->name('thankyou');
+
+
+
 Route::resource('car', 'CarController');
 Route::resource('booking', 'BookingController');
+
+
+Route::resource('admin', 'AdminController'); /*adminBooking_view*/
+
+Route::resource('adminUser', 'AdminUserController'); /*adminUser_view*/

@@ -19,11 +19,17 @@ class BookingController extends Controller
 
     public function store(Request $request)
     {
+
         $this->validate($request, [
             'item_id' => 'required',
             'address_line_1' => 'required',
             'suburb' => 'required',
+//            'suburb' => 'required|Unique:users|Between:10,20|AlphaNum',
             'state' => 'required',
+            'time' => 'required',
+
+            'date' => 'required',
+//            'state' => array('regex:/^(0[289][0-9]{4})$/'),
         ]);
 
         $allRequest = $request->all();
@@ -31,6 +37,9 @@ class BookingController extends Controller
         $bookingDetails->address_line_1 = $allRequest['address_line_1'];
         $bookingDetails->suburb = $allRequest['suburb'];
         $bookingDetails->state = $allRequest['state'];
+        $bookingDetails->time = $allRequest['time'];
+
+        $bookingDetails->date = $allRequest['date'];
         $bookingDetails->save();
 
 
