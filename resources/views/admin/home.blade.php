@@ -8,8 +8,8 @@
             </div>
 
 
-            <div class="content display-container">
-                <img class="adminhome1" src="admin1.jpg" style="width:100%">
+            <div class="homeAdmin">
+                <img class="adminhome" src="admin1.jpg" style="width:100%">
             </div>
 
         </div>
