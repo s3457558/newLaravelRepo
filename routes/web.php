@@ -28,6 +28,17 @@ Route::get('admin', ['middleware' => ['auth', 'admin'], function() {
     return view('admin.admin');
 }]);
 
+
+
+
+Route::get('admin.home',
+    ['as' => 'admin.home', 'uses' =>   'AdminHomeController@create']);
+
+
+
+
+
+
 Route::get('login',
     ['as' => 'login', 'uses' =>  'LoginPageController@create']);        // link to login in page
 Route::get('logout', function(){
@@ -71,3 +82,9 @@ Route::resource('booking', 'BookingController');
 Route::resource('admin', 'AdminController'); /*adminBooking_view*/
 
 Route::resource('adminUser', 'AdminUserController'); /*adminUser_view*/
+
+
+
+
+
+

@@ -24,12 +24,9 @@ class BookingController extends Controller
             'item_id' => 'required',
             'address_line_1' => 'required',
             'suburb' => 'required',
-//            'suburb' => 'required|Unique:users|Between:10,20|AlphaNum',
             'state' => 'required',
             'time' => 'required',
-
             'date' => 'required',
-//            'state' => array('regex:/^(0[289][0-9]{4})$/'),
         ]);
 
         $allRequest = $request->all();
