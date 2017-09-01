@@ -22,7 +22,8 @@
                 <li><a href="booking.create">Booking</a></li>
                 <li><a href="contact">Contact Us</a></li>
                 <li><a href="location">Location</a></li>
-                <li><a href="car.create">Admin</a></li>
+                <li><a href="admin.home">Admin</a></li>
+                {{--subdirectory--}}
 
             <ul class="nav navbar-nav navbar-right">
                 <form class="navbar-form navbar-left" role="search">

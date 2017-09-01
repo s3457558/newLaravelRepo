@@ -52,51 +52,19 @@
 
 
     <div class="form-group">
-    {!! Form::label('date', 'Date') !!}
-    <input type = "date" name = "field1"/><br /><br />
-    {{--{!! Form::text('time', null,array('required','class'=>'form-control','placeholder'=>'Your time here')) !!}--}}
+        {!! Form::label('date', 'Date') !!}
+        {!! Form::date('date', null,array('required','class'=>'form-control','placeholder'=>'Your date here')) !!}
     </div>
 
 
 
     <div class="form-group">
         {!! Form::label('time', 'Time') !!}
-        {{--<select name="Time" id="form-control">--}}
-            {{--<option>{{$->time}}</option>--}}
-            {{--<option>AM</option>--}}
-            {{--<option>PM</option>--}}
-        {{--</select>--}}
-        {!! Form::text('time', null,array('required','class'=>'form-control','placeholder'=>'Your time here')) !!}
+        {!! Form::time('time', null,array('required','class'=>'form-control','placeholder'=>'Your time here')) !!}
 
     </div>
-
-
 
     <button class="btn btn-success" type="submit">Book Now!</button>
 
     {!! Form::close() !!}
 @endsection
-
-
-
-{{--<div class="form-group">--}}
-{{--{!! Form::label('name', 'Name') !!}--}}
-{{--{!! Form::text('name', '', ['class' => 'form-control']) !!}--}}
-{{--</div>--}}
-
-{{--<div class="form-group">--}}
-{{--{!! Form::label('email', 'Email') !!}--}}
-{{--{!! Form::text('email', '', ['class' => 'form-control']) !!}--}}
-{{--</div>--}}
-
-
-
-{{--<div class="form-group">--}}
-{{--{!! Form::text('address_line_2', '', ['class' => 'form-control']) !!}--}}
-{{--</div>--}}
-
-
-{{--<div class="form-group">--}}
-    {{--{!! Form::label('country', 'Country') !!}--}}
-    {{--{!! Form::text('country', '', ['class' => 'form-control']) !!}--}}
-{{--</div>--}}

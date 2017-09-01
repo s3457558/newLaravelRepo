@@ -19,6 +19,20 @@ Route::get('location','LocationController@create');                     // locat
 Route::get('price','PriceController@create');                           // price page
 
 
+
+
+
+
+
+
+Route::get('admin.home',
+    ['as' => 'admin.home', 'uses' =>   'AdminHomeController@create']);
+
+
+
+
+
+
 Route::get('login',
     ['as' => 'login', 'uses' =>  'LoginPageController@create']);        // link to login in page
 Route::post('login',
@@ -56,3 +70,9 @@ Route::resource('booking', 'BookingController');
 Route::resource('admin', 'AdminController'); /*adminBooking_view*/
 
 Route::resource('adminUser', 'AdminUserController'); /*adminUser_view*/
+
+
+
+
+
+
