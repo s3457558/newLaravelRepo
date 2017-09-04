@@ -31,7 +31,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="http://localhost/workspace/capstone/newLaravelRepo/public/">Car_sharing_home</a></li>
+                <li><a href="/">Car_sharing_home</a></li>
                 <li><a href="admin.home">Admin_home</a></li>
                 <li><a href="car.create">Admin_add</a></li>
                 <li><a href="admin">Admin_booking</a></li>
