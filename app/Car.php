@@ -8,5 +8,5 @@ class Car extends Model
 {
     //
 
-    protected $fillable = [ 'name', 'model', 'price' ];
+    protected $fillable = [ 'name', 'model', 'price','dummyAddress'];
 }

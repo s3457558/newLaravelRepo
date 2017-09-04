@@ -8,6 +8,20 @@
             </div>
         </div>
     </div>
+
+    <div class="container">
+        <div class="new">
+
+            <div class="form-group">
+                <lable for="">search</lable>
+                <input type="text" id="searchmap"></input>
+                <div id="map"></div>
+            </div>
+
+        </div>
+    </div>
+
+
     @if (count($errors) > 0)
         <div class="alert alert-danger">
             <strong>Whoops!</strong> There were some problems with your input.<br><br>

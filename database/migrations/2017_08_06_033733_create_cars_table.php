@@ -22,6 +22,7 @@ class CreateCarsTable extends Migration
             $table->string('name');
             $table->string('model');
             $table->float('price');
+            $table->string('dummyAddress');
             $table->timestamps();
         });
 

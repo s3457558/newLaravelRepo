@@ -33,7 +33,7 @@
             <ul class="nav navbar-nav">
                 <li><a href="http://localhost/workspace/capstone/newLaravelRepo/public/">Car_sharing_home</a></li>
                 <li><a href="admin.home">Admin_home</a></li>
-                <li><a href="car.create">Admin_car</a></li>
+                <li><a href="car.create">Admin_add</a></li>
                 <li><a href="admin">Admin_booking</a></li>
                 <li><a href="adminUser">Admin_user</a></li>
                 {{--<li><a href="/">Car-sharing Home</a></li>--}}

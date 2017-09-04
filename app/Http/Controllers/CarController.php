@@ -21,12 +21,13 @@ class CarController extends Controller
             'name' => 'required',
             'price' => 'required',
             'model' => 'required',
+            'dummyAddress' => 'required',
         ]);
         Car::create($request->all());
         /*
          * Using sessions
          * */
 
-        return redirect()->route('car.create') ->with('success','Car added successfully');
+        return redirect()->route('car.create') ->with('success','Car and dummy address added successfully');
     }
 }

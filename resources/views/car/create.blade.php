@@ -1,10 +1,10 @@
 @extends('admin.master')
-@section('title', 'Add New Car')
+@section('title', 'Add New Car and dummy address')
 @section('content')
     <div class="container">
         <div class="content">
             <div class="title">
-                <h2>Add New Car</h2>
+                <h2>Add New Car and dummy address</h2>
             </div>
 
 
@@ -41,7 +41,13 @@
         {!! Form::text('price', null,array('required','class'=>'form-control','placeholder'=>'Your add car price here')) !!}
     </div>
 
-    <button class="btn btn-success" type="submit">Add Car!</button>
+    <div class="form-group">
+        {!! Form::label('dummyAddress', 'Address') !!}
+        {!! Form::text('dummyAddress', null,array('required','class'=>'form-control','placeholder'=>'Your add dummy address here')) !!}
+    </div>
+
+
+    <button class="btn btn-success" type="submit">Submit infor</button>
 
     {!! Form::close() !!}
         </div>
