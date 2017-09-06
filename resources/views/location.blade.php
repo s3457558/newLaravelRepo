@@ -7,8 +7,10 @@
 	<div class="new">
 
 	<div class="form-group">
-		<lable for="">search</lable>
-		<input type="text" id="searchmap"></input>
+		<div class="form-group">
+			{!! Form::label('Search your location: ') !!}
+			<input type="text" id="searchmap"></input>
+		</div>
         <button type="button" class="find-me btn btn-info btn-block">Find My Location</button>
 		<div id="map"></div>
 	</div>

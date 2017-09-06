@@ -2,34 +2,34 @@ $(document).ready(function(){
 
 
 
-        var broadway = {
-            info: '<strong>Chipotle on Broadway</strong><br>\
-					5224 N Broadway St<br> Chicago, IL 60640<br>\
-					<a href="https://goo.gl/maps/jKNEDz4SyyH2">Get Directions</a>',
-            lat: -37.804489,
-            long: 144.961411
+        var LaTrobe = {
+            info: '<strong>Car-Share on La Trobe St</strong><br>\
+					200-202 La Trobe<br> Melbourne, VIC 3000<br>\
+                                <a href="https://goo.gl/maps/o5RB74QxT352">Get Directions</a>',
+            lat: -37.809681,
+            long: 144.963297
         };
 
-        var belmont = {
-            info: '<strong>Chipotle on Belmont</strong><br>\
-					1025 W Belmont Ave<br> Chicago, IL 60657<br>\
-					<a href="https://goo.gl/maps/PHfsWTvgKa92">Get Directions</a>',
-            lat: -37.806715,
-            long: 144.959643
+        var Elizabeth = {
+            info: '<strong>Car-Share on Elizabeth St</strong><br>\
+					28 Elizabeth St<br> Melbourne, VIC 3004<br>\
+                                <a href="https://goo.gl/maps/9dEhhM6a8xF2">Get Directions</a>',
+            lat: -37.817354,
+            long: 144.964716
         };
 
-        var sheridan = {
-            info: '<strong>Chipotle on Sheridan</strong><br>\r\
-					6600 N Sheridan Rd<br> Chicago, IL 60626<br>\
-					<a href="https://goo.gl/maps/QGUrqZPsYp92">Get Directions</a>',
-            lat: -37.806732,
-            long: 144.966016
+        var LittleCollins = {
+            info: '<strong>Car-Share on Little Collins St</strong><br>\r\
+					112-124 Little Collins St<br> Melbourne, VIC 3000<br>\
+					<a href="https://goo.gl/maps/SFEkPrAYJjo">Get Directions</a>',
+            lat: -37.813327,
+            long:  144.969800
         };
 
         var locations = [
-            [broadway.info, broadway.lat, broadway.long, 0],
-            [belmont.info, belmont.lat, belmont.long, 1],
-            [sheridan.info, sheridan.lat, sheridan.long, 2],
+            [LaTrobe.info, LaTrobe.lat, LaTrobe.long, 0],
+            [Elizabeth.info, Elizabeth.lat, Elizabeth.long, 1],
+            [LittleCollins.info, LittleCollins.lat, LittleCollins.long, 2],
         ];
 
         var map = new google.maps.Map(document.getElementById('map'), {

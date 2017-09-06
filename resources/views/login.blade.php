@@ -9,8 +9,6 @@
                 <h2>Login</h2>
              </div>
 
-
-
     <ul>
         @foreach($errors->all() as $error)
             <li>{{ $error }}</li>
@@ -36,12 +34,12 @@
     </div>
     <br>
     <div class="login-form-group">
-        {!! Form::submit('Submit',
-          array('class'=>'btn btn-primary')) !!}
+        {!! Form::submit('LogIn',
+          array('class'=>'button2 btn btn-primary')) !!}
     </div>
     <br>
     <div class="login-form-group">
-        <a href="register">Create a new account</a>
+        <h4>Not the member yet? <a href="register">Sign up a new account</a> </h4>
     </div>
 
 
