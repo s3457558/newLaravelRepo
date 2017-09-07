@@ -41,7 +41,7 @@ class AdminController extends Controller
         $booking->save();
 //        return redirect()->route('its.index') ->with('success','Comment uploaded successfully');
 //        return view('admin.show',compact('booking'));
-        return redirect()->route('admin.index')->with('success','Booking updated successfully');
+        return redirect()->route('admin.index')->with('success','Booking details updated successfully');
 //        return redirect()->route('admin.show') ->with('success','Booking detail updated successfully');
 
 //        $this->validate($request, [
