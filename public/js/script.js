@@ -58,7 +58,7 @@ $(document).ready(function() {
         }
 
     function searchCars(lat,lng){
-            $.post('http://localhost:8000/api/searchCars',{lat:lat,lng:lng},function(match){
+            $.post('http://localhost:5000/api/searchCars',{lat:lat,lng:lng},function(match){
                $.each(match,function(i,val){
                    var clatval=val.lat;
                    var clngval=val.lng;
