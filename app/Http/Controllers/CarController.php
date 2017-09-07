@@ -20,14 +20,24 @@ class CarController extends Controller
         $this->validate($request, [
             'name' => 'required',
             'price' => 'required',
-            'model' => 'required',
-            'dummyAddress' => 'required',
+            'car_model' => 'required',
+//            'status' => 'required',
+//            'isBooked' => 'required',
         ]);
-        Car::create($request->all());
-        /*
-         * Using sessions
-         * */
 
-        return redirect()->route('car.create') ->with('success','Car and dummy address added successfully');
+
+//        Car::create($request->all());
+        $allRequest = $request->all();
+
+        $cars = new Car();
+        $cars->name = $allRequest['name'];
+        $cars->car_model = $allRequest['car_model'];
+        $cars->price = $allRequest['price'];
+        $cars->status = 'Available';
+        $cars->isBooked = 0;
+        $cars->save();
+
+//        $request->session()->put('car_detail', $cars);
+        return redirect()->route('car.create') ->with('success','Car added successfully');
     }
 }

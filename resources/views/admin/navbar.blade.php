@@ -36,6 +36,7 @@
                 <li><a href="car.create">Admin_add</a></li>
                 <li><a href="admin">Admin_booking</a></li>
                 <li><a href="adminUser">Admin_user</a></li>
+                <li><a href="adminCar">Admin_car</a></li>
                 {{--<li><a href="/">Car-sharing Home</a></li>--}}
                 {{--<li><a href="/">Car-sharing Home</a></li>--}}
             </ul>

@@ -84,7 +84,6 @@ Route::resource('admin', 'AdminController'); /*adminBooking_view*/
 Route::resource('adminUser', 'AdminUserController'); /*adminUser_view*/
 
 
-
-
+Route::resource('adminCar', 'AdminCarController'); /*adminCar_view*/
 
 
