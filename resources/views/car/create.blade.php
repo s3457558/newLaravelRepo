@@ -45,32 +45,9 @@
 
 
 
-            {{--{!! Form::model($car, ['method' => 'PATCH','route' => ['car.create', $car->id]]) !!}--}}
-            {{--<div class="form-=group">--}}
-                {{--{!! Form::label('status', 'Status') !!}--}}
-                {{--<select name="status" id="form-control">--}}
-                    {{--<option>{{$car->status}}</option>--}}
-                    {{--<option>Available</option>--}}
-                    {{--<option>Unavailable</option>--}}
-                {{--</select>--}}
-            {{--</div>--}}
-
-            {{--<button class="btn btn-success" type="submit">Change</button>--}}
-            {{--{!! Form::close() !!}--}}
-
-
-            {{--<div class="form-group">--}}
-                {{--{!! Form::label('dummyAddress', 'Address') !!}--}}
-                {{--{!! Form::text('dummyAddress', null,array('required','class'=>'form-control','placeholder'=>'Your add dummy address here')) !!}--}}
-            {{--</div>--}}
-
-
             <button class="btn btn-success" type="submit">Submit infor</button>
 
             {!! Form::close() !!}
-
-
-
 
         </div>
     </div>
