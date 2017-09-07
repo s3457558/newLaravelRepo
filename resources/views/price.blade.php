@@ -10,6 +10,7 @@
            <table class="content display-tablecontainer" >
                <tr>
                    <th></th>
+
                    <th>Name</th>
                    <th>Model</th>
                    <th>Price</th>

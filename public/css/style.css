@@ -1,51 +1,81 @@
 /*Home page*/
-.title-home > h2{
-    text-align: center;
-}
-.black,.hover-black:hover{
-    color:#fff!important;
-    background-color:#000!important;
-}
-.button-left{
-    position:absolute;
-    top:50%;
-    transform:translate(0%,-50%);
-    -ms-transform:translate(-0%,-50%)
-}
-.button-right{
-    position:absolute;
-    top:50%;
-    right:0%;
-    transform:translate(0%,-50%);
-    -ms-transform:translate(0%,-50%)
-}
-.mbtn,.button{
-    -webkit-touch-callout:none;
-    -webkit-user-select:none;
-    -khtml-user-select:none;
-    -moz-user-select:none;
-    -ms-user-select:none;
-    user-select:none
-}
-.mbtn,.button{
-    border:none;
-    display:inline-block;
-    outline:0;
-    padding:50px 16px;
-    vertical-align:middle;
-    overflow:hidden;
-    text-decoration:none;
-    color:inherit;
-    background-color:inherit;
-    text-align:center;
-    cursor:pointer;white-space:nowrap
-}
+.container-home{
+    background-color: rgba(0, 0, 0, 0.3);
 
-.display-container{
+    padding-top: 10px;
+    padding-bottom: 700px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
     position: relative;
 }
+.white-text {
+     font-family: "MuseoSans-900", Helvetica, Arial, sans-serif;
+     font-weight: initial;
+     font-size: 48px;
+     line-height: 1;
+     margin-top: 150px;
+     color: white;
+    font-weight: bold;
+ }
 
+.white-text2 {
+    font-family: "MuseoSans-900", Helvetica, Arial, sans-serif;
+    font-weight: initial;
+    font-size: 48px;
+    line-height: 1;
+    margin-top: 50px;
+    color: white;
+}
 
+.white-text3 {
+    font-family: "MuseoSans-900", Helvetica, Arial, sans-serif;
+    font-weight: initial;
+    font-size: 48px;
+    line-height: 1;
+    color: white;
+    font-weight: bold;
+}
+
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin-top: 50px;
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-right: 25px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
 /*login page*/
 .login-form-control {
     width: 400px;
@@ -69,7 +99,28 @@
     position: relative;
 }
 
+.button2 {
 
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+h4 > a {
+    color: #7eccff;
+}
+
+/*Logout page*/
+h3 > a {
+    color: #7eccff;
+}
 /*Register page*/
 .register-form-control {
     width: 400px;
@@ -138,60 +189,80 @@
 
 /*nav bar*/
 .container-fluid {
-    background-color: #f98740;
-    padding: 15px;
+
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-button: 5px;
     margin-right: auto;
     margin-left: auto;
 }
+.navbar-form {
+    padding:  0px;
+    width: auto;
+
+    margin-top: 8px;
+    margin-right: -15px;
+    margin-bottom: 8px;
+    margin-left: 0px;
 
 
+}
 .navbar-brand {
     margin-top: -10px;
 }
-
-li {
-    float: left;
-}
-
-ul {
+ul > li > a {
     line-height: 1em;
     text-decoration: none;
-    padding: 0;
-    margin: 0;
+    padding: 10px 15px;
     border-radius: 5px;
     font-weight: bold;
-    font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
+    font-family: 'Paytone One', sans-serif;
     font-size: 18px;
-    list-style-type: none;
 }
 
-.nav>li>a:hover {
-    background-color: #f98740;
-}
-
-.navbar-bar {
-
-    margin: 0;
-}
-
-.navbar-default .navbar-bar>li>a {
+.navbar-default .navbar-nav>li>a {
     color: #000000;
 }
 
-.navbar-default .navbar-bar>li>a:hover {
-    color: #ffffff;
+.navbar-default .navbar-nav>li>a:hover {
+    color: #999999;
 }
 
 .navbar-default{
     margin-bottom: 0px;
+    padding-bottom: 10px;
+}
+
+@media (min-width: 768px){
+    nav navbar-nav navbar-right{
+        float: right;
+        margin: 0;
+    }
+}
+
+ul > li > a > login-name {
+    padding-top: 0px;
+}
+
+.navbar-left{
+    padding-top: 30px;
+    padding-left: 30px;
 
 }
+
+.navbar-right{
+    padding-top: 30px;
+    padding-left: 30px;
+
+}
+
 
 /*footer*/
 
 footer {
     font-family: PT Serif;
-    background-color: #e8e8e8;
+    background-color: #8f8f8f;
     padding: 10px;
     margin-top: 0px;
     height: 40px;
@@ -210,22 +281,43 @@ html, body {
 }
 
 
+
 /*other*/
 
 h2 {
     font-weight:bold;
     font-size: 40px;
+    color: #ffffff;
+}
+
+p {
+    font-weight:bold;
+    font-size: 17px;
+    color: #ffffff;
+}
+
+h3{
+    font-weight:bold;
+    color: #ffffff;
 }
 
 .main-container{
-    background-color: #000000;
-
     min-height: 100%;
     position: relative;
 }
 
+label{
+    color: #ffffff;
+    font-size: 17px;
+}
+
+h4{
+    color: #ffffff;
+}
+
 .container{
-    background-color: #bce8f1;
+    background-color: rgba(0, 0, 0, 0.65);
+
     padding-top: 10px;
     padding-bottom: 160px;
     padding-right: 15px;
@@ -235,3 +327,10 @@ h2 {
     position: relative;
 }
 
+.size{
+    height:800px;
+}
+
+form{
+    padding-top: 50px;
+}

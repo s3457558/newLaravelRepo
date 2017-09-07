@@ -67,7 +67,7 @@
     </div>
 
     <br>
-    <p>Have an account already? <a href="login">Click here</a></p>
+    <h4>Have an account already? <a href="login">Click here</a></h4>
 
 
 

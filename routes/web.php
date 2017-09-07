@@ -30,13 +30,8 @@ Route::get('admin', ['middleware' => ['auth', 'admin'], function() {
 
 
 
-
 Route::get('admin.home',
     ['as' => 'admin.home', 'uses' =>   'AdminHomeController@create']);
-
-
-
-
 
 
 Route::get('login',
@@ -48,8 +43,6 @@ Route::get('logout', function(){
 
 Route::post('login',
     ['as' => 'login', 'uses' =>  'LoginPageController@doLogin']);
-
-
 
 
 Route::get('booking.create',
