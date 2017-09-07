@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Auth;
 
 
-Route::get('/', 'PagesController@home');                                //home page
+Route::get('home', 'PagesController@home');                                //home page
 //Route::get('booking', 'BookingController@create');                      //booking
 Route::get('about', 'AboutPageController@create');                      //about us page
 Route::get('location','LocationController@create');                     // location page
@@ -30,13 +30,8 @@ Route::get('admin', ['middleware' => ['auth', 'admin'], function() {
 
 
 
-
 Route::get('admin.home',
     ['as' => 'admin.home', 'uses' =>   'AdminHomeController@create']);
-
-
-
-
 
 
 Route::get('login',
@@ -48,8 +43,6 @@ Route::get('logout', function(){
 
 Route::post('login',
     ['as' => 'login', 'uses' =>  'LoginPageController@doLogin']);
-
-
 
 
 Route::get('booking.create',
