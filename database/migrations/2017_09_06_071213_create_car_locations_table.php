@@ -16,8 +16,8 @@ class CreateCarLocationsTable extends Migration
         Schema::create('car_locations', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->float('lat');
-            $table->float('lng');
+            $table->float('lat',10,6);
+            $table->float('lng',10,6);
             $table->timestamps();
         });
     }
