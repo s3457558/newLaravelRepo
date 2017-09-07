@@ -20,8 +20,10 @@ class CreateCarsTable extends Migration
              * Other columns in the table
              */
             $table->string('name');
-            $table->string('model');
+            $table->string('car_model');
             $table->float('price');
+            $table->boolean('isBooked');
+            $table->string('status');
             $table->timestamps();
         });
 
@@ -43,5 +45,12 @@ class CreateCarsTable extends Migration
         Schema::dropIfExists('car_booking_details');
         Schema::dropIfExists('car_bookings');
         Schema::dropIfExists('cars');
+//
+//
+//
+//
+//        Schema::table('cars', function (Blueprint $table) {
+//            $table->dropColumn('isBooked');
+//        });
     }
 }

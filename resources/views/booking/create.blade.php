@@ -6,6 +6,20 @@
             <div class="title">
                 <h2>Booking Your Car</h2>
             </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="new">
+
+            <div class="form-group">
+                <lable for="">search</lable>
+                <input type="text" id="searchmap"></input>
+                <div id="map"></div>
+            </div>
+
+        </div>
+    </div>
 
     @if (count($errors) > 0)
         <div class="alert alert-danger">
@@ -34,10 +48,10 @@
     </div>
 
 
-    <div class="form-group">
-    {!! Form::label('address_line_1', 'Address') !!}
-    {!! Form::text('address_line_1', null,array('required','class'=>'form-control','placeholder'=>'Your address here')) !!}
-    </div>
+    {{--<div class="form-group">--}}
+    {{--{!! Form::label('address_line_1', 'Address') !!}--}}
+    {{--{!! Form::text('address_line_1', null,array('required','class'=>'form-control','placeholder'=>'Your address here')) !!}--}}
+    {{--</div>--}}
 
     <div class="form-group">
         {!! Form::label('suburb', 'Suburb') !!}
@@ -66,6 +80,4 @@
     <button class="btn btn-success" type="submit">Book Now!</button>
 
     {!! Form::close() !!}
-        </div>
-    </div>
 @endsection

@@ -23,7 +23,6 @@
         </tr>
         @foreach ($users as $users_detail)
             <tr>
-                {{--<td>{{ ++$i }}</td>--}}
                 <td>{{ $users_detail->id}}</td>
                 <td>{{ $users_detail->username}}</td>
                 <td>{{ $users_detail->name}}</td>

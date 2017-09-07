@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Auth;
 
 
-Route::get('home', 'PagesController@home');                                //home page
+Route::get('/', 'PagesController@home');                                //home page
 //Route::get('booking', 'BookingController@create');                      //booking
 Route::get('about', 'AboutPageController@create');                      //about us page
 Route::get('location','LocationController@create');                     // location page
@@ -56,6 +56,7 @@ Route::get('register',
 Route::post('register',
     ['as' => 'register_system', 'uses' => 'RegisterPageController@doRegister']);
 
+
 Route::get('contact',                                                   // link to contact
     ['as' => 'contact', 'uses' => 'ContactController@create']);
 Route::post('contact',
@@ -70,14 +71,13 @@ Route::get('thankyou', function () {
 
 Route::resource('car', 'CarController');
 Route::resource('booking', 'BookingController');
-
+//Route::resource('contact','ContactController');
 
 Route::resource('admin', 'AdminController'); /*adminBooking_view*/
 
 Route::resource('adminUser', 'AdminUserController'); /*adminUser_view*/
 
 
-
-
+Route::resource('adminCar', 'AdminCarController'); /*adminCar_view*/
 
 

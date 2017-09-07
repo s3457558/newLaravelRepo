@@ -3,28 +3,40 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
-use App\Http\Requests;
-
-use Illuminate\Support\Facades\Redirect;
-
-use App\Http\Requests\ContactFormRequest;
-
-use Illuminate\Support\Facades\Session;
+use App\Contactus;
 
 class ContactController extends Controller
 {
     public function create()
     {
+//        $contact = new Contactus;
         return view('contact');
     }
 
-    public function store(ContactFormRequest $request)
+
+
+    public function store(Request $request)
     {
-        session()->put('thanks',  'Thanks for contacting us:');
-        session()->put('name',  $request->name);
-        session()->put('email',  $request->email);
-        session()->put('message',  $request->message);
-        return \Redirect::route('contact');
+        $this->validate($request, [
+            'name' => 'required',
+            'email' => 'required',
+            'phone' => 'required',
+            'message' => 'required',
+        ]);
+
+
+//        Car::create($request->all());
+        $allRequest = $request->all();
+
+        $contactuses = new Contactus;
+        $contactuses->name = $allRequest['name'];
+        $contactuses->email = $allRequest['email'];
+        $contactuses->phone = $allRequest['phone'];
+        $contactuses->message = $allRequest['message'];
+        $contactuses->save();
+
+//        $request->session()->put('car_detail', $cars);
+        return redirect()->route('contact') ->with('success','Contact us successfully');
+//        return redirect()->route('contact');
     }
 }
