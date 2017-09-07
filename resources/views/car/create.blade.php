@@ -41,7 +41,11 @@
                 {!! Form::text('price', null,array('required','class'=>'form-control','placeholder'=>'Your add car price here')) !!}
             </div>
 
-            <button class="btn btn-success" type="submit">Add Car!</button>
+
+
+            <button class="btn btn-success" type="submit">Submit infor</button>
+
+            {!! Form::close() !!}
 
 
         </div>
