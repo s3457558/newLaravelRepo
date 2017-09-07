@@ -3,7 +3,12 @@ $(document).ready(function() {
     geoLocationInit();
     function geoLocationInit() {
         if(navigator.geolocation){
-            navigator.geolocation.getCurrentPosition(success,fail);
+          var optn ={
+            enalbeHighAccuracy: true,
+            timeout: Infinity,
+            maximumAge:0
+          }
+            navigator.geolocation.watchPosition(success,fail,optn);
         }else{
             alert("Browser not supported");
         }
@@ -17,7 +22,10 @@ $(document).ready(function() {
         myLatLng = new google.maps. LatLng(latval,lngval);
         createMap(myLatLng);
         searchCars(latval,lngval);
+            console.log(latval);
+            console.log(lngval);
     }
+
 
     function fail() {
     alert("it fails");
