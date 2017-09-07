@@ -47,8 +47,6 @@
 
             {!! Form::close() !!}
 
-            <button class="btn btn-success" type="submit">Add Car!</button>
-
 
         </div>
     </div>
