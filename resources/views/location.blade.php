@@ -4,10 +4,16 @@
 
 @section('content')
 <div class="container">
-	<div id="map">
-	 <p>asdf</p>
-	</div>
+
+		<div id="map"></div>
+
+		{!! Form::open() !!}
+
+        {!! Form::select('size', ['L' => 'Large', 'S' => 'Small']) !!}
+
+        {!! Form::close() !!}
 	
 </div>
+
 
 @endsection

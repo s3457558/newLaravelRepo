@@ -9,9 +9,9 @@
             <div id="img">
                 <img src="images/carshare.png" width='400px' >
             </div>
-            <br><p>The project which we have chosen to develop is the car share rental service. This is a web application that allows users to find rental cars in their local vicinity. The main benefit of the application is to allow customers to rent or share cars  in their local area for some period of time.</p>
+            <br><p>Car-Sharing is a web application that allows users to find rental cars in their local vicinity. The main benefit of the application is to allow customers to rent or share cars  in their local area for some period of time.</p>
 
-            <p>The main objective of the project is to allow users to rent cars. The company will provide a number of cars.  These cars will be parked at a number of locations in the city, users  can then book and use their chosen car for a minimum of one hour and a maximum of one week.</p>
+            <p>Car-Sharing provides a lot of cars.  These cars will be parked at a number of locations in the city, users  can then book and use their chosen car for a minimum of one hour and a maximum of one week.</p>
 
             <p>The sponsor is offering this project because it allows team members to develop an application in an IT industry like environment. This is an invaluable task for the individuals of the project because it allows them to show employers how they might operate in the workspace.</p>
 

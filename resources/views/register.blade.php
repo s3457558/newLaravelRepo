@@ -6,8 +6,8 @@
             <div class="title">
                 <h2>Register Form</h2>
             </div>
-        </div>
-    </div>
+
+
 
     <ul>
         @foreach($errors->all() as $error)
@@ -67,9 +67,11 @@
     </div>
 
     <br>
-    <p>Have an account already? <a href="login">Click here</a></p>
+    <h4>Have an account already? <a href="login">Click here</a></h4>
 
 
 
     {!! Form::close() !!}
+        </div>
+    </div>
 @endsection

@@ -9,35 +9,36 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-                <a href="{{action('PagesController@home')}}">
-                     <img src="images/carsharing logo.png" alt="Car-Sharing Logo" width="250" height="40">
-                </a>
+            <a href="{{action('PagesController@home')}}">
+                <img src="images/CAR-SHARING.png" alt="Car-Sharing Logo" style="width: 200px;">
+            </a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home<span class="sr-only">(current)</span></a></li>
-
-                <li><a href="/">Home<span class="sr-only">(current)</span></a></li>
-                <li><a href="about">About Us</a></li>
-                <li><a href="price">Price</a></li>
-                <li><a href="booking.create">Booking</a></li>
-                <li><a href="contact">Contact Us</a></li>
-                <li><a href="location">Location</a></li>
-                <li><a href="car.create">Add Car</a></li>
-
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
+            <ul class="nav navbar-nav navbar-left">
+                <li><a href="/">HOME<span class="sr-only"></span></a></li>
+                <li><a href="about">ABOUT US</a></li>
+                <li><a href="price">PRICE</a></li>
+                <li><a href="contact">CONTACT US</a></li>
+                <li><a href="location">LOCATION</a></li>
+            </ul>
             <ul class="nav navbar-nav navbar-right">
-                <form class="navbar-form navbar-left" role="search">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search" required>
-                        <input class="searchbutton" type="button" value="Search">
-                    </div>
-                    <!--<button type="submit" class="btn btn-default">Submit</button>-->
-                </form>
-                <li><a href="register">SignUp</a></li>
-                <li><a href="login">LogIn</a></li>
+            @if(!\Illuminate\Support\Facades\Auth::guest())
+                    <li > <a href="booking.create">BOOKING</a></li>
+                    <li > <a style="padding-top: 0px;"> Welcome, <br> {{\Illuminate\Support\Facades\Auth::user()->name}} </a>  </li>
+                    <li > <a href="logout">LOG OUT</a></li>
+            @endif
+
+            @if(!\Illuminate\Support\Facades\Auth::check())
+                    <li> <a class="register" href="register">JOIN US</a></li>
+                    <li> <a href="login">LOG IN</a></li>
+            @endif
+            @if( Auth::check() && Auth::user()->isAdmin )
+                    <li style="float:right;"> <a href="admin">ADMIN</a></li>
+            @endif
 
             </ul>
+
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
