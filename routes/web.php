@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Auth;
 
 
-Route::get('home', 'PagesController@home');                                //home page
+Route::get('/', 'PagesController@home');                                //home page
 //Route::get('booking', 'BookingController@create');                      //booking
 Route::get('about', 'AboutPageController@create');                      //about us page
 Route::get('location','LocationController@create');                     // location page
