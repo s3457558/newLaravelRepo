@@ -43,6 +43,9 @@ $(document).ready(function() {
                   title:name
 
               });
+        marker.addListener('click',function(){
+           alert('This is '+name);
+        });
         }
 
     function searchCars(lat,lng){
