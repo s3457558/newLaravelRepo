@@ -49,10 +49,10 @@
     </div>
 
 
-    <div class="form-group">
-    {!! Form::label('address_line_1', 'Address') !!}
-    {!! Form::text('address_line_1', null,array('required','class'=>'form-control','placeholder'=>'Your address here')) !!}
-    </div>
+    {{--<div class="form-group">--}}
+    {{--{!! Form::label('address_line_1', 'Address') !!}--}}
+    {{--{!! Form::text('address_line_1', null,array('required','class'=>'form-control','placeholder'=>'Your address here')) !!}--}}
+    {{--</div>--}}
 
     <div class="form-group">
         {!! Form::label('suburb', 'Suburb') !!}

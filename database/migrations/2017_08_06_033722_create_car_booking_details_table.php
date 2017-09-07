@@ -10,7 +10,7 @@ class CreateCarBookingDetailsTable extends Migration
     {
         Schema::create('car_booking_details', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('address_line_1');
+//            $table->string('address_line_1');
             $table->string('suburb');
             $table->string('state');
             $table->string('date');
