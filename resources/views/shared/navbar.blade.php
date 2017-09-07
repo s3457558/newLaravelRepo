@@ -7,56 +7,36 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Cars-Sharing</a>
+                <a href="{{action('PagesController@home')}}">
+                     <img src="images/carsharing logo.png" alt="Car-Sharing Logo" width="250" height="40">
+                </a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#">Home<span class="sr-only">(current)</span></a></li>
-                <li><a href="http://54.252.194.171/booking">Booking</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Members
-                        <span class="caret"></span>
-                    </a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Register</a></li>
-                        <li><a href="#">Login</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">One more separated link</a></li>
-                    </ul>
-                </li>
-            </ul>
+
+                <li><a href="/">Home<span class="sr-only">(current)</span></a></li>
+                <li><a href="about">About Us</a></li>
+                <li><a href="price">Price</a></li>
+                <li><a href="booking.create">Booking</a></li>
+                <li><a href="contact">Contact Us</a></li>
+                <li><a href="location">Location</a></li>
+                <li><a href="car.create">Add Car</a></li>
 
             <ul class="nav navbar-nav navbar-right">
                 <form class="navbar-form navbar-left" role="search">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search">
+                        <input type="text" class="form-control" placeholder="Search" required>
+                        <input class="searchbutton" type="button" value="Search">
                     </div>
-                    <button type="submit" class="btn btn-default">Submit</button>
+                    <!--<button type="submit" class="btn btn-default">Submit</button>-->
                 </form>
+                <li><a href="register">SignUp</a></li>
+                <li><a href="login">LogIn</a></li>
 
-
-
-                {{--<li><a href="#">Link</a></li>--}}
-                {{--<li class="dropdown">--}}
-                    {{--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"--}}
-                       {{--aria-expanded="false">Dropdown <span class="caret"></span>--}}
-                    {{--</a>--}}
-                    {{--<ul class="dropdown-menu" role="menu">--}}
-                        {{--<li><a href="#">Action</a></li>--}}
-                        {{--<li><a href="#">Another action</a></li>--}}
-                        {{--<li><a href="#">Something else here</a></li>--}}
-                        {{--<li class="divider"></li>--}}
-                        {{--<li><a href="#">Separated link</a></li>--}}
-
-                    {{--</ul>--}}
-                {{--</li>--}}
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
