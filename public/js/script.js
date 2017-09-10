@@ -27,7 +27,6 @@ $(document).ready(function() {
             console.log(lngval);
     }
 
-
     function fail() {
     alert("it fails");
     }

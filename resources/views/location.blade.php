@@ -9,7 +9,15 @@
 
 		{!! Form::open() !!}
 
-        {!! Form::select('size', ['L' => 'Large', 'S' => 'Small']) !!}
+        {!! Form::label('district','District') !!}
+
+        {!! Form::select('district', ['L' => 'Ktm', 'S' => 'Lalitpur']) !!}
+
+        <div id="city">
+
+
+
+        </div>
 
         {!! Form::close() !!}
 	
