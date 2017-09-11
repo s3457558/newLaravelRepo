@@ -34,7 +34,7 @@
                     <li> <a href="login">LOG IN</a></li>
             @endif
             @if( Auth::check() && Auth::user()->isAdmin )
-                    <li style="float:right;"> <a href="admin">ADMIN</a></li>
+                    <li style="float:right;"> <a href="admin.home">ADMIN</a></li>
             @endif
 
             </ul>
