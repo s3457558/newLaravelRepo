@@ -12,8 +12,8 @@ public function searchCars(Request $request){
     $lat=$request->lat;
     $lng=$request->lng;
 
-    $cars=CarLocation::whereBetween('lat',[$lat-0.1,$lat+0.1])
-                     ->whereBetween('lng',[$lng-0.1,$lng+0.1])
+    $cars=CarLocation::whereBetween('lat',[$lat-50,$lat+50])
+                     ->whereBetween('lng',[$lng-50,$lng+50])
                      ->get();
     return $cars;
 }
