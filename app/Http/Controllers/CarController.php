@@ -20,7 +20,7 @@ class CarController extends Controller
         $this->validate($request, [
             'name' => 'required',
             'price' => 'required',
-            'car_model' => 'required',
+            'car_model' => 'required'
 //            'status' => 'required',
 //            'isBooked' => 'required',
         ]);

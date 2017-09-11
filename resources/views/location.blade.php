@@ -22,12 +22,12 @@
             </div>
             <div class="modal-body">
 
-                <p>Some text in the Modal Body
+                <p>Car One Place Holder
                     <a href="register" class="button white-text3">
                         <span>Book</span>
                     </a></p>
 
-                <p>Some other text...
+                <p>Car Two Place Holder
                     <a href="register" class="button white-text3">
                         <span>Book</span>
                     </a></p>
