@@ -6,6 +6,7 @@
     <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHhDF6eVxfPzvPTH0gOy_WUk7l-IoqwZE&libraries=places">
 	 </script>
     <link rel="stylesheet" href="{{asset('css/location.css')}}">
+    <link rel="stylesheet" href="{{asset('css/modalStyle.css')}}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
     <script crossorigin ="anonymous" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
