@@ -111,21 +111,7 @@ $(document).ready(function() {
 
               });
         marker.addListener('click',function(){
-            infowindow.open(map,marker);
-        });
-        var contentString = '<div id="content">'+
-            '<div id="siteNotice">'+
-             name+
-            '</div>'+
-            '<div id="bodyContent">'+
-            ' <a href="booking.create" class="button white-text3">\n' +
-            '             <span>Booking</span>\n' +
-            '                    </a>'+
-            '</div>'+
-            '</div>';
-        var infowindow = new google.maps.InfoWindow({
-            content: contentString,
-            maxWidth: 200
+            displaySomething();
         });
 
         }
@@ -144,6 +130,26 @@ $(document).ready(function() {
                })
             })
         }
+
+    function displaySomething(){
+        var modal = document.getElementById('myModal');
+
+        var span = document.getElementsByClassName("close")[0];
+
+        modal.style.display = "block";
+
+    // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+    // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    }
 
 
 
