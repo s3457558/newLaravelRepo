@@ -20,15 +20,31 @@
             <div class="modal-body">
 
                 <p>Car One Place Holder
-                    <a href="booking.create" class="button white-text3">
-                        <span>Book</span>
-                    </a></p>
+                    @if(!\Illuminate\Support\Facades\Auth::guest())
+                        <a href="booking.create" class="button white-text3">
+                            <span>Book</span></a>
+                    @endif
+
+                    @if(!\Illuminate\Support\Facades\Auth::check())
+                        <a href="login" class="button white-text3">
+                            <span>Book</span></a>
+                    @endif
+
+                </p>
 
                 <p>Car Two Place Holder
-                    <a href="booking.create" class="button white-text3">
-                        <span>Book</span>
-                    </a></p>
+                    @if(!\Illuminate\Support\Facades\Auth::guest())
+                        <a href="booking.create" class="button white-text3">
+                            <span>Book</span></a>
+
+                    @endif
+                    @if(!\Illuminate\Support\Facades\Auth::check())
+                        <a href="login" class="button white-text3">
+                            <span>Book</span></a>
+                    @endif
+                </p>
             </div>
+            
             <div class="modal-footer">
                 <h3>   </h3>
             </div>
