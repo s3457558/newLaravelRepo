@@ -56,6 +56,11 @@ Route::get('register',
 Route::post('register',
     ['as' => 'register_system', 'uses' => 'RegisterPageController@doRegister']);
 
+//Route::post('register',
+//    ['as' => 'register_system', 'uses' => 'RegisterPageController@storeFile']);
+
+
+
 
 Route::get('contact',                                                   // link to contact
     ['as' => 'contact', 'uses' => 'ContactController@create']);
@@ -81,3 +86,5 @@ Route::resource('adminUser', 'AdminUserController'); /*adminUser_view*/
 Route::resource('adminCar', 'AdminCarController'); /*adminCar_view*/
 
 
+//Route::get('register','RegisterPageController@showUpLoadForm')->name('upload.register');
+//Route::post('register', 'RegisterPageController@storeFile');

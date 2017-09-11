@@ -33,6 +33,7 @@
                       'placeholder'=>'Enter your password')) !!}
     </div>
     <br>
+
     <div class="login-form-group">
         {!! Form::submit('LogIn',
           array('class'=>'button2 btn btn-primary')) !!}

@@ -18,6 +18,4 @@ class locationController extends Controller
     {
         return view('location');
     }
-
-
 }

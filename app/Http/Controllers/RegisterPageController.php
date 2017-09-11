@@ -53,9 +53,23 @@ class RegisterPageController extends Controller
 
         $userName = Input::get('username');
         return view('successfulRegister');
-
-
     }
 
+//    public function storeFile(requset $request){
+////
+//
+//    if($request->hasFile('register')){
+//        store('public/upload');
+////            $filename = $request->file->getClientOriginalName();
+////            $filesize = $request->file->getClientSize();
+////        $request->file->storeAs('public/upload',$filename);
+////            $choose_files = new File;
+////            $choose_files->name = $filename;
+////            $choose_files->size = $filesize;
+////            $choose_files->save();
+//        return 'yes';
+//    }
+//        return $request->all();
+//}
 
 }
