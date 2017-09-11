@@ -111,8 +111,23 @@ $(document).ready(function() {
 
               });
         marker.addListener('click',function(){
-           alert('This is '+name);
+            infowindow.open(map,marker);
         });
+        var contentString = '<div id="content">'+
+            '<div id="siteNotice">'+
+             name+
+            '</div>'+
+            '<div id="bodyContent">'+
+            ' <a href="booking.create" class="button white-text3">\n' +
+            '             <span>Booking</span>\n' +
+            '                    </a>'+
+            '</div>'+
+            '</div>';
+        var infowindow = new google.maps.InfoWindow({
+            content: contentString,
+            maxWidth: 200
+        });
+
         }
 
     function searchCars(lat,lng){
@@ -124,6 +139,7 @@ $(document).ready(function() {
                    var Clatlng = new google.maps.LatLng(clatval,clngval);
                    var cicn='https://developer.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
                    createMarker(Clatlng,cicn,cname);
+
 
                })
             })
