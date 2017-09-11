@@ -20,12 +20,12 @@
             <div class="modal-body">
 
                 <p>Car One Place Holder
-                    <a href="register" class="button white-text3">
+                    <a href="booking.create" class="button white-text3">
                         <span>Book</span>
                     </a></p>
 
                 <p>Car Two Place Holder
-                    <a href="register" class="button white-text3">
+                    <a href="booking.create" class="button white-text3">
                         <span>Book</span>
                     </a></p>
             </div>
