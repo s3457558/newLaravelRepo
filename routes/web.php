@@ -57,7 +57,7 @@ Route::post('register',
     ['as' => 'register_system', 'uses' => 'RegisterPageController@doRegister']);
 
 //Route::post('register',
-//    ['as' => 'register_system', 'uses' => 'RegisterPageController@storeFile']);
+//    ['as' => 'register_system', 'choose_files' => 'RegisterPageController@storeFile']);
 
 
 
@@ -86,5 +86,5 @@ Route::resource('adminUser', 'AdminUserController'); /*adminUser_view*/
 Route::resource('adminCar', 'AdminCarController'); /*adminCar_view*/
 
 
-//Route::get('register','RegisterPageController@showUpLoadForm')->name('upload.register');
-//Route::post('register', 'RegisterPageController@storeFile');
+Route::get('file','FileController@showUpLoadForm')->name('upload.file');
+Route::post('file', 'FileController@storeFile');

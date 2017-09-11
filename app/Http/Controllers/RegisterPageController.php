@@ -47,8 +47,6 @@ class RegisterPageController extends Controller
         $user->isAdmin = 0;
         $user->save();
 
-
-
         $request->session()->put('user', $user);
 
         $userName = Input::get('username');
@@ -59,7 +57,7 @@ class RegisterPageController extends Controller
 ////
 //
 //    if($request->hasFile('register')){
-//        store('public/upload');
+//        $request->register->store('public/upload');
 ////            $filename = $request->file->getClientOriginalName();
 ////            $filesize = $request->file->getClientSize();
 ////        $request->file->storeAs('public/upload',$filename);

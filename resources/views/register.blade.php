@@ -62,9 +62,6 @@
                   'class'=>'register-form-control',
                   'placeholder'=>'Confirm your password')) !!}
         <br>
-        {!! Form::label('License file') !!}
-        {!! Form::file('') !!}
-        <br>
         {!! Form::submit('Register',
           array('class'=>'btn btn-primary')) !!}
     </div>
