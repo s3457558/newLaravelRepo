@@ -7,8 +7,6 @@
                 <h2>Register Form</h2>
             </div>
 
-
-
     <ul>
         @foreach($errors->all() as $error)
             <li>{{ $error }}</li>
@@ -68,8 +66,6 @@
 
     <br>
     <h4>Have an account already? <a href="login">Click here</a></h4>
-
-
 
     {!! Form::close() !!}
         </div>

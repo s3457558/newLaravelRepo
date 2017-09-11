@@ -7,19 +7,6 @@
                 <h2>Booking Your Car</h2>
             </div>
         </div>
-    </div>
-
-    <div class="container">
-        <div class="new">
-
-            <div class="form-group">
-                <lable for="">search</lable>
-                <input type="text" id="searchmap"></input>
-                <div id="map"></div>
-            </div>
-
-        </div>
-    </div>
 
     @if (count($errors) > 0)
         <div class="alert alert-danger">
@@ -80,4 +67,13 @@
     <button class="btn btn-success" type="submit">Book Now!</button>
 
     {!! Form::close() !!}
+
+        <div class="new">
+            <div class="form-group">
+                <h4> search:</h4> <input type="text" id="searchmap"></input>
+
+                    <div id="map"></div>
+            </div>
+        </div>
+    </div>
 @endsection

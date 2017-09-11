@@ -13,19 +13,28 @@
                 <img src="images/CAR-SHARING.png" alt="Car-Sharing Logo" style="width: 200px;">
             </a>
         </div>
+
+        <ul class="nav navbar-nav navbar-right">
+            @if(!\Illuminate\Support\Facades\Auth::guest())
+                <li > <a> Welcome, {{\Illuminate\Support\Facades\Auth::user()->name}} </a>  </li>
+            @endif
+
+        </ul>
+    </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-left">
                 <li><a href="/">HOME<span class="sr-only"></span></a></li>
                 <li><a href="about">ABOUT US</a></li>
+                @if(!\Illuminate\Support\Facades\Auth::guest())
+                    <li > <a href="booking.create">BOOKING</a></li>
+                @endif
                 <li><a href="price">PRICE</a></li>
                 <li><a href="contact">CONTACT US</a></li>
                 <li><a href="location">LOCATION</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
             @if(!\Illuminate\Support\Facades\Auth::guest())
-                    <li > <a href="booking.create">BOOKING</a></li>
-                    <li > <a style="padding-top: 0px;"> Welcome, <br> {{\Illuminate\Support\Facades\Auth::user()->name}} </a>  </li>
                     <li > <a href="logout">LOG OUT</a></li>
             @endif
 
@@ -40,5 +49,5 @@
             </ul>
 
         </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
+
 </nav>

@@ -5,7 +5,7 @@ $(document).ready(function() {
         if(navigator.geolocation){
             navigator.geolocation.getCurrentPosition(success);
           var optn ={
-            enalbeHighAccuracy: true,
+            enableHighAccuracy: true,
             timeout: Infinity,
             maximumAge:0
           }
@@ -39,12 +39,16 @@ $(document).ready(function() {
         });
         var marker = new google.maps.Marker({
             position:myLatLng,
-            map: map
+            map: map,
+            animation: google.maps.Animation.DROP
 
+        });
+        marker.addListener('click',function(){
+            alert('Your Current Location: '+myLatLng);
         });
     }
 
-    function createMarker(latlng,icn,name){
+    function createMarker(latlng,icn,name){                 //new marker location
               var marker= new google.maps.Marker({
                   position:latlng,
                   map: map,
@@ -52,13 +56,14 @@ $(document).ready(function() {
                   title:name
 
               });
-        marker.addListener('click',function(){
-           alert('This is '+name);
-        });
-        }
 
-    function searchCars(lat,lng){
-            $.post('http://localhost:8000/api/searchCars',{lat:lat,lng:lng},function(match){
+        marker.addListener('click',function(){
+           alert('Location: '+name);
+        });
+    }
+
+    function searchCars(lat,lng){                           //tap the new location with the flag
+            $.post('http://127.0.0.1:8000/api/searchCars',{lat:lat,lng:lng},function(match){
                $.each(match,function(i,val){
                    var clatval=val.lat;
                    var clngval=val.lng;
@@ -70,4 +75,6 @@ $(document).ready(function() {
                })
             })
         }
+
+   
 });
