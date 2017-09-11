@@ -11,7 +11,7 @@
                     Enjoy our share car service
                 </h2>
                 <a href="register" class="button white-text3">
-                    <span>JOIN US NOW</span>
+                        <span>JOIN US NOW</span>
                     </a>
 
             </div>
