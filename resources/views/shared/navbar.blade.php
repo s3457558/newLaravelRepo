@@ -27,6 +27,7 @@
                 <li><a href="location">LOCATION</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
+
                 @if(!\Illuminate\Support\Facades\Auth::guest())
                     <li > <a id="loginname"> Welcome, {{\Illuminate\Support\Facades\Auth::user()->name}} </a>  </li>
                 @endif
@@ -34,13 +35,16 @@
                         <li > <a href="logout">LOG OUT</a></li>
                 @endif
 
-                @if(!\Illuminate\Support\Facades\Auth::check())
-                        <li> <a class="register" href="register">JOIN US</a></li>
-                        <li> <a href="login">LOG IN</a></li>
-                @endif
-                @if( Auth::check() && Auth::user()->isAdmin )
-                        <li style="float:right;"> <a href="admin">ADMIN</a></li>
-                @endif
+            @if(!\Illuminate\Support\Facades\Auth::check())
+                    <li> <a class="register" href="register">JOIN US</a></li>
+                    <li> <a href="login">LOG IN</a></li>
+            @endif
+            @if( Auth::check() && Auth::user()->isAdmin )
+                    <li style="float:right;"> <a href="admin.home">ADMIN</a></li>
+            @endif
+
+
+
             </ul>
 
         </div><!-- /.navbar-collapse -->

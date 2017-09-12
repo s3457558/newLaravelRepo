@@ -23,6 +23,8 @@
                     <p>{{ $message }}</p>
                 </div>
             @endif
+
+
             {!! Form::model($car, ['action' => 'CarController@store']) !!}
 
 
@@ -32,8 +34,8 @@
             </div>
 
             <div class="form-group">
-                {!! Form::label('model', 'Model') !!}
-                {!! Form::text('model', null,array('required','class'=>'form-control','placeholder'=>'Your add car model here')) !!}
+                {!! Form::label('car_model', 'Model') !!}
+                {!! Form::text('car_model', null,array('required','class'=>'form-control','placeholder'=>'Your add car model here')) !!}
             </div>
 
             <div class="form-group">
@@ -41,13 +43,9 @@
                 {!! Form::text('price', null,array('required','class'=>'form-control','placeholder'=>'Your add car price here')) !!}
             </div>
 
-
-
             <button class="btn btn-success" type="submit">Submit infor</button>
 
             {!! Form::close() !!}
-
-
         </div>
     </div>
 @endsection
