@@ -45,6 +45,7 @@ $(document).ready(function() {
         });
         marker.addListener('click',function(){
             alert('Your Current Location: '+myLatLng);
+            
         });
 
     }
