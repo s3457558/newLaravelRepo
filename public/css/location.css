@@ -16,14 +16,15 @@
 }
 
 #pac-input {
+
 	background-color: #fff;
 	font-family: Roboto;
 	font-size: 15px;
 	font-weight: 300;
-	margin-left: 12px;
+	margin: 0 0 10px 0;
 	padding: 0 11px 0 13px;
 	text-overflow: ellipsis;
-	width: 300px;
+	width: 200px;
 }
 
 #pac-input:focus {
@@ -49,9 +50,6 @@
 #target {
 	width: 345px;
 }
-
-
-
 
 .controls {
 	margin-top: 10px;
