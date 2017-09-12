@@ -9,7 +9,7 @@
         <h2>Find Location</h2>
     </div>
     <h4>Option 1:</h4>
-    <h4>Search your location:</h4>
+    <h4>Search your location to find our car-share:</h4>
     <input id="pac-input" class="controls" type="text" placeholder="Search Box">
     <h4>Option 2:</h4>
     <h4>Enter your start location:</h4>
@@ -29,9 +29,8 @@
     </div>
         <div id="dvDistance"></div>
 
-
-
     <div id="map"></div>
+        <div id="dvPanel" style="width: 500px; height: 500px">
 
     <div id="myModal" class="modal">
 

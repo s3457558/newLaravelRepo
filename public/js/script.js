@@ -24,8 +24,8 @@ $(document).ready(function() {
         myLatLng = new google.maps. LatLng(latval,lngval);
         createMap(myLatLng);
         searchCars(latval,lngval);
-        console.log(latval);
-        console.log(lngval);
+        //console.log(latval);
+        //console.log(lngval);
         new AutocompleteDirectionsHandler(map);
     }
 
@@ -45,7 +45,7 @@ $(document).ready(function() {
 
         marker.addListener('click',function(){
             alert('Your Current Location: '+myLatLng);
-            
+
         });
 
         // Create the search box and link it to the UI element.
@@ -117,6 +117,7 @@ $(document).ready(function() {
 
         });
         marker.addListener('click',function(){
+            displaySomething();
             alert('Location: '+name);
         });
     }
@@ -131,7 +132,7 @@ $(document).ready(function() {
                 var cicn='https://developer.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
                 createMarker(Clatlng,cicn,cname);
 
-           displaySomething();
+
 
         });
 
