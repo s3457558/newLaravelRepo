@@ -245,18 +245,18 @@ ul > li > a {
     }
 }
 
-ul > li > a > login-name {
-    padding-top: 0px;
+#loginname {
+    color: #eb2525;
 }
 
 .navbar-left{
-    padding-top: 10px;
+    padding-top: 30px;
 
 
 }
 
 .navbar-right{
-    padding-top: 10px;
+    padding-top: 30px;
 }
 
 

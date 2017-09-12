@@ -12,14 +12,7 @@
             <a href="{{action('PagesController@home')}}">
                 <img src="images/CAR-SHARING.png" alt="Car-Sharing Logo" style="width: 200px;">
             </a>
-        </div>
 
-        <ul class="nav navbar-nav navbar-right">
-            @if(!\Illuminate\Support\Facades\Auth::guest())
-                <li > <a> Welcome, {{\Illuminate\Support\Facades\Auth::user()->name}} </a>  </li>
-            @endif
-
-        </ul>
     </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -34,20 +27,22 @@
                 <li><a href="location">LOCATION</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-            @if(!\Illuminate\Support\Facades\Auth::guest())
-                    <li > <a href="logout">LOG OUT</a></li>
-            @endif
+                @if(!\Illuminate\Support\Facades\Auth::guest())
+                    <li > <a id="loginname"> Welcome, {{\Illuminate\Support\Facades\Auth::user()->name}} </a>  </li>
+                @endif
+                @if(!\Illuminate\Support\Facades\Auth::guest())
+                        <li > <a href="logout">LOG OUT</a></li>
+                @endif
 
-            @if(!\Illuminate\Support\Facades\Auth::check())
-                    <li> <a class="register" href="register">JOIN US</a></li>
-                    <li> <a href="login">LOG IN</a></li>
-            @endif
-            @if( Auth::check() && Auth::user()->isAdmin )
-                    <li style="float:right;"> <a href="admin">ADMIN</a></li>
-            @endif
-
+                @if(!\Illuminate\Support\Facades\Auth::check())
+                        <li> <a class="register" href="register">JOIN US</a></li>
+                        <li> <a href="login">LOG IN</a></li>
+                @endif
+                @if( Auth::check() && Auth::user()->isAdmin )
+                        <li style="float:right;"> <a href="admin">ADMIN</a></li>
+                @endif
             </ul>
 
         </div><!-- /.navbar-collapse -->
-
+    </div>
 </nav>
