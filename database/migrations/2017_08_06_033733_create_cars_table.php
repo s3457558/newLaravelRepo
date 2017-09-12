@@ -24,6 +24,8 @@ class CreateCarsTable extends Migration
             $table->float('price');
             $table->boolean('isBooked');
             $table->string('status');
+            $table->unsignedInteger('car_location_id');
+
             $table->timestamps();
         });
 
