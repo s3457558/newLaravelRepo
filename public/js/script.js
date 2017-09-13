@@ -102,8 +102,9 @@ $(document).ready(function() {
         });
     }
 
-    function createMarker(latlng,icn,name){
+    function createMarker(latlng,icn,name,id){
               var marker= new google.maps.Marker({
+                  id:id,
                   position:latlng,
                   map: map,
                   icon:icn,
@@ -112,28 +113,31 @@ $(document).ready(function() {
               });
         marker.addListener('click',function(){
 
-           displaySomething();
+           displaySomething(id);
 
         });
 
         }
 
     function searchCars(lat,lng){
-            $.post('http://localhost:8000/api/searchCars',{lat:lat,lng:lng},function(match){
+            $.post('http://localhost:5000/api/searchCars',{lat:lat,lng:lng},function(match){
                $.each(match,function(i,val){
                    var clatval=val.lat;
                    var clngval=val.lng;
                    var cname=val.name;
+                   var cid=val.id;
                    var Clatlng = new google.maps.LatLng(clatval,clngval);
                    var cicn='https://developer.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
-                   createMarker(Clatlng,cicn,cname);
+                   createMarker(Clatlng,cicn,cname,cid);
 
 
                })
             })
         }
 
-    function displaySomething(){
+    function displaySomething(id){
+        $.post('http://localhost:5000/api/create',{car_location_id:id},function(){
+
         var modal = document.getElementById('myModal');
 
         var span = document.getElementsByClassName("close")[0];
@@ -155,7 +159,7 @@ $(document).ready(function() {
                 modal.style.display = "none";
             }
         }
+    })
     }
-
 
 });

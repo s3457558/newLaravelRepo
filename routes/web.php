@@ -88,3 +88,6 @@ Route::resource('adminCar', 'AdminCarController'); /*adminCar_view*/
 
 //Route::get('register','RegisterPageController@showUpLoadForm')->name('upload.register');
 //Route::post('register', 'RegisterPageController@storeFile');
+
+
+

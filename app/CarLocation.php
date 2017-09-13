@@ -7,7 +7,7 @@ use App\Car;
 
 class CarLocation extends Model
 {
-    protected $fillable=['name','lat','lng'];
+    protected $fillable=['id','name','lat','lng'];
 
     public function cars(){
         return $this->hasMany('App\Car');

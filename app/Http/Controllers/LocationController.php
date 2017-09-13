@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Car;
 use App\CarLocation;
 use Illuminate\Http\Request;
 
@@ -15,8 +16,14 @@ use Illuminate\Support\Facades\Session;
 
 class locationController extends Controller
 {
-    public function create()
+    public function create(Request $request)
     {
-        return view('location')->with('carLocation',CarLocation::all());
+        $car_location_id=$request->car_location_id;
+
+        $car = Car::where('car_location_id', 1)->get();
+        return view('location',['car' => $car]);
+
     }
 }
+
+

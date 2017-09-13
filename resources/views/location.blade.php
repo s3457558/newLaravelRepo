@@ -19,14 +19,11 @@
                 </div>
                 <div class="modal-body">
 
-                    @foreach($carLocation as $carLoc)
-                        <p>{{$carLoc->name}}</p>
-                        @foreach($carLoc->cars as $car)
-                            <p>{{$car->name}}</p>
+                    @foreach($car as $data)
+                        <p>{{$data->name}}</p>
 
-                        @endforeach
                     @endforeach
-                    <p>Car One Place Holder
+
                         @if(!\Illuminate\Support\Facades\Auth::guest())
                             <a href="booking.create" class="button white-text3">
                                 <span>Book</span></a>
@@ -37,19 +34,8 @@
                                 <span>Book</span></a>
                         @endif
 
-                    </p>
 
-                    <p>Car Two Place Holder
-                        @if(!\Illuminate\Support\Facades\Auth::guest())
-                            <a href="booking.create" class="button white-text3">
-                                <span>Book</span></a>
 
-                        @endif
-                        @if(!\Illuminate\Support\Facades\Auth::check())
-                            <a href="login" class="button white-text3">
-                                <span>Book</span></a>
-                        @endif
-                    </p>
                 </div>
 
                 <div class="modal-footer">
