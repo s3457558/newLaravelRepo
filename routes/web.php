@@ -20,8 +20,7 @@ Route::get('about', 'AboutPageController@create');                      //about 
 Route::get('location','LocationController@create');                     // location page
 Route::get('price','PriceController@create');                           // price page
 
-
-
+Route::get('location','SearchLocationController@searchLocation');
 
 
 Route::get('admin', ['middleware' => ['auth', 'admin'], function() {
