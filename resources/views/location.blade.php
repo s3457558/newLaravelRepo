@@ -59,7 +59,7 @@ $result1 = mysqli_query($connect, $query);
 
 
     <div id="myModal" class="modal">
-        
+
         <!-- Modal content -->
         <div class="modal-content">
             <div class="modal-header">

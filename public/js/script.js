@@ -25,7 +25,7 @@ $(document).ready(function() {
         myLatLng = new google.maps. LatLng(latval,lngval);
         geocoder.geocode( { 'latLng': myLatLng }, function(results, status) {
             if (status == google.maps.GeocoderStatus.OK) {
-                document.getElementById('start').value = results[0].formatted_address;
+                document.getElementById('start').value = results[0].formatted_address;  /*take current location name*/
             }
         });
         createMap(myLatLng);
@@ -206,6 +206,7 @@ $(document).ready(function() {
         //this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(destinationInput);
         this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(modeSelector);
 
+        /*take the database location_name*/
         $('#destination').change(function(){
             var end = $('#destination').val();
             $("#end").val(end);
