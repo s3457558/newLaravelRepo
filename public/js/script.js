@@ -1,4 +1,5 @@
 var map;
+
 $(document).ready(function() {
     geoLocationInit();
     function geoLocationInit() {
@@ -17,11 +18,16 @@ $(document).ready(function() {
     }
 
     function success(position){
-
+        var geocoder = new google.maps.Geocoder();
         var latval=position.coords.latitude;
         var lngval=position.coords.longitude;
         console.log([latval,lngval]);
         myLatLng = new google.maps. LatLng(latval,lngval);
+        geocoder.geocode( { 'latLng': myLatLng }, function(results, status) {
+            if (status == google.maps.GeocoderStatus.OK) {
+                document.getElementById('start').value = results[0].formatted_address;
+            }
+        });
         createMap(myLatLng);
         searchCars(latval,lngval);
         //console.log(latval);
@@ -132,8 +138,6 @@ $(document).ready(function() {
                 var cicn='https://developer.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
                 createMarker(Clatlng,cicn,cname);
 
-
-
         });
 
         });
@@ -180,8 +184,8 @@ $(document).ready(function() {
         this.startPlaceId = null;
         this.endPlaceId = null;
         this.travelMode = 'WALKING';
-        var startInput = document.getElementById('start-input');
-        var endInput = document.getElementById('end-input');
+        var startInput = document.getElementById('start');
+        var endInput = document.getElementById('end');  //can change destination or end
         var modeSelector = document.getElementById('selection');
         this.directionsService = new google.maps.DirectionsService;
         this.directionsDisplay = new google.maps.DirectionsRenderer;
@@ -202,6 +206,10 @@ $(document).ready(function() {
         //this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(destinationInput);
         this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(modeSelector);
 
+        $('#destination').change(function(){
+            var end = $('#destination').val();
+            $("#end").val(end);
+        });
 
     }
 

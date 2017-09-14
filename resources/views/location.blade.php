@@ -1,3 +1,17 @@
+<?php
+
+$hostname = "127.0.0.1";
+$username = "testlaravel";
+$password = "admin";
+$databaseName = "testlaravel";
+
+$connect = mysqli_connect($hostname, $username, $password, $databaseName);
+$query = "SELECT * FROM `car_locations`";
+
+$result1 = mysqli_query($connect, $query);
+?>
+
+
 @extends('layout.master')
 
 @section('title','location')
@@ -10,31 +24,42 @@
     </div>
     <h4>Option 1:</h4>
     <h4>Search your location to find our car-share:</h4>
-    <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+    <input id="pac-input" class="controls" type="text" placeholder="Search Box"/>
+    {{--<h4>Option 2:</h4>--}}
+    {{--<h4>Enter your start location:</h4>--}}
+    {{--<input type="text" id="start-input" class="controls" placeholder="Start location"/>--}}
+    {{--<h4>Enter your end location:</h4>--}}
+    {{--<input type="text" id="end-input" class="controls" placeholder="Destination location"/>--}}
+
     <h4>Option 2:</h4>
-    <h4>Enter your start location:</h4>
-    <input type="text" id="start-input" class="controls" placeholder="Start location">
-    <h4>Enter your end location:</h4>
-    <input type="text" id="end-input" class="controls" placeholder="Destination location">
+    <h4>Search your choice location:</h4>
+    <h4>Location:</h4>
+    <input type="text" id="start" class="controls">
+    <h4>Destination:</h4> <select id="destination" class="controls">
+    <?php while($row1 = mysqli_fetch_array($result1)):;?>
+    <option value="<?php echo $row1[1];?>"><?php echo $row1[1];?></option>
+    <?php endwhile;?>
+    </select>
+        {{--<input type="hidden" type="text" id="end"/>--}}
+    <input type="text" id="end" class="controls"/>
 
     <div id="selection" class="controls">
-        <input type="radio" name="type" id="changemode-walking" checked="checked">
+        <input type="radio" name="type" id="changemode-walking" checked="checked"/>
         <label for="changemode-walking">Walking</label>
 
-        <input type="radio" name="type" id="changemode-transit">
+        <input type="radio" name="type" id="changemode-transit"/>
         <label for="changemode-transit">Transit</label>
 
-        <input type="radio" name="type" id="changemode-driving">
+        <input type="radio" name="type" id="changemode-driving"/>
         <label for="changemode-driving">Driving</label>
     </div>
         <div id="dvDistance"></div>
 
     <div id="map"></div>
-        <div id="dvPanel" style="width: 500px; height: 500px">
+
 
     <div id="myModal" class="modal">
-
-
+        
         <!-- Modal content -->
         <div class="modal-content">
             <div class="modal-header">
@@ -74,8 +99,8 @@
             </div>
         </div>
 
-
-
+    </div>
+    </div>
 </div>
 
 @endsection
