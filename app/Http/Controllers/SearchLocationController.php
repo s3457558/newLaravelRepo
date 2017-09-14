@@ -13,7 +13,7 @@ class SearchLocationController extends Controller
 {
     public function searchLocation(Request $request)
     {
-        $car_location_id=$request->input('name','harry');
+        $car_location_id=$request->input('name');
         $car = CarLocation::where('name', $car_location_id)->get();
         return view('location',compact('car'));
 

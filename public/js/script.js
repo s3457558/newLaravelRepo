@@ -137,7 +137,7 @@ $(document).ready(function() {
     function displaySomething(name){
         $.ajax({
             type: 'POST',
-            url:'http://localhost:5000/api/create' ,
+            url:'http://localhost:5000/api/searchLocation' ,
             data: name ,
         });
 
