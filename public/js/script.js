@@ -102,9 +102,8 @@ $(document).ready(function() {
         });
     }
 
-    function createMarker(latlng,icn,name,id){
+    function createMarker(latlng,icn,name){
               var marker= new google.maps.Marker({
-                  id:id,
                   position:latlng,
                   map: map,
                   icon:icn,
@@ -113,7 +112,7 @@ $(document).ready(function() {
               });
         marker.addListener('click',function(){
 
-           displaySomething(id);
+           displaySomething(name);
 
         });
 
@@ -125,18 +124,22 @@ $(document).ready(function() {
                    var clatval=val.lat;
                    var clngval=val.lng;
                    var cname=val.name;
-                   var cid=val.id;
+
                    var Clatlng = new google.maps.LatLng(clatval,clngval);
                    var cicn='https://developer.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
-                   createMarker(Clatlng,cicn,cname,cid);
+                   createMarker(Clatlng,cicn,cname);
 
 
                })
             })
         }
 
-    function displaySomething(id){
-        $.post('http://localhost:5000/api/create',{car_location_id:id},function(){
+    function displaySomething(name){
+        $.ajax({
+            type: 'POST',
+            url:'http://localhost:5000/api/create' ,
+            data: name ,
+        });
 
         var modal = document.getElementById('myModal');
 
@@ -159,7 +162,7 @@ $(document).ready(function() {
                 modal.style.display = "none";
             }
         }
-    })
+
     }
 
 });

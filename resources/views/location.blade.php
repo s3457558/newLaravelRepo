@@ -21,7 +21,6 @@
 
                     @foreach($car as $data)
                         <p>{{$data->name}}</p>
-
                     @endforeach
 
                         @if(!\Illuminate\Support\Facades\Auth::guest())

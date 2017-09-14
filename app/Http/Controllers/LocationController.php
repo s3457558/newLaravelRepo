@@ -18,10 +18,10 @@ class locationController extends Controller
 {
     public function create(Request $request)
     {
-        $car_location_id=$request->car_location_id;
+        $car_location_id=$request->input('name','harry');
+        $car = CarLocation::where('name', $car_location_id)->get();
+        return view('location',compact('car'));
 
-        $car = Car::where('car_location_id', 1)->get();
-        return view('location',['car' => $car]);
 
     }
 }
