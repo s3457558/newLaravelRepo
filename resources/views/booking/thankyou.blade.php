@@ -32,7 +32,8 @@
 
 
 
-    <h4>Address: {!! Session::get('bookingDetails')->address_line_1 !!}</h4>
+    {{--<h4>Address: {!! Session::get('bookingDetails')->address_line_1 !!}</h4>--}}
+    <h4>Booking id: {!! Session::get('bookingDetails')->id !!}</h4>
     <h4>Suburb: {!! Session::get('bookingDetails')->suburb !!}</h4>
     <h4>State: {!! Session::get('bookingDetails')->state !!}</h4>
     <h4>Date: {!! Session::get('bookingDetails')->date !!}</h4>

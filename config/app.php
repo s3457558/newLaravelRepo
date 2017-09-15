@@ -2,6 +2,11 @@
 
 return [
 
+    'fileDestinationPath' => 'public',
+    'allowedFileTypes' => 'png',
+    'maxFileSize' => 1000,
+
+
     /*
     |--------------------------------------------------------------------------
     | Application Name

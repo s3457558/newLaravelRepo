@@ -15,8 +15,8 @@ class CreateChooseFilesTable extends Migration
     {
         Schema::create('choose_files', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->string('size');
+            $table->text('filename');
+            $table->string('filesize_bytes');
             $table->timestamps();
         });
     }

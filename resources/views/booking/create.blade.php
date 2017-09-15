@@ -47,12 +47,6 @@
         </select>
     </div>
 
-
-    {{--<div class="form-group">--}}
-    {{--{!! Form::label('address_line_1', 'Address') !!}--}}
-    {{--{!! Form::text('address_line_1', null,array('required','class'=>'form-control','placeholder'=>'Your address here')) !!}--}}
-    {{--</div>--}}
-
     <div class="form-group">
         {!! Form::label('suburb', 'Suburb') !!}
         {!! Form::text('suburb', null,array('required','class'=>'form-control','placeholder'=>'Your suburb here')) !!}
@@ -70,11 +64,9 @@
     </div>
 
 
-
     <div class="form-group">
         {!! Form::label('time', 'Time') !!}
         {!! Form::time('time', null,array('required','class'=>'form-control','placeholder'=>'Your time here')) !!}
-
     </div>
 
     <button class="btn btn-success" type="submit">Book Now!</button>

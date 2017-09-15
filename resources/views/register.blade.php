@@ -16,7 +16,7 @@
     </ul>
 
     {!! Form::open(array('route' => 'register_system', 'class' => 'form')) !!}
-
+    {{--{!! Form::open(['action' => 'RegisterPageController@doRegister']) !!}--}}
     <div class="register-form-group">
         {!! Form::label('Username') !!}
         {!! Form::text('username', null,
@@ -68,8 +68,6 @@
 
     <br>
     <h4>Have an account already? <a href="login">Click here</a></h4>
-
-
 
     {!! Form::close() !!}
         </div>

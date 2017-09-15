@@ -10,7 +10,7 @@
                     <br>
                     Enjoy our share car service
                 </h2>
-                <a href="file" class="button white-text3">
+                <a href="upload" class="button white-text3">
                     <span>JOIN US NOW</span>
                     </a>
 

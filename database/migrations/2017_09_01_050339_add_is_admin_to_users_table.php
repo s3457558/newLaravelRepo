@@ -15,6 +15,8 @@ class AddIsAdminToUsersTable extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->boolean('isAdmin');
+            $table->boolean('isRecord');
+
         });
     }
 
@@ -27,6 +29,7 @@ class AddIsAdminToUsersTable extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->dropColumn('isAdmin');
+            $table->dropColumn('isRecord');
         });
     }
 }

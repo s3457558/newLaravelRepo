@@ -4,7 +4,7 @@
     <div class="container">
         <div class="content">
             <div class="title">
-                <h2>Add New Car and dummy address</h2>
+                <h2>Add New Cars</h2>
             </div>
 
 

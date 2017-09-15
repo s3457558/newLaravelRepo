@@ -33,10 +33,11 @@
             <ul class="nav navbar-nav">
                 <li><a href="/">Car_sharing_home</a></li>
                 <li><a href="admin.home">Admin_home</a></li>
-                <li><a href="car.create">Admin_add</a></li>
+                <li><a href="car.create">Admin_add_cars</a></li>
                 <li><a href="admin">Admin_booking</a></li>
                 <li><a href="adminUser">Admin_user</a></li>
                 <li><a href="adminCar">Admin_car</a></li>
+                <li><a href="adminLicense.license">Admin_license</a></li>
                 {{--<li><a href="/">Car-sharing Home</a></li>--}}
                 {{--<li><a href="/">Car-sharing Home</a></li>--}}
             </ul>

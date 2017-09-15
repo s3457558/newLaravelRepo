@@ -46,5 +46,12 @@
                 {{ $users_detail->postcode}}
             </div>
         </div>
+
+        {{--<div class="col-xs-12 col-sm-12 col-md-12">--}}
+            {{--<div class="form-group">--}}
+                {{--<strong>User_license:</strong>--}}
+                {{--{{ $file->id}}--}}
+            {{--</div>--}}
+        {{--</div>--}}
     </div>
 @endsection

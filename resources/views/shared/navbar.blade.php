@@ -25,12 +25,13 @@
             <ul class="nav navbar-nav navbar-right">
             @if(!\Illuminate\Support\Facades\Auth::guest())
                     <li > <a href="booking.create">BOOKING</a></li>
+                    <li > <a href="record">VIEW HISTORY</a></li>
                     <li > <a style="padding-top: 0px;"> Welcome, <br> {{\Illuminate\Support\Facades\Auth::user()->name}} </a>  </li>
                     <li > <a href="logout">LOG OUT</a></li>
             @endif
 
             @if(!\Illuminate\Support\Facades\Auth::check())
-                    <li> <a class="register" href="file">JOIN US</a></li>
+                    <li> <a class="register" href="upload">JOIN US</a></li>
                     <li> <a href="login">LOG IN</a></li>
             @endif
             @if( Auth::check() && Auth::user()->isAdmin )

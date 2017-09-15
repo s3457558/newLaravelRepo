@@ -176,6 +176,15 @@ h3 > a {
     position: relative;
 }
 
+/*view history page*/
+.record_table{
+    color:white;
+    font-family: "Microsoft Himalaya";
+    font-size: 30px;
+}
+
+
+
 /*price page*/
 .display-tablecontainer{
     position: relative;
@@ -280,7 +289,10 @@ html, body {
     margin: 0;
 }
 
-
+/*upload page*/
+.choose-file{
+    color: white;
+}
 
 /*other*/
 
@@ -288,6 +300,11 @@ h2 {
     font-weight:bold;
     font-size: 40px;
     color: #ffffff;
+}
+
+h5 {
+    font-weight:bold;
+    color: white;
 }
 
 p {
@@ -334,3 +351,4 @@ h4{
 form{
     padding-top: 50px;
 }
+
