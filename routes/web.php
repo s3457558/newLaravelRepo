@@ -21,7 +21,11 @@ Route::get('location','LocationController@create');                     // locat
 Route::get('price','PriceController@create');                           // price page
 
 Route::get('location','SearchLocationController@searchLocation');
-
+Route::post('/searchLocation', function(){
+    if(Request::ajax()){
+        return Response::json(Request::all());
+    }
+});
 
 Route::get('admin', ['middleware' => ['auth', 'admin'], function() {
     return view('admin.admin');
