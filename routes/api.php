@@ -18,5 +18,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::post('/searchCars', 'SearchCarsController@searchCars');
-
+Route::post('/searchLocation', function(){
+    if(Request::ajax()){
+        return Response::json(Request::all());
+    }
+});
 

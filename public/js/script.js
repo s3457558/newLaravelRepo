@@ -119,7 +119,7 @@ $(document).ready(function() {
         }
 
     function searchCars(lat,lng){
-            $.post('http://localhost:5000/api/searchCars',{lat:lat,lng:lng},function(match){
+            $.post('/api/searchCars',{lat:lat,lng:lng},function(match){
                $.each(match,function(i,val){
                    var clatval=val.lat;
                    var clngval=val.lng;
@@ -136,7 +136,7 @@ $(document).ready(function() {
 
     function displaySomething(name){
 
-        $.post('/searchLocation',{name:name},function() {
+        $.post('/api/searchLocation',{name:name},function(){
 
             var modal = document.getElementById('myModal');
 
