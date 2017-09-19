@@ -3,12 +3,16 @@
 @section('title','location')
 
 @section('content')
-    <div class="container">
+    <div class="container" id="idWorksL">
 
-        <input id="pac-input" class="controls" type="text" placeholder="Search Box">
-
-        <div id="map"></div>
-
+        
+        
+            <div id="map"></div>
+            <div id="boxToSearch">
+           <p> <input id="pac-input" class="controls" type="text" placeholder="Type Location to find cars"></p>
+            <div id="findText">get my location: </div>    
+            <button type="button" id="myCurrentLoc">GO</button>
+            </div>
         <div id="myModal" class="modal">
 
             <!-- Modal content -->
@@ -18,14 +22,10 @@
                     <h2>Select Your Car</h2>
                 </div>
                 <div class="modal-body">
-
-                    @foreach($carLocation as $carLoc)
-                        <p>{{$carLoc->name}}</p>
-                        @foreach($carLoc->cars as $car)
-                            <p>{{$car->name}}</p>
-
-                        @endforeach
-                    @endforeach
+                    @foreach($cars as $object)
+                        {{ $object->name }}
+                     @endforeach
+                    
                     <p>Car One Place Holder
                         @if(!\Illuminate\Support\Facades\Auth::guest())
                             <a href="booking.create" class="button white-text3">

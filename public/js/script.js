@@ -4,12 +4,12 @@ $(document).ready(function() {
     function geoLocationInit() {
         if(navigator.geolocation){
             navigator.geolocation.getCurrentPosition(success);
-          var optn ={
+            /*var optn ={
             enalbeHighAccuracy: true,
             timeout: Infinity,
             maximumAge:0
-          }
-            navigator.geolocation.watchPosition(success,fail,optn);
+            }*/
+           //navigator.geolocation.watchPosition(success,fail,optn);
         }else{
             alert("Browser not supported");
         }
@@ -19,7 +19,7 @@ $(document).ready(function() {
 
         var latval=position.coords.latitude;
         var lngval=position.coords.longitude;
-        console.log([latval,lngval]);
+        //console.log([latval,lngval]);
         myLatLng = new google.maps. LatLng(latval,lngval);
         createMap(myLatLng);
         searchCars(latval,lngval);
@@ -45,7 +45,7 @@ $(document).ready(function() {
         // Create the search box and link it to the UI element.
         var input = document.getElementById('pac-input');
         var searchBox = new google.maps.places.SearchBox(input);
-        map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+        // map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
 
         // Bias the SearchBox results towards current map's viewport.
         map.addListener('bounds_changed', function() {
@@ -111,28 +111,40 @@ $(document).ready(function() {
 
               });
         marker.addListener('click',function(){
-
            displaySomething();
 
         });
 
         }
-
-    function searchCars(lat,lng){
+    var change=[];
+    var change1=[];
+    var i;
+    function searchCars(lat,lng,id){
             $.post('http://localhost:8000/api/searchCars',{lat:lat,lng:lng},function(match){
                $.each(match,function(i,val){
                    var clatval=val.lat;
                    var clngval=val.lng;
                    var cname=val.name;
+                   var carLocationId=val.id;
                    var Clatlng = new google.maps.LatLng(clatval,clngval);
                    var cicn='https://developer.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
-                   createMarker(Clatlng,cicn,cname);
-
-
+                   
+                   change.push(Clatlng);
+                   
+                   //createMarker(Clatlng,cicn,cname);
                })
             })
         }
+    console.log(change.length);
+        //console.log(change1.length);
 
+    for(i=0; i<change1.length;i++){
+
+        marker =new google.maps.Marker({
+                position: new google.maps.LatLng(change1[i][0],change1[i][1]),
+                map:map
+            });
+        }
     function displaySomething(){
         var modal = document.getElementById('myModal');
 
