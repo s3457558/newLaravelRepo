@@ -22,8 +22,11 @@
                     <h2>Select Your Car</h2>
                 </div>
                 <div class="modal-body">
-                    @foreach($cars as $object)
-                        {{ $object->name }}
+
+                    @foreach($carLocation as $location)
+                        @foreach($location->cars as $object)
+                        {{$object->name}}
+                        @endforeach
                      @endforeach
                     
                     <p>Car One Place Holder

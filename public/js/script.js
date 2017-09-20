@@ -102,7 +102,7 @@ $(document).ready(function() {
         });
     }
 
-    function createMarker(latlng,icn,name){
+    function createMarker(latlng,icn,name,id){
               var marker= new google.maps.Marker({
                   position:latlng,
                   map: map,
@@ -111,14 +111,12 @@ $(document).ready(function() {
 
               });
         marker.addListener('click',function(){
-           displaySomething();
+           displaySomething(id);
 
         });
 
         }
-    var change=[];
-    var change1=[];
-    var i;
+    
     function searchCars(lat,lng,id){
             $.post('http://localhost:8000/api/searchCars',{lat:lat,lng:lng},function(match){
                $.each(match,function(i,val){
@@ -129,28 +127,27 @@ $(document).ready(function() {
                    var Clatlng = new google.maps.LatLng(clatval,clngval);
                    var cicn='https://developer.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
                    
-                   change.push(Clatlng);
+                  // change.push(Clatlng);
                    
-                   //createMarker(Clatlng,cicn,cname);
+                   createMarker(Clatlng,cicn,cname,carLocationId);
                })
             })
         }
-    console.log(change.length);
-        //console.log(change1.length);
+    
+    //function findCars()  
 
-    for(i=0; i<change1.length;i++){
 
-        marker =new google.maps.Marker({
-                position: new google.maps.LatLng(change1[i][0],change1[i][1]),
-                map:map
-            });
-        }
-    function displaySomething(){
+    function displaySomething(id){
+        if(id==1){
+
         var modal = document.getElementById('myModal');
 
         var span = document.getElementsByClassName("close")[0];
 
         modal.style.display = "block";
+
+        }
+        
 
 
     // When the user clicks on <span> (x), close the modal

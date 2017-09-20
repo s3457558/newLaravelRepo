@@ -26,8 +26,7 @@ class ExampleTest extends TestCase
     	$this->assertDatabaseHas('cars',['name'=> 'Tesla','car_model'=>'S','price'=> '30','isBooked'=> '0',
             'status'          => 'null',
             'car_location_id' => '1']);
-    	$this->assertDatabaseHas('cars',['name'            => 'Toyota Camry',
-            'car_model'       => '05',
+    	$this->assertDatabaseHas('cars',['name'=> 'Toyota Camry', 'car_model'       => '05',
             'price'           => '10',
             'isBooked'        => '0',
             'status'          => 'null',
@@ -40,4 +39,5 @@ class ExampleTest extends TestCase
             'car_location_id' => '2']);
 
     }
+    
 }

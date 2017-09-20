@@ -14,6 +14,8 @@ use Illuminate\Support\Facades\Session;
 
 use App\carLocation;
 
+use App\Car;
+
 use DB;
 
 class locationController extends Controller
@@ -21,8 +23,11 @@ class locationController extends Controller
     public function create()
     {
     	//$hello = DB::talbe('car_locations')->get();
-    	$cars = carLocation::find(1)->cars;
-        return view('location',compact('cars'));
+    	$carLocation = carLocation::all();
+    	$cars = Car::all();
+        return view('location')
+        	->with('carLocation',$carLocation)
+        	->with('cars',$cars);
     }
    
 
