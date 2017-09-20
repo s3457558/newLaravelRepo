@@ -228,7 +228,7 @@ $result1 = mysqli_query($connect, $query);
             }
 
             function searchCars(lat, lng) {
-                $.post('http://127.0.0.1:8000/api/searchCars', {lat: lat, lng: lng}, function (match) {
+                $.post('/api/searchCars', {lat: lat, lng: lng}, function (match) {
                     $.each(match, function (i, val) {
                         var clatval = val.lat;
                         var clngval = val.lng;
