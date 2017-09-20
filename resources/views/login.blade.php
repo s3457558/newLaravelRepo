@@ -16,7 +16,7 @@
     </ul>
 
     {{Form::open(array('url' => 'login')) }}
-
+loca
     <div class="login-form-group">
         {!! Form::label('Email') !!}
         {!! Form::text('email', null,
