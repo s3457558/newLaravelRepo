@@ -15,24 +15,13 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <span class="close">&times;</span>
-                    <h2>Select Your Car</h2>
+                    <h2 class="location"></h2>
                 </div>
                 <div class="modal-body">
 
-                    <p>Car One Place Holder
-                        @if(!\Illuminate\Support\Facades\Auth::guest())
-                            <a href="booking.create" class="button white-text3">
-                                <span>Book</span></a>
-                        @endif
 
-                        @if(!\Illuminate\Support\Facades\Auth::check())
-                            <a href="login" class="button white-text3">
-                                <span>Book</span></a>
-                        @endif
 
-                    </p>
-
-                    <p>Car Two Place Holder
+                    <p class="car">
                         @if(!\Illuminate\Support\Facades\Auth::guest())
                             <a href="booking.create" class="button white-text3">
                                 <span>Book</span></a>
@@ -195,15 +184,27 @@
                 var modal = document.getElementById('myModal');
 
 
-
                 var carLocationData = '{!! json_encode($carLocation) !!}';
                 var carData = '{!! json_encode($car) !!}';
 
 
                 var span = document.getElementsByClassName("close")[0];
-                var modalHeader = document.getElementsByClassName("modal-header")[0];
-                modalHeader.append(carLocationData);
-                modalHeader.append(carData)
+                var modalTitle = document.getElementsByClassName("location")[0];
+                var carItem = document.getElementsByClassName("car")[0];
+                var carLocationJSONData = JSON.parse(carLocationData);
+                var carJSONData = JSON.parse(carData);
+
+
+                $.each(carLocationJSONData, function (i, carLocationValue) {
+                    if (carLocationValue.name.localeCompare(carLocationName)) {
+                        modalTitle.append(carLocationValue.name);
+                        $.each(carJSONData, function (j, carValue) {
+                            if (carValue.car_location_id == carLocationValue.id) {
+                               carItem.append(carValue.name);
+                            }
+                        });
+                    }
+                });
 
                 modal.style.display = "block";
 
@@ -222,9 +223,6 @@
                     }
                 }
             }
-
-
-
 
 
         });
