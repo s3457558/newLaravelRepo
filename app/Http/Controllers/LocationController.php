@@ -12,7 +12,7 @@ use App\Http\Requests\ContactFormRequest;
 
 class locationController extends Controller
 {
-    public function create()
+    public function view()
     {
 
         return view('location');

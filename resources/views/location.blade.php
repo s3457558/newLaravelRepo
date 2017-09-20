@@ -19,7 +19,7 @@
                 </div>
                 <div class="modal-body">
 
-                    @foreach($car as $data)
+                    @foreach($cars as $data)
                         <p>{{$data->name}}</p>
                     @endforeach
 

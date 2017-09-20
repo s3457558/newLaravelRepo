@@ -23,8 +23,7 @@ $(document).ready(function() {
         myLatLng = new google.maps. LatLng(latval,lngval);
         createMap(myLatLng);
         searchCars(latval,lngval);
-            console.log(latval);
-            console.log(lngval);
+
     }
 
     function fail() {
@@ -111,9 +110,9 @@ $(document).ready(function() {
 
               });
         marker.addListener('click',function(){
-
-           displaySomething(name);
-
+            $.post('/api/searchLocation',{name:name},function() {
+                displaySomething(name);
+            });
         });
 
         }
@@ -124,7 +123,6 @@ $(document).ready(function() {
                    var clatval=val.lat;
                    var clngval=val.lng;
                    var cname=val.name;
-
                    var Clatlng = new google.maps.LatLng(clatval,clngval);
                    var cicn='https://developer.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
                    createMarker(Clatlng,cicn,cname);
@@ -136,7 +134,7 @@ $(document).ready(function() {
 
     function displaySomething(name){
 
-        $.post('/api/searchLocation',{name:name},function(){
+            console.log(name);
 
             var modal = document.getElementById('myModal');
 
@@ -144,13 +142,11 @@ $(document).ready(function() {
 
             modal.style.display = "block";
 
-
             // When the user clicks on <span> (x), close the modal
 
             span.onclick = function () {
                 modal.style.display = "none";
             }
-
 
             // When the user clicks anywhere outside of the modal, close it
 
@@ -159,7 +155,7 @@ $(document).ready(function() {
                     modal.style.display = "none";
                 }
             }
-        });
+
     }
 
 });
