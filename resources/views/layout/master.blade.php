@@ -15,7 +15,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/style.css" type="text/css" />
 
-    <link rel="stylesheet" href="css/style.css" type="text/css" />ype="image/jpeg" href="{{{ asset('images/small_car.jpg') }}}" size="16x16">
+    <link rel="shortcut icon" type="image/jpeg" href="{{{ asset('images/small_car.jpg') }}}" size="16x16">
     <meta name="viewport" content ="width=device-width,initial-scale=1,user-scalable=yes" />
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false&libraries=places"></script>
 </head>
