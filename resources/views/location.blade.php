@@ -18,10 +18,11 @@
                     <h2 class="location"></h2>
                 </div>
                 <div class="modal-body">
+       <p class="car">
+    </p>
 
 
-
-                    <p class="car">
+                    <p>
                         @if(!\Illuminate\Support\Facades\Auth::guest())
                             <a href="booking.create" class="button white-text3">
                                 <span>Book</span></a>
@@ -166,7 +167,7 @@
             }
 
             function searchCars(lat, lng) {
-                $.post('http://localhost:8000/api/searchCars', {lat: lat, lng: lng}, function (match) {
+                $.post('http://localhost:5000/api/searchCars', {lat: lat, lng: lng}, function (match) {
                     $.each(match, function (i, val) {
                         var clatval = val.lat;
                         var clngval = val.lng;
@@ -197,10 +198,11 @@
 
                 $.each(carLocationJSONData, function (i, carLocationValue) {
                     if (carLocationValue.name.localeCompare(carLocationName)) {
-                        modalTitle.append(carLocationValue.name);
+                        modalTitle.innerHTML = '<p>'+carLocationValue.name+'</p>';
                         $.each(carJSONData, function (j, carValue) {
                             if (carValue.car_location_id == carLocationValue.id) {
-                               carItem.append(carValue.name);
+                               carItem.innerHTML += '<li>'+carValue.name+'</li>';
+
                             }
                         });
                     }
@@ -212,6 +214,8 @@
 
                 span.onclick = function () {
                     modal.style.display = "none";
+                    $(carItem).empty();
+
                 }
 
 
@@ -220,6 +224,7 @@
                 window.onclick = function (event) {
                     if (event.target == modal) {
                         modal.style.display = "none";
+                        $(carItem).empty();
                     }
                 }
             }
