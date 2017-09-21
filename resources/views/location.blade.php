@@ -20,7 +20,7 @@ $result1 = mysqli_query($connect, $query);
     <div class="container">
         <div class="content">
             <div class="title">
-                <h2>Find Location</h2>
+                <h2>Find Car</h2>
             </div>
             <h4>Option 1:</h4>
             <h4>Search your location to find our car-share:</h4>
@@ -275,6 +275,8 @@ $result1 = mysqli_query($connect, $query);
                     var end = $('#destination').val();
                     $("#end").val(end);
                 });
+
+
 
             }
 

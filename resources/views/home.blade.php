@@ -21,7 +21,7 @@
                     <br>
                     You can book your car now
                 </h2>
-                <a href="booking.create" class="button white-text3">
+                <a href="location" class="button white-text3">
                     <span>BOOK CAR</span>
                 </a>
                 @endif
