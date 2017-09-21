@@ -23,20 +23,21 @@
                 <li><a href="location">LOCATION</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-            @if(!\Illuminate\Support\Facades\Auth::guest())
+                @if(!\Illuminate\Support\Facades\Auth::guest())
                     <li > <a href="booking.create">BOOKING</a></li>
                     <li > <a href="record">VIEW HISTORY</a></li>
+                    <li > <a href="return">RETURN</a></li>
                     <li > <a style="padding-top: 0px;"> Welcome, <br> {{\Illuminate\Support\Facades\Auth::user()->name}} </a>  </li>
                     <li > <a href="logout">LOG OUT</a></li>
-            @endif
+                @endif
 
-            @if(!\Illuminate\Support\Facades\Auth::check())
+                @if(!\Illuminate\Support\Facades\Auth::check())
                     <li> <a class="register" href="upload">JOIN US</a></li>
                     <li> <a href="login">LOG IN</a></li>
-            @endif
-            @if( Auth::check() && Auth::user()->isAdmin )
+                @endif
+                @if( Auth::check() && Auth::user()->isAdmin )
                     <li style="float:right;"> <a href="admin.home">ADMIN</a></li>
-            @endif
+                @endif
 
             </ul>
 

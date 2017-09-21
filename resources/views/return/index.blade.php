@@ -1,10 +1,11 @@
 @extends('layout.master')
 @section('content')
     <div class="container-brv">
+
         <div class="row">
             <div class="col-lg-12 margin-tb">
                 <div class="pull-left">
-                    <h2>Booking record</h2>
+                    <h2>Booking return</h2>
                 </div>
             </div>
         </div>
@@ -13,8 +14,6 @@
                 <p>{{ $message }}</p>
             </div>
         @endif
-
-
         <div class="record_table">
             <table class="table table-bordered">
                 <tr>
@@ -23,21 +22,27 @@
                     <th>Booking postcode</th>
                     <th>Booking date</th>
                     <th>Booking time</th>
+                    <th width="280px">Action</th>
                 </tr>
 
                 {{--@foreach($details as $register)--}}
-                @foreach ($car_details as $car_booking)
+                @foreach ($return_car_details as $return_car_booking)
                     <tr>
-                        <td>{{ $car_booking->id }}</td>
-                        <td>{{ $car_booking->suburb}}</td>
-                        <td>{{ $car_booking->state}}</td>
-                        <td>{{ $car_booking->date}}</td>
-                        <td>{{ $car_booking->time}}</td>
+                        <td>{{ $return_car_booking->id }}</td>
+                        <td>{{ $return_car_booking->suburb}}</td>
+                        <td>{{ $return_car_booking->state}}</td>
+                        <td>{{ $return_car_booking->date}}</td>
+                        <td>{{ $return_car_booking->time}}</td>
+                        <td>
+                            {!! Form::open(['method' => 'DELETE','route' => ['return.destroy', $return_car_booking->id],'style'=>'display:inline']) !!}
+                            {!! Form::submit('Return', ['class' => 'btn btn-primary']) !!}
+                            {!! Form::close() !!}
+                        </td>
                     </tr>
                 @endforeach
                 {{--@endforeach--}}
             </table>
-            {!! $car_details->render() !!}
+            {!! $return_car_details->render() !!}
         </div>
     </div>
 @endsection

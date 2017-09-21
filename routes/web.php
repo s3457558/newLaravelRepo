@@ -69,8 +69,11 @@ Route::get('thankyou', function () {
 Route::resource('record', 'RecordController');
 
 
+/*customers return the car*/
+Route::resource('return', 'ReturnController');
 
-/*****************************admin page**************************************/
+
+/*****************************Data management (admin page)**************************************/
 /*admin access*/
 Route::get('admin', ['middleware' => ['auth', 'admin'], function() {
     return view('admin.admin');
