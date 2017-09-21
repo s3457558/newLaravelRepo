@@ -15,11 +15,11 @@ class CreateRecordBookingDetailsTable extends Migration
     {
         Schema::create('record_booking_details', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('car_name');
             $table->string('suburb');
             $table->string('state');
             $table->string('date');
             $table->string('time');
-
             $table->timestamps();
         });
     }
