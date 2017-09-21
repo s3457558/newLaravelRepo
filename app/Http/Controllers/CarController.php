@@ -20,7 +20,8 @@ class CarController extends Controller
         $this->validate($request, [
             'name' => 'required',
             'price' => 'required',
-            'car_model' => 'required'
+            'car_model' => 'required',
+            'car_location_id'=>'required'
 //            'status' => 'required',
 //            'isBooked' => 'required',
         ]);
@@ -33,6 +34,7 @@ class CarController extends Controller
         $cars->name = $allRequest['name'];
         $cars->car_model = $allRequest['car_model'];
         $cars->price = $allRequest['price'];
+        $cars->car_location_id = $allRequest['car_location_id'];
         $cars->status = 'Available';
         $cars->isBooked = 0;
         $cars->save();

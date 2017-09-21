@@ -1,10 +1,12 @@
 <?php
 
 $hostname = "127.0.0.1";
-$username = "supriya";
-$password = "";
-$databaseName = "testdb";
-$connect = mysqli_connect($hostname, $username, $password, $databaseName);
+$username = "testlaravel";
+$password = "admin";
+$databaseName = "testlaravel";
+$port="9000";
+$connect = mysqli_connect($hostname, $username, $password, $databaseName,$port);
+
 $query = "SELECT * FROM `car_locations`";
 
 $result1 = mysqli_query($connect, $query);
