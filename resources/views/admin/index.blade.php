@@ -1,13 +1,11 @@
 @extends('admin.master')
+@section('title', 'Admin_booking')
 @section('content')
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
                 <h2>Booking Table</h2>
             </div>
-            {{--<div class="pull-right">--}}
-                {{--<a class="btn btn-success" href="{{ route('admin.create') }}"> Create New Product</a>--}}
-            {{--</div>--}}
         </div>
     </div>
     @if ($message = Session::get('success'))
@@ -18,15 +16,13 @@
     <table class="table table-bordered">
         <tr>
             <th>Booking ID</th>      {{--register (username)--}}
-            {{--<th>Booking address</th>--}}
             <th>Booking suburb</th>
             <th>Booking postcode</th>
             <th width="280px">Action</th>
         </tr>
         @foreach ($car_booking_details as $booking)
             <tr>
-                {{--<td>{{ ++$i }}</td>--}}
-                <td>{{ ++$i }}</td>
+                <td>{{ $booking->id }}</td>
                 <td>{{ $booking->suburb}}</td>
                 <td>{{ $booking->state}}</td>
                 <td>

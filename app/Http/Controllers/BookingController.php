@@ -11,6 +11,8 @@ class BookingController extends Controller
 {
     //
 
+
+
     public function create()
     {
         $cars = Car::all();

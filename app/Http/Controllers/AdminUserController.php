@@ -19,10 +19,18 @@ class AdminUserController extends Controller
 //    }
 
 
+//    public function showFile($id)
+//    {
+//        $file = File::find($id);
+//        return view('adminUser.license',compact('file'));
+//    }
+
+
     public function show($id)
     {
         $users_detail= User::find($id);
-        return view('adminUser.show',compact('users_detail'));
+
+        return view('adminUser.showUser',compact('users_detail'));
     }
 //
 //

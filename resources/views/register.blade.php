@@ -14,7 +14,7 @@
     </ul>
 
     {!! Form::open(array('route' => 'register_system', 'class' => 'form')) !!}
-
+    {{--{!! Form::open(['action' => 'RegisterPageController@doRegister']) !!}--}}
     <div class="register-form-group">
         {!! Form::label('Username') !!}
         {!! Form::text('username', null,
@@ -59,9 +59,6 @@
             array('required',
                   'class'=>'register-form-control',
                   'placeholder'=>'Confirm your password')) !!}
-        <br>
-        {!! Form::label('License file') !!}
-        {!! Form::file('') !!}
         <br>
         {!! Form::submit('Register',
           array('class'=>'btn btn-primary')) !!}
