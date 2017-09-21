@@ -23,21 +23,25 @@ class BookingController extends Controller
     {
 
         $this->validate($request, [
-            'item_id' => 'required',
-//            'address_line_1' => 'required',
+            'car_name' => 'required',
             'suburb' => 'required',
             'state' => 'required',
             'time' => 'required',
             'date' => 'required',
         ]);
 
+
         $allRequest = $request->all();
+
+
+
         $bookingDetails = new CarBookingDetails();
 //        $bookingDetails->address_line_1 = $allRequest['address_line_1'];
+//        $bookingDetails->car_name = '{!! json_encode($cars->name) !!}';
+        $bookingDetails->car_name = $allRequest['car_name'];
         $bookingDetails->suburb = $allRequest['suburb'];
         $bookingDetails->state = $allRequest['state'];
         $bookingDetails->time = $allRequest['time'];
-
         $bookingDetails->date = $allRequest['date'];
         $bookingDetails->save();
 
