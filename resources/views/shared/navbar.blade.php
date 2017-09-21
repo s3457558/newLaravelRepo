@@ -22,7 +22,7 @@
 
                 <li><a href="price">PRICE</a></li>
                 <li><a href="contact">CONTACT US</a></li>
-                <li><a href="location">LOCATION</a></li>
+                <li><a href="location">FIND CAR</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 @if(!\Illuminate\Support\Facades\Auth::guest())
