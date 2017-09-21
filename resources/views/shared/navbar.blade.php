@@ -19,14 +19,18 @@
             <ul class="nav navbar-nav navbar-left">
                 <li><a href="/">HOME<span class="sr-only"></span></a></li>
                 <li><a href="about">ABOUT US</a></li>
-                @if(!\Illuminate\Support\Facades\Auth::guest())
-                    <li > <a href="booking.create">BOOKING</a></li>
-                @endif
+
                 <li><a href="price">PRICE</a></li>
                 <li><a href="contact">CONTACT US</a></li>
                 <li><a href="location">LOCATION</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
+                @if(!\Illuminate\Support\Facades\Auth::guest())
+                    <li> <a href="booking.create">BOOKING</a></li>
+                    <li> <a href="record">VIEW HISTORY</a></li>
+                    <li> <a href="return">RETURN</a></li>
+                    <li> <a style="padding-top:0px">Welcome,<br>{{\Illuminate\Support\Facades\Auth::user()->name}}</a></li>
+                    <li> <a href="logout">LOG OUT</a></li>
                 @endif
 
                 @if(!\Illuminate\Support\Facades\Auth::check())
