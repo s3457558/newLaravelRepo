@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 var map;
 $(document).ready(function() {
     geoLocationInit();
@@ -159,3 +160,5 @@ $(document).ready(function() {
     }
 
 });
+=======
+>>>>>>> origin/master

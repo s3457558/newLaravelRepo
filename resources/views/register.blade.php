@@ -7,8 +7,6 @@
                 <h2>Register Form</h2>
             </div>
 
-
-
     <ul>
         @foreach($errors->all() as $error)
             <li>{{ $error }}</li>
@@ -16,7 +14,7 @@
     </ul>
 
     {!! Form::open(array('route' => 'register_system', 'class' => 'form')) !!}
-
+    {{--{!! Form::open(['action' => 'RegisterPageController@doRegister']) !!}--}}
     <div class="register-form-group">
         {!! Form::label('Username') !!}
         {!! Form::text('username', null,
@@ -62,17 +60,12 @@
                   'class'=>'register-form-control',
                   'placeholder'=>'Confirm your password')) !!}
         <br>
-        {!! Form::label('License file') !!}
-        {!! Form::file('') !!}
-        <br>
         {!! Form::submit('Register',
           array('class'=>'btn btn-primary')) !!}
     </div>
 
     <br>
     <h4>Have an account already? <a href="login">Click here</a></h4>
-
-
 
     {!! Form::close() !!}
         </div>

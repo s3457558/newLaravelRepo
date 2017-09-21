@@ -1,6 +1,6 @@
 #map {
 	height:600px;
-	width:1140px;
+	width:100%;
 	margin: auto;
 }
 
@@ -16,14 +16,26 @@
 }
 
 #pac-input {
+
 	background-color: #fff;
 	font-family: Roboto;
 	font-size: 15px;
 	font-weight: 300;
-	margin-left: 12px;
+	margin: 0 0 10px 0;
 	padding: 0 11px 0 13px;
 	text-overflow: ellipsis;
-	width: 300px;
+	width: 400px;
+}
+
+#start,#end,#destination{
+	background-color: #fff;
+	font-family: Roboto;
+	font-size: 15px;
+	font-weight: 300;
+	margin: 0 0 10px 0;
+	padding: 0 11px 0 13px;
+	text-overflow: ellipsis;
+	width: 400px;
 }
 
 #pac-input:focus {
@@ -50,6 +62,40 @@
 	width: 345px;
 }
 
+
+
+#start-input,
+#end-input {
+	background-color: #fff;
+	font-family: Roboto;
+	font-size: 15px;
+	font-weight: 300;
+	margin: 0 0 10px 0;
+	padding: 0 11px 0 13px;
+	text-overflow: ellipsis;
+	width: 200px;
+}
+
+#start-input:focus,
+#end-input:focus {
+	border-color: #4d90fe;
+}
+
+#selection {
+	color: #fff;
+	background-color: #4d90fe;
+	margin-left: 12px;
+	padding: 5px 11px 0px 11px;
+}
+
+#selection label {
+	font-family: Roboto;
+	font-size: 13px;
+	font-weight: 300;
+}
+
+
 #siteNotice {
 	font-size: 15px;
 }
+

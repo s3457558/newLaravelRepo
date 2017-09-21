@@ -4,7 +4,7 @@
 
     <div class="container">
         <div class="content">
-            <div class="size">
+
             <div class="title">
                 <h2>Login</h2>
              </div>
@@ -16,7 +16,7 @@
     </ul>
 
     {{Form::open(array('url' => 'login')) }}
-loca
+
     <div class="login-form-group">
         {!! Form::label('Email') !!}
         {!! Form::text('email', null,
@@ -45,7 +45,7 @@ loca
 
 
     {!! Form::close() !!}
-            </div>
+
         </div>
     </div>
 @endsection

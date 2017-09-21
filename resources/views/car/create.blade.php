@@ -4,7 +4,7 @@
     <div class="container">
         <div class="content">
             <div class="title">
-                <h2>Add New Car and dummy address</h2>
+                <h2>Add New Cars</h2>
             </div>
 
 
@@ -30,17 +30,22 @@
 
             <div class="form-group">
                 {!! Form::label('name', 'Name') !!}
-                {!! Form::text('name', null,array('required','class'=>'form-control','placeholder'=>'Your add car name here')) !!}
+                {!! Form::text('name', null,array('required','class'=>'form-control','placeholder'=>'Add car name here')) !!}
             </div>
 
             <div class="form-group">
                 {!! Form::label('car_model', 'Model') !!}
-                {!! Form::text('car_model', null,array('required','class'=>'form-control','placeholder'=>'Your add car model here')) !!}
+                {!! Form::text('car_model', null,array('required','class'=>'form-control','placeholder'=>'Add car model here')) !!}
             </div>
 
             <div class="form-group">
                 {!! Form::label('price', 'Price') !!}
-                {!! Form::text('price', null,array('required','class'=>'form-control','placeholder'=>'Your add car price here')) !!}
+                {!! Form::text('price', null,array('required','class'=>'form-control','placeholder'=>'Add car price here')) !!}
+            </div>
+
+            <div class="form-group">
+                {!! Form::label('car_location_id', 'Car location') !!}
+                {!! Form::text('car_location_id', null,array('required','class'=>'form-control','placeholder'=>'Add car price here')) !!}
             </div>
 
             <button class="btn btn-success" type="submit">Submit infor</button>
