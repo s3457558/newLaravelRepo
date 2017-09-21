@@ -24,7 +24,6 @@ class BookingController extends Controller
 
         $this->validate($request, [
             'item_id' => 'required',
-//            'address_line_1' => 'required',
             'suburb' => 'required',
             'state' => 'required',
             'time' => 'required',
