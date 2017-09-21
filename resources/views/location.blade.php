@@ -4,8 +4,8 @@ $hostname = "127.0.0.1";
 $username = "testlaravel";
 $password = "admin";
 $databaseName = "testlaravel";
-
-$connect = mysqli_connect($hostname, $username, $password, $databaseName);
+$port="9000";
+$connect = mysqli_connect($hostname, $username, $password, $databaseName,$port);
 $query = "SELECT * FROM `car_locations`";
 
 $result1 = mysqli_query($connect, $query);
@@ -228,7 +228,7 @@ $result1 = mysqli_query($connect, $query);
             }
 
             function searchCars(lat, lng) {
-                $.post('http://127.0.0.1:8000/api/searchCars', {lat: lat, lng: lng}, function (match) {
+                $.post('/api/searchCars', {lat: lat, lng: lng}, function (match) {
                     $.each(match, function (i, val) {
                         var clatval = val.lat;
                         var clngval = val.lng;
@@ -368,7 +368,7 @@ $result1 = mysqli_query($connect, $query);
                     if (carLocationValue.name.localeCompare(carLocationName)) {
                         modalTitle.innerHTML = '<p>' + carLocationValue.name + '</p>';
                         $.each(carJSONData, function (j, carValue) {
-                            if (carValue.car_location_id == carLocationValue.id) {
+                            if (carValue.car_location_id == carLocationValue.id && carValue.isBooked == false) {
                                 carItem.innerHTML += '<li>' + carValue.name + '</li>';
 
                             }
