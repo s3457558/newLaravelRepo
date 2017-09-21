@@ -68,12 +68,6 @@
 
     {!! Form::close() !!}
 
-        <div class="new">
-            <div class="form-group">
-                <h4> search:</h4> <input type="text" id="searchmap"></input>
 
-                    <div id="map"></div>
-            </div>
-        </div>
     </div>
 @endsection
