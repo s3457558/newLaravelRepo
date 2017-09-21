@@ -1,11 +1,10 @@
 <?php
 
 $hostname = "127.0.0.1";
-$username = "testlaravel";
-$password = "admin";
-$databaseName = "testlaravel";
-$port="9000";
-$connect = mysqli_connect($hostname, $username, $password, $databaseName,$port);
+$username = "supriya";
+$password = "";
+$databaseName = "testdb";
+$connect = mysqli_connect($hostname, $username, $password, $databaseName);
 $query = "SELECT * FROM `car_locations`";
 
 $result1 = mysqli_query($connect, $query);
@@ -22,8 +21,8 @@ $result1 = mysqli_query($connect, $query);
             <div class="title">
                 <h2>Find Location</h2>
             </div>
-            <h4>Option 1:</h4>
-            <h4>Search your location to find our car-share:</h4>
+            <h4>Manual Search:</h4>
+            <h4>Enter postcode to find cars nearby:</h4>
             <input id="pac-input" class="controls" type="text" placeholder="Search Box"/>
             {{--<h4>Option 2:</h4>--}}
             {{--<h4>Enter your start location:</h4>--}}
@@ -31,11 +30,11 @@ $result1 = mysqli_query($connect, $query);
             {{--<h4>Enter your end location:</h4>--}}
             {{--<input type="text" id="end-input" class="controls" placeholder="Destination location"/>--}}
 
-            <h4>Option 2:</h4>
-            <h4>Search your choice location:</h4>
-            <h4>Start:</h4>
+            <h4>Current Location Search:</h4>
+            <h4>Find Your Car</h4>
+            <h4>Current Location:</h4>
             <input type="text" id="start" class="controls">
-            <h4>Destination:</h4> <select id="destination" class="controls">
+            <h4>Available Car Locations:</h4> <select id="destination" class="controls">
                 <?php while($row1 = mysqli_fetch_array($result1)):;?>
                 <option value="<?php echo $row1[1];?>"><?php echo $row1[1];?></option>
                 <?php endwhile;?>
