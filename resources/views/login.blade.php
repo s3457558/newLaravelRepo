@@ -4,7 +4,7 @@
 
     <div class="container">
         <div class="content">
-            <div class="size">
+
             <div class="title">
                 <h2>Login</h2>
              </div>
@@ -46,7 +46,7 @@
 
 
     {!! Form::close() !!}
-            </div>
+
         </div>
     </div>
 @endsection

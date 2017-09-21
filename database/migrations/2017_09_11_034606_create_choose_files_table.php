@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddIsAdminToUsersTable extends Migration
+class CreateChooseFilesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,11 @@ class AddIsAdminToUsersTable extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->boolean('isAdmin');
-            $table->boolean('isRecord');
-
+        Schema::create('choose_files', function (Blueprint $table) {
+            $table->increments('id');
+            $table->text('filename');
+            $table->string('filesize_bytes');
+            $table->timestamps();
         });
     }
 
@@ -27,9 +28,9 @@ class AddIsAdminToUsersTable extends Migration
      */
     public function down()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('isAdmin');
-            $table->dropColumn('isRecord');
-        });
+        Schema::dropIfExists('choose_files');
     }
 }
+
+
+

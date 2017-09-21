@@ -36,6 +36,7 @@ class RegisterPageController extends Controller
             'firstname'             => 'required|Alpha|max:20',
             'lastname'              => 'required|Alpha|max:20'
         ]);
+//        $allRequest = $request->all();
         $user = new User;
         $firstname =Input::get('firstname');
         $lastname = Input::get('lastname');
@@ -45,21 +46,49 @@ class RegisterPageController extends Controller
         $user->email = Input::get('email');
         $user->password = Hash::make(Input::get('password'));
         $user->isAdmin = 0;
+        $user->isRecord = 0;
         $user->save();
 
 
 
+//        $request->session()->put('ChooseFiles', $choose_files);
         $request->session()->put('user', $user);
 
-        $userName = Input::get('username');
+//        $userName = Input::get('username');
         return view('successfulRegister');
     }
+
+//    public function storeFile(request $request){
+//
+//        if($request->hasFile('file')){
+//
+//
+//            $filename = $request->file->getClientOriginalName();
+//
+//            $filesize = $request->file->getClientSize();
+//
+//            $request->file->storeAs('public/upload',$filename);
+//
+//            $file = new ChooseFiles;
+//
+//            $file->name = $filename;
+//
+//            $file->size = $filesize;
+//
+//            $file->save();
+//            return 'yes';
+//
+//            return redirect()->route('register') ->with('Success','license uploaded successfully');
+//        }
+//        return $request->all();
+//    }
+
 
 //    public function storeFile(requset $request){
 ////
 //
 //    if($request->hasFile('register')){
-//        store('public/upload');
+//        $request->register->store('public/upload');
 ////            $filename = $request->file->getClientOriginalName();
 ////            $filesize = $request->file->getClientSize();
 ////        $request->file->storeAs('public/upload',$filename);

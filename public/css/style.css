@@ -1,3 +1,7 @@
+
+
+
+
 /*Home page*/
 .container-home{
     background-color: rgba(0, 0, 0, 0.3);
@@ -11,14 +15,14 @@
     position: relative;
 }
 .white-text {
-     font-family: "MuseoSans-900", Helvetica, Arial, sans-serif;
-     font-weight: initial;
-     font-size: 48px;
-     line-height: 1;
-     margin-top: 150px;
-     color: white;
+    font-family: "MuseoSans-900", Helvetica, Arial, sans-serif;
+    font-weight: initial;
+    font-size: 48px;
+    line-height: 1;
+    margin-top: 150px;
+    color: white;
     font-weight: bold;
- }
+}
 
 .white-text2 {
     font-family: "MuseoSans-900", Helvetica, Arial, sans-serif;
@@ -117,6 +121,10 @@ h4 > a {
     color: #7eccff;
 }
 
+.content > ul > li{
+    color: white;
+}
+
 /*Logout page*/
 h3 > a {
     color: #7eccff;
@@ -176,6 +184,60 @@ h3 > a {
     position: relative;
 }
 
+
+/*view history page*/
+.record_table{
+    color:white;
+    font-family: "Microsoft Himalaya";
+    font-size: 30px;
+}
+
+/*booking return view history container*/
+.container-brv{
+    background-color: rgba(0, 0, 0, 0.65);
+
+    padding-top: 10px;
+    padding-bottom: 160px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+}
+
+
+/*thank you page*/
+.receipt1{
+    margin: 60px auto;
+    width:600px;
+    height:500px;
+    border: 3px solid white;
+}
+
+.receipt2{
+    margin: 45px auto;
+    width:450px;
+    height:350px;
+    border: 3px solid white;
+}
+
+
+.receipt2 > h3{
+    text-align: left;
+    /*font-family:'Verdana';*/
+    font-family:'Trebuchet MS';
+    color:#FFFFFF;
+    font-weight: bold;
+    font-size:20px;
+}
+
+
+/*.receipt1 > table , tr , th{*/
+    /*border: 1px solid white;*/
+
+/*}*/
+
+
 /*price page*/
 .display-tablecontainer{
     position: relative;
@@ -231,7 +293,7 @@ ul > li > a {
 
 .navbar-default{
     margin-bottom: 0px;
-    padding-bottom: 10px;
+    border: 0px;
 }
 
 @media (min-width: 768px){
@@ -241,21 +303,20 @@ ul > li > a {
     }
 }
 
-ul > li > a > login-name {
-    padding-top: 0px;
+#loginname {
+    color: #eb2525;
 }
 
 .navbar-left{
     padding-top: 30px;
-    padding-left: 30px;
+
 
 }
 
 .navbar-right{
     padding-top: 30px;
-    padding-left: 30px;
-
 }
+
 
 
 /*footer*/
@@ -267,7 +328,7 @@ footer {
     margin-top: 0px;
     height: 40px;
     position: absolute;
-    bottom: 0;
+    /*bottom: 0;*/
     width: 100%;
 }
 
@@ -280,7 +341,10 @@ html, body {
     margin: 0;
 }
 
-
+/*upload page*/
+.choose-file{
+    color: white;
+}
 
 /*other*/
 
@@ -288,6 +352,11 @@ h2 {
     font-weight:bold;
     font-size: 40px;
     color: #ffffff;
+}
+
+h5 {
+    font-weight:bold;
+    color: white;
 }
 
 p {
@@ -332,8 +401,14 @@ h4{
 }
 
 form{
+
+    padding-top: 30px;
+}
+
+th{
+    color: #ffffff;
     padding-top: 50px;
 }
 
-     /* The Modal (background) */
+
 
