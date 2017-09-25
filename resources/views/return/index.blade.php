@@ -27,7 +27,7 @@
 
                 {{--@foreach($details as $register)--}}
                 @foreach ($return_car_details as $return_car_booking)
-                    @if($return_car_booking->user_id == \Illuminate\Support\Facades\Auth::user()->id){
+                    @if($return_car_booking->user_id == \Illuminate\Support\Facades\Auth::user()->id)
                         <tr>
                             <td>{{ $return_car_booking->id }}</td>
                             <td>{{ $return_car_booking->suburb}}</td>
