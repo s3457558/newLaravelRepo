@@ -32,7 +32,7 @@
             <div class="text-center">
                 {!! Form::Label('car', 'Select Your Car:')!!}
                 <div class="form-group" align="center">
-                    <select class="form-control" name="item_id">
+                    <select class="form-control" name="car_name">
                         @foreach($cars as $car)
                             <option value="{{$car->id}}">{{$car->name}}</option>
                         @endforeach
@@ -73,15 +73,15 @@
                     {!! Form::time('endTime', null,array('required','class'=>'form-control','placeholder'=>'End Time')) !!}
                 </div>
 
-
+                <button class="btn btn-success" type="submit">Book Now!</button>
+                {!! Form::close() !!}
             </div>
+
+
         </div>
-
-
-        <button class="btn btn-success" type="submit">Book Now!</button>
     </div>
 
-    {!! Form::close() !!}
+
 
     </div>
     </div>

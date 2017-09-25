@@ -21,11 +21,12 @@ class BookingController extends Controller
     {
 
         $this->validate($request, [
-            'item_id' => 'required',
+            'car_name' => 'required',
             'pickup' => 'required',
             'dropoff' => 'required',
-            'startTime' => 'required',
             'date' => 'required|after:today',
+            'startTime' => 'required',
+            'endTime' => 'required',
         ]);
 
 
@@ -33,28 +34,29 @@ class BookingController extends Controller
 
 
         $record_booking_details = new RecordBookingDetails();
-        $record_booking_details->Record_car_name = $allRequest['car_name'];
-        $record_booking_details->Record_suburb = $allRequest['suburb'];
-        $record_booking_details->Record_state = $allRequest['state'];
-        $record_booking_details->Record_date = $allRequest['time'];
-        $record_booking_details->Record_time = $allRequest['date'];
+        $record_booking_details->car = $allRequest['car_name'];
+        $record_booking_details->pickup = $allRequest['pickup'];
+        $record_booking_details->dropoff = $allRequest['dropoff'];
+        $record_booking_details->date = $allRequest['date'];
+        $record_booking_details->startTime = $allRequest['startTime'];
+        $record_booking_details->endTime = $allRequest['endTime'];
         $record_booking_details->user_id = Auth::user()->id;
         $record_booking_details->save();
 
 
         $bookingDetails = new CarBookingDetails();
-        $bookingDetails->car_name = $allRequest['car_name'];
-        $bookingDetails->suburb = $allRequest['suburb'];
-        $bookingDetails->state = $allRequest['state'];
-        $bookingDetails->time = $allRequest['time'];
+        $bookingDetails->car = $allRequest['car_name'];
+        $bookingDetails->pickup = $allRequest['pickup'];
+        $bookingDetails->dropoff = $allRequest['dropoff'];
         $bookingDetails->date = $allRequest['date'];
+        $bookingDetails->startTime = $allRequest['startTime'];
+        $bookingDetails->endTime = $allRequest['endTime'];
         $bookingDetails->user_id = Auth::user()->id;
         $bookingDetails->save();
 
 
         $request->session()->put('RecordBookingDetails', $record_booking_details);
         $request->session()->put('bookingDetails', $bookingDetails);
-//        $request->session()->put('carDetails', $carDetails);
 
         return redirect()->route('thankyou');
     }

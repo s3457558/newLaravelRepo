@@ -28,7 +28,7 @@
                 @if(!\Illuminate\Support\Facades\Auth::guest())
                     <li> <a href="booking.create">BOOKING</a></li>
                     <li> <a href="record">VIEW HISTORY</a></li>
-                    <li> <a href="return">RETURN</a></li>
+                    <li> <a href="return">CURRENT BOOKINGS</a></li>
                     <li> <a style="padding-top:0px">Welcome,<br>{{\Illuminate\Support\Facades\Auth::user()->name}}</a></li>
                     <li> <a href="logout">LOG OUT</a></li>
                 @endif
