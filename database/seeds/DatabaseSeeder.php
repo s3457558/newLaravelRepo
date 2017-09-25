@@ -60,5 +60,10 @@ class DatabaseSeeder extends Seeder
     ]);
         //*****END OF CARS SEED*******
 
+
+        DB::table('users')->insert([
+            
+
+        ]);
     }
 }

@@ -8,75 +8,83 @@
             </div>
         </div>
 
-    @if (count($errors) > 0)
-        <div class="alert alert-danger">
-            <strong>Whoops!</strong> There were some problems with your input.<br><br>
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
-    @if ($message = Session::get('success'))
-        <div class="alert alert-success">
-            <p>{{ $message }}</p>
-        </div>
-    @endif
+        @if (count($errors) > 0)
+            <div class="alert alert-danger">
+                <strong>Whoops!</strong> There were some problems with your input.<br><br>
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+        @if ($message = Session::get('success'))
+            <div class="alert alert-success">
+                <p>{{ $message }}</p>
+            </div>
+        @endif
 
 
-    <div class="container-brv">
-        {!! Form::open(['action' => 'BookingController@store']) !!}
-
-        <div class="text-center">
-            {!! Form::Label('car', 'Car (Choose your car here):')!!}
-        </div>
-        <div class="form-group" align="center">
-            <select class="form-control" name="item_id">
-                @foreach($cars as $car)
-                    <option value="{{$car->id}}">{{$car->name}}</option>
-                @endforeach
-            </select>
-        </div>
-
-        {{--<div class="form-group">--}}
-        <div class="text-center">
-            {!! Form::label('suburb', 'Suburb') !!}
-        </div>
-        <div class="form-group" align="center">
-            {!! Form::text('suburb', null,array('required','class'=>'form-control','placeholder'=>'Your suburb here')) !!}
-        </div>
+        <div class="container-brv">
+            {!! Form::open(['action' => 'BookingController@store']) !!}
 
 
+            <!--Car selection -->
+            <div class="text-center">
+                {!! Form::Label('car', 'Select Your Car:')!!}
+                <div class="form-group" align="center">
+                    <select class="form-control" name="item_id">
+                        @foreach($cars as $car)
+                            <option value="{{$car->id}}">{{$car->name}}</option>
+                        @endforeach
+                    </select>
+                </div>
 
-        <div class="text-center">
-            {!! Form::label('state', 'Postcode') !!}
-        </div>
-        <div class="form-group" align="center">
-            {!! Form::text('state', null,array('required','class'=>'form-control','placeholder'=>'Your postcode here')) !!}
-        </div>
+
+                <!-- Pickup selection -->
+                {!! Form::label('pickup', 'Pickup') !!}
+                <div class="form-group" align="center">
+                    {!! Form::text('pickup', null,array('required','class'=>'form-control','placeholder'=>'Pickup Location')) !!}
+                </div>
 
 
-        <div class="text-center">
-            {!! Form::label('date', 'Date') !!}
-        </div>
-        <div class="form-group" align="center">
-            {!! Form::date('date', null,array('required','class'=>'form-control','placeholder'=>'Your date here')) !!}
-        </div>
+                <!--Drop-off selection -->
+                {!! Form::label('dropoff', 'Drop-off') !!}
+                <div class="form-group" align="center">
+                    {!! Form::text('dropoff', null,array('required','class'=>'form-control','placeholder'=>'Drop-off Location')) !!}
+                </div>
 
-        <div class="text-center">
-            {!! Form::label('time', 'Time') !!}
-        </div>
-        <div class="form-group" align="center">
-            {!! Form::time('time', null,array('required','class'=>'form-control','placeholder'=>'Your time here')) !!}
-        </div>
 
-        <div class="text-center">
-            <button class="btn btn-success" type="submit">Book Now!</button>
+                <!--Date selection -->
+                {!! Form::label('date', 'Date') !!}
+                <div class="form-group" align="center">
+                    {!! Form::date('date', null,array('required','class'=>'form-control','placeholder'=>'Your date here')) !!}
+                </div>
+
+
+                <!--Start time selection -->
+                {!! Form::label('startTime', 'Start Time') !!}
+                <div class="form-group" align="center">
+                    {!! Form::time('startTime', null,array('required','class'=>'form-control','placeholder'=>'Start Time')) !!}
+                </div>
+
+
+
+
+                <!--End time selection -->
+                {!! Form::label('endTime', 'End Time') !!}
+                <div class="form-group" align="center">
+                    {!! Form::time('endTime', null,array('required','class'=>'form-control','placeholder'=>'End Time')) !!}
+                </div>
+
+
+
+
+                <button class="btn btn-success" type="submit">Book Now!</button>
+            </div>
+
+            {!! Form::close() !!}
+
         </div>
-
-        {!! Form::close() !!}
-
-    </div>
     </div>
 @endsection

@@ -24,11 +24,10 @@ class BookingController extends Controller
 
         $this->validate($request, [
             'item_id' => 'required',
-//            'address_line_1' => 'required',
-            'suburb' => 'required',
-            'state' => 'required',
-            'time' => 'required',
-            'date' => 'required',
+            'pickup' => 'required',
+            'dropoff' => 'required',
+            'startTime' => 'required',
+            'date' => 'required|after:today',
         ]);
 
         $allRequest = $request->all();
