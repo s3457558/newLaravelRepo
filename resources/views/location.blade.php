@@ -4,6 +4,7 @@ $hostname = "127.0.0.1";
 $username = "supriya";
 $password = "";
 $databaseName = "testdb";
+
 $connect = mysqli_connect($hostname, $username, $password, $databaseName);
 $query = "SELECT * FROM `car_locations`";
 

@@ -26,10 +26,9 @@
 
 
         <div class="container-brv">
-            {!! Form::open(['action' => 'BookingController@store']) !!}
+        {!! Form::open(['action' => 'BookingController@store']) !!}
 
-
-            <!--Car selection -->
+        <!--Car selection -->
             <div class="text-center">
                 {!! Form::Label('car', 'Select Your Car:')!!}
                 <div class="form-group" align="center">
@@ -39,7 +38,6 @@
                         @endforeach
                     </select>
                 </div>
-
 
                 <!-- Pickup selection -->
                 {!! Form::label('pickup', 'Pickup') !!}
@@ -69,8 +67,6 @@
                 </div>
 
 
-
-
                 <!--End time selection -->
                 {!! Form::label('endTime', 'End Time') !!}
                 <div class="form-group" align="center">
@@ -78,13 +74,15 @@
                 </div>
 
 
-
-
-                <button class="btn btn-success" type="submit">Book Now!</button>
             </div>
-
-            {!! Form::close() !!}
-
         </div>
+
+
+        <button class="btn btn-success" type="submit">Book Now!</button>
+    </div>
+
+    {!! Form::close() !!}
+
+    </div>
     </div>
 @endsection

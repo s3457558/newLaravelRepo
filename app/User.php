@@ -1,7 +1,7 @@
 <?php
 
 namespace App;
-
+use App\CarBookingDetails;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
@@ -33,5 +33,9 @@ class User extends Authenticatable
 
     public function isRecord(){
         return $this->record;
+    }
+
+    public function carBooking(){
+        return $this->hasMany('App\CarBookingDetails');
     }
 }
