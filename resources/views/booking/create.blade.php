@@ -34,7 +34,7 @@
                 <div class="form-group" align="center">
                     <select class="form-control" name="car_name">
                         @foreach($cars as $car)
-                            <option value="{{$car->id}}">{{$car->name}}</option>
+                            <option value="{{$car->name}}">{{$car->name}}</option>
                         @endforeach
                     </select>
                 </div>
