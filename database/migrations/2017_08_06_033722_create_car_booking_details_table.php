@@ -16,6 +16,7 @@ class CreateCarBookingDetailsTable extends Migration
             $table->string('state');
             $table->string('date');
             $table->string('time');
+            $table->unsignedInteger('user_id');
             $table->timestamps();
         });
     }

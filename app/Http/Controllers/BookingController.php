@@ -7,6 +7,7 @@ use App\CarBookingDetails;
 use Illuminate\Http\Request;
 use App\Car;
 use App\RecordBookingDetails;
+use Illuminate\Support\Facades\Auth;
 
 class BookingController extends Controller
 {
@@ -32,13 +33,13 @@ class BookingController extends Controller
 
 
         $record_booking_details = new RecordBookingDetails();
-        $record_booking_details->car_name = $allRequest['car_name'];
-        $record_booking_details->suburb = $allRequest['suburb'];
-        $record_booking_details->state = $allRequest['state'];
-        $record_booking_details->time = $allRequest['time'];
-        $record_booking_details->date = $allRequest['date'];
+        $record_booking_details->Record_car_name = $allRequest['car_name'];
+        $record_booking_details->Record_suburb = $allRequest['suburb'];
+        $record_booking_details->Record_state = $allRequest['state'];
+        $record_booking_details->Record_date = $allRequest['time'];
+        $record_booking_details->Record_time = $allRequest['date'];
+        $record_booking_details->user_id = Auth::user()->id;
         $record_booking_details->save();
-
 
 
         $bookingDetails = new CarBookingDetails();
@@ -47,6 +48,7 @@ class BookingController extends Controller
         $bookingDetails->state = $allRequest['state'];
         $bookingDetails->time = $allRequest['time'];
         $bookingDetails->date = $allRequest['date'];
+        $bookingDetails->user_id = Auth::user()->id;
         $bookingDetails->save();
 
 
