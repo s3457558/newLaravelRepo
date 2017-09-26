@@ -6,6 +6,7 @@ use App\CarBooking;
 use App\CarBookingDetails;
 use Illuminate\Http\Request;
 use App\Car;
+use App\CarLocation;
 use App\RecordBookingDetails;
 use Illuminate\Support\Facades\Auth;
 
@@ -14,7 +15,8 @@ class BookingController extends Controller
     public function create()
     {
         $cars = Car::all();
-        return view('booking.create', ['cars' => $cars ]);
+        $carLocations = CarLocation::all();
+        return view('booking.create', ['cars' => $cars,'carLocations' => $carLocations ]);
     }
 
     public function store(Request $request)
@@ -31,6 +33,18 @@ class BookingController extends Controller
 
 
         $allRequest = $request->all();
+
+        $carLocations = CarLocation::all();
+        foreach ($carLocations as $carLocation) {
+            if ($carLocation->name == $allRequest['pickup']) {
+                foreach ($carLocation->cars() as $car) {
+                    if ($car->name == $allRequest['car_name']) {
+                        return redirect()->route('/')->withErrors($car->name+" "+$allRequest['car_name'] );
+
+                    }
+                }
+            }
+        }
 
 
         $record_booking_details = new RecordBookingDetails();
@@ -57,6 +71,8 @@ class BookingController extends Controller
 
         $request->session()->put('RecordBookingDetails', $record_booking_details);
         $request->session()->put('bookingDetails', $bookingDetails);
+
+
 
         return redirect()->route('thankyou');
     }

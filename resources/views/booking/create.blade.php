@@ -42,14 +42,23 @@
                 <!-- Pickup selection -->
                 {!! Form::label('pickup', 'Pickup') !!}
                 <div class="form-group" align="center">
-                    {!! Form::text('pickup', null,array('required','class'=>'form-control','placeholder'=>'Pickup Location')) !!}
+                    <select class="form-control" name="pickup">
+                        @foreach($carLocations as $carLocation)
+                            <option value="{{$carLocation->name}}">{{$carLocation->name}}</option>
+                        @endforeach
+                    </select>
                 </div>
 
 
                 <!--Drop-off selection -->
                 {!! Form::label('dropoff', 'Drop-off') !!}
                 <div class="form-group" align="center">
-                    {!! Form::text('dropoff', null,array('required','class'=>'form-control','placeholder'=>'Drop-off Location')) !!}
+                    <select class="form-control" name="dropoff">
+                        @foreach($carLocations as $carLocation)
+                            <option value="{{$carLocation->name}}">{{$carLocation->name}}</option>
+                        @endforeach
+                    </select>
+
                 </div>
 
 
