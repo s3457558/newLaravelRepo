@@ -1,9 +1,7 @@
 <?php
-
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
-
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -17,18 +15,25 @@ class DatabaseSeeder extends Seeder
             'name'   => 'Melbourne Central',
             'lat'    => '-37.8108',
             'lng'    => '144.9631'
-
         ]);
-
-
         DB::table('car_locations')->insert([
             'name'   => 'Queen Victoria Market',
             'lat'    => '-37.8076',
             'lng'    => '144.9568'
         ]);
+
+        DB::table('car_locations')->insert([
+            'name'   => '300 Flinders St',
+            'lat'    => '-37.818212',
+            'lng'    => '144.964742'
+            ]);
+
+        DB::table('car_locations')->insert([
+            'name'   => '98 Victoria St Carlton VIC 3053',
+            'lat'    => '-37.806584',
+            'lng'    => '144.964161'
+        ]);
         //*****END OF CAR LOCATIONS SEED*******
-
-
         DB::table('cars')->insert([
             'name'            => 'Tesla',
             'car_model'       => 'S',
@@ -36,9 +41,7 @@ class DatabaseSeeder extends Seeder
             'isBooked'        => '0',
             'status'          => 'null',
             'car_location_id' => '1',
-
         ]);
-
         DB::table('cars')->insert([
             'name'            => 'Toyota Camry',
             'car_model'       => '05',
@@ -46,7 +49,6 @@ class DatabaseSeeder extends Seeder
             'isBooked'        => '0',
             'status'          => 'null',
             'car_location_id' => '1',
-
         ]);
 
         DB::table('cars')->insert([
@@ -55,10 +57,39 @@ class DatabaseSeeder extends Seeder
             'price'           => '20',
             'isBooked'        => '0',
             'status'          => 'null',
-            'car_location_id' => '2',
-
-    ]);
+            'car_location_id' => '3',
+        ]);
         //*****END OF CARS SEED*******
 
+
+        DB::table('users')->insert([
+            'name'          =>'admin admin',
+            'email'         =>'admin@admin',
+            'password'      =>Hash::make('Hello123!'),
+            'username'      =>'admin',
+            'postcode'      =>'3000',
+            'isAdmin'       =>'1',
+            'isRecord'      =>'0',
+        ]);
+
+        DB::table('users')->insert([
+            'name'          =>'BobbY McGee',
+            'email'         =>'gmail@gmail',
+            'password'      =>Hash::make('Hello123!'),
+            'username'      =>'bobby',
+            'postcode'      =>'3000',
+            'isAdmin'       =>'0',
+            'isRecord'      =>'0',
+        ]);
+
+        DB::table('users')->insert([
+            'name'          =>'Doug Stanford',
+            'email'         =>'gmail1@gmail',
+            'password'      =>Hash::make('Hello123!'),
+            'username'      =>'user',
+            'postcode'      =>'3000',
+            'isAdmin'       =>'0',
+            'isRecord'      =>'0',
+        ]);
     }
 }
