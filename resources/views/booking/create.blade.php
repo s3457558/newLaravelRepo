@@ -44,7 +44,9 @@
                 <div class="form-group" align="center">
                     <select class="form-control" name="pickup">
                         @foreach($carLocations as $carLocation)
+                            @if(!$carLocation->cars->isEmpty()))
                             <option value="{{$carLocation->name}}">{{$carLocation->name}}</option>
+                            @endif
                         @endforeach
                     </select>
                 </div>
