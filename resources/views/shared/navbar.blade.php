@@ -22,15 +22,23 @@
 
                 <li><a href="price">PRICE</a></li>
                 <li><a href="contact">CONTACT US</a></li>
-                <li><a href="location">LOCATION</a></li>
+                <li><a href="location">FIND CAR</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
+            
                 @if(!\Illuminate\Support\Facades\Auth::guest())
-                    <li> <a href="booking.create">BOOKING</a></li>
-                    <li> <a href="record">VIEW HISTORY</a></li>
-                    <li> <a href="return">RETURN</a></li>
-                    <li> <a style="padding-top:0px">Welcome,<br>{{\Illuminate\Support\Facades\Auth::user()->name}}</a></li>
+                    <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Welcome,{{\Illuminate\Support\Facades\Auth::user()->name}}
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li> <a href="booking.create">BOOKING</a></li>
+                        <li> <a href="return">RETURN CARS</a></li>
+                        <li> <a href="record">VIEW HISTORY</a></li>
+                     </ul>
+                     </li>
                     <li> <a href="logout">LOG OUT</a></li>
+
                 @endif
 
                 @if(!\Illuminate\Support\Facades\Auth::check())

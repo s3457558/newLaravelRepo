@@ -213,6 +213,11 @@ h3 > a {
     height:500px;
     border: 3px solid white;
 }
+.receipt1 > h2{
+    font-style: italic;
+}
+
+
 
 .receipt2{
     margin: 45px auto;
@@ -229,7 +234,10 @@ h3 > a {
     color:#FFFFFF;
     font-weight: bold;
     font-size:20px;
+
 }
+
+
 
 
 /*.receipt1 > table , tr , th{*/
