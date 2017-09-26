@@ -104,6 +104,7 @@
 
 .login-form-group{
     position: relative;
+
 }
 
 .button2 {
@@ -189,7 +190,6 @@ h3 > a {
 
 .form-group{
     position: relative;
-
 }
 
 
@@ -218,11 +218,12 @@ h3 > a {
 .receipt1{
     margin: 60px auto;
     width:600px;
-    height:500px;
+    height:800px;
     border: 3px solid white;
 }
 .receipt1 > h2{
     font-style: italic;
+
 }
 
 
@@ -230,7 +231,7 @@ h3 > a {
 .receipt2{
     margin: 45px auto;
     width:450px;
-    height:350px;
+    height:500px;
     border: 3px solid white;
 }
 
@@ -426,7 +427,6 @@ th{
     padding-top: 50px;
     font-size: 28px;
 }
-
 
 
 

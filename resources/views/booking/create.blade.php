@@ -1,7 +1,7 @@
 @extends('layout.master')
 @section('title', 'Add a Booking')
 @section('content')
-    <div class="container-brv">
+    <div class="container">
 
         <div class="row">
             <div class="col-lg-12 margin-tb">
@@ -28,7 +28,6 @@
         @endif
 
 
-        <div class="container-brv">
 
         {!! Form::open(['action' => 'BookingController@store']) !!}
 
@@ -93,7 +92,7 @@
             </div>
 
 
-        </div>
+
     </div>
 
 

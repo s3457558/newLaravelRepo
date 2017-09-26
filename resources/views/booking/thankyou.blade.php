@@ -3,9 +3,6 @@
 @section('content')
 
 
-
-
-
     <div class="container-brv">
         <div class="text-center">
             <h2>Thanks for your booking, enjoy your travel</h2>
