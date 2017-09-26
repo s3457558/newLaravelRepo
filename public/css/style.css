@@ -7,12 +7,14 @@
     background-color: rgba(0, 0, 0, 0.3);
 
     padding-top: 10px;
-    padding-bottom: 700px;
+    padding-bottom: 900px;
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
     position: relative;
+
+
 }
 .white-text {
     font-family: "MuseoSans-900", Helvetica, Arial, sans-serif;
@@ -82,12 +84,13 @@
 }
 /*login page*/
 .login-form-control {
-    width: 400px;
+    width: 260px;
     display:block;
     height:34px;
     padding:6px 12px;
     font-size:14px;
-    line-height:1.42857143;color:#555;
+    line-height:1.42857143;
+    color:#555;
     background-color:#fff;
     background-image:none;
     border:1px solid #ccc;
@@ -131,7 +134,7 @@ h3 > a {
 }
 /*Register page*/
 .register-form-control {
-    width: 400px;
+    width: 260px;
     display:block;
     height:34px;
     padding:6px 12px;
@@ -160,10 +163,14 @@ h3 > a {
     margin-right: auto;
     margin-left: auto;
 }
+#img > img {
+    width: 80%;
+    height: auto;
+}
 
 /*contact us page*/
 .form-control {
-    width: 400px;
+    width: 265px;
     display:block;
     height:34px;
     padding:6px 12px;
@@ -182,6 +189,7 @@ h3 > a {
 
 .form-group{
     position: relative;
+
 }
 
 
@@ -302,6 +310,8 @@ ul > li > a {
 .navbar-default{
     margin-bottom: 0px;
     border: 0px;
+    padding-bottom: 10px;
+
 }
 
 @media (min-width: 768px){
@@ -332,12 +342,10 @@ ul > li > a {
 footer {
     font-family: PT Serif;
     background-color: #8f8f8f;
-    padding: 10px;
-    margin-top: 0px;
-    height: 40px;
     position: absolute;
-    /*bottom: 0;*/
-    width: 100%;
+    bottom: 0;
+    padding: 1rem;
+    width:100%;
 }
 
 footer * {
@@ -416,7 +424,10 @@ form{
 th{
     color: #ffffff;
     padding-top: 50px;
+    font-size: 28px;
 }
+
+
 
 
 

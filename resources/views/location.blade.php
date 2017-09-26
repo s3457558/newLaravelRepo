@@ -5,7 +5,9 @@ $username = "supriya";
 $password = "";
 $databaseName = "testdb";
 
+
 $connect = mysqli_connect($hostname, $username, $password, $databaseName);
+
 $query = "SELECT * FROM `car_locations`";
 
 $result1 = mysqli_query($connect, $query);
@@ -20,8 +22,9 @@ $result1 = mysqli_query($connect, $query);
     <div class="container">
         <div class="content">
             <div class="title">
-                <h2>Find Location</h2>
+                <h2>Find Car</h2>
             </div>
+            <br>
             <h4>Manual Search:</h4>
             <h4>Enter postcode to find cars nearby:</h4>
             <input id="pac-input" class="controls" type="text" placeholder="Search Box"/>
@@ -46,10 +49,8 @@ $result1 = mysqli_query($connect, $query);
             <div id="selection" class="controls">
                 <input type="radio" name="type" id="changemode-walking" checked="checked"/>
                 <label for="changemode-walking">Walking</label>
-
                 <input type="radio" name="type" id="changemode-transit"/>
                 <label for="changemode-transit">Transit</label>
-
                 <input type="radio" name="type" id="changemode-driving"/>
                 <label for="changemode-driving">Driving</label>
             </div>
@@ -276,6 +277,8 @@ $result1 = mysqli_query($connect, $query);
                     $("#end").val(end);
                 });
 
+
+
             }
 
             AutocompleteDirectionsHandler.prototype.setupClickListener = function(id, mode) {
@@ -340,7 +343,7 @@ $result1 = mysqli_query($connect, $query);
                         var dvDistance = document.getElementById("dvDistance");
                         dvDistance.innerHTML = "";
                         dvDistance.innerHTML += "<h4>"+"Distance: " + distance + "<br />"+"</h4>";
-                        dvDistance.innerHTML += "<h4>"+"Duration:" + duration + "</h4>";
+                        dvDistance.innerHTML += "<h4>"+"Duration: " + duration + "</h4>";
 
                     } else {
                         alert("Unable to find the distance via road.");
@@ -366,11 +369,11 @@ $result1 = mysqli_query($connect, $query);
 
                 $.each(carLocationJSONData, function (i, carLocationValue) {
                     if (carLocationValue.name == carLocationName) {
+
                         modalTitle.innerHTML = '<p>' + carLocationValue.name + '</p>';
                         $.each(carJSONData, function (j, carValue) {
                             if (carValue.car_location_id == carLocationValue.id && carValue.isBooked == false) {
                                 carItem.innerHTML += '<li>' + carValue.name + '</li>';
-
                             }
                         });
                     }
