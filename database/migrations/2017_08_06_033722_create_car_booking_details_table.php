@@ -14,8 +14,10 @@ class CreateCarBookingDetailsTable extends Migration
             $table->string('pickup');
             $table->string('dropoff');
             $table->string('date');
+            $table->boolean('isHistory');
             $table->string('startTime');
             $table->string('endTime');
+
             $table->unsignedInteger('user_id');
             $table->timestamps();
         });

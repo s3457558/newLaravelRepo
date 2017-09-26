@@ -35,17 +35,21 @@ class BookingController extends Controller
         $allRequest = $request->all();
 
         $carLocations = CarLocation::all();
+        $found = false;
         foreach ($carLocations as $carLocation) {
             if ($carLocation->name == $allRequest['pickup']) {
-                foreach ($carLocation->cars() as $car) {
+                foreach ($carLocation->cars as $car) {
                     if ($car->name == $allRequest['car_name']) {
-                        return redirect()->route('/')->withErrors($car->name+" "+$allRequest['car_name'] );
-
+                        $found = true;
                     }
                 }
             }
+            echo("<script>console.log('PHP: ".json_encode($carLocation->name).$allRequest['pickup']."');</script>");
         }
-
+        if(!$found) {
+            $cars = Car::all();
+            return view('booking.create', ['cars' => $cars, 'carLocations' => $carLocations])->withErrors('ERROR - The selected car is not in the pickup location');
+        }
 
         $record_booking_details = new RecordBookingDetails();
         $record_booking_details->car = $allRequest['car_name'];
@@ -66,6 +70,7 @@ class BookingController extends Controller
         $bookingDetails->startTime = $allRequest['startTime'];
         $bookingDetails->endTime = $allRequest['endTime'];
         $bookingDetails->user_id = Auth::user()->id;
+        $bookingDetails->isHistory = 0;
         $bookingDetails->save();
 
 

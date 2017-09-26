@@ -73,8 +73,8 @@ class DatabaseSeeder extends Seeder
             'password'      =>Hash::make('Hello123!'),
             'username'      =>'admin',
             'postcode'      =>'3000',
-            'isAdmin'       =>'1',
-            'isRecord'      =>'0',
+            'isAdmin'       =>'0',
+            'isRecord'      =>'1',
         ]);
 
         DB::table('users')->insert([
