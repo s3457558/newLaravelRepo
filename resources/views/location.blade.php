@@ -1,9 +1,9 @@
 <?php
 
 $hostname = "127.0.0.1";
-$username = "root";
+$username = "supriya";
 $password = "";
-$databaseName = "testlaravel";
+$databaseName = "testdb";
 
 
 $connect = mysqli_connect($hostname, $username, $password, $databaseName);
