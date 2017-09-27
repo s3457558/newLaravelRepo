@@ -10,12 +10,13 @@ class CreateCarBookingDetailsTable extends Migration
     {
         Schema::create('car_booking_details', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('car_name');
-//            $table->string('address_line_1');
-            $table->string('suburb');
-            $table->string('state');
+            $table->string('car');
+            $table->string('pickup');
+            $table->string('dropoff');
             $table->string('date');
-            $table->string('time');
+            $table->string('startTime');
+            $table->string('endTime');
+            $table->unsignedInteger('user_id');
             $table->timestamps();
         });
     }

@@ -365,7 +365,7 @@ $result1 = mysqli_query($connect, $query);
 
 
                 $.each(carLocationJSONData, function (i, carLocationValue) {
-                    if (carLocationValue.name.localeCompare(carLocationName)) {
+                    if (carLocationValue.name == carLocationName) {
                         modalTitle.innerHTML = '<p>' + carLocationValue.name + '</p>';
                         $.each(carJSONData, function (j, carValue) {
                             if (carValue.car_location_id == carLocationValue.id && carValue.isBooked == false) {
