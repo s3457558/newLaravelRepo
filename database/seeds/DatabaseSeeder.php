@@ -32,6 +32,45 @@ class DatabaseSeeder extends Seeder
             'lat'    => '-37.818212',
             'lng'    => '144.964742'
         ]);
+
+        DB::table('car_locations')->insert([
+            'name'   => '305 Grattan St',
+            'lat'    => '-37.799964',
+            'lng'    => '144.957437'
+        ]);
+
+        DB::table('car_locations')->insert([
+            'name'   => 'JVM Wood & Company',
+            'lat'    => '-37.808647',
+            'lng'    => '144.977890'
+        ]);
+
+        DB::table('car_locations')->insert([
+            'name'   => '344 Queensberry St',
+            'lat'    => '-37.803864',
+            'lng'    => '144.956609'
+        ]);
+
+        DB::table('car_locations')->insert([
+            'name'   => 'Jetts Docklands',
+            'lat'    => '-37.820494',
+            'lng'    => '144.948790'
+        ]);
+
+        DB::table('car_locations')->insert([
+            'name'   => '99 Carlton St',
+            'lat'    => '-37.800885',
+            'lng'    => '144.971021'
+        ]);
+
+        DB::table('car_locations')->insert([
+            'name'   => '390 Collins St',
+            'lat'    => '-37.816808',
+            'lng'    => '144.961700'
+        ]);
+
+
+
         //*****END OF CAR LOCATIONS SEED*******
         DB::table('cars')->insert([
             'name'            => 'Acura',
@@ -39,7 +78,7 @@ class DatabaseSeeder extends Seeder
             'price'           => '25',
             'isBooked'        => '0',
             'status'          => 'null',
-            'car_location_id' => '2',
+            'car_location_id' => '1',
 
         ]);
         DB::table('cars')->insert([
@@ -57,7 +96,7 @@ class DatabaseSeeder extends Seeder
             'price'           => '35',
             'isBooked'        => '0',
             'status'          => 'null',
-            'car_location_id' => '2',
+            'car_location_id' => '3',
 
         ]);
         DB::table('cars')->insert([
@@ -66,7 +105,7 @@ class DatabaseSeeder extends Seeder
             'price'           => '30',
             'isBooked'        => '0',
             'status'          => 'null',
-            'car_location_id' => '2',
+            'car_location_id' => '3',
 
         ]);
         DB::table('cars')->insert([
@@ -75,7 +114,7 @@ class DatabaseSeeder extends Seeder
             'price'           => '35',
             'isBooked'        => '0',
             'status'          => 'null',
-            'car_location_id' => '1',
+            'car_location_id' => '4',
 
         ]);
         DB::table('cars')->insert([
@@ -84,7 +123,7 @@ class DatabaseSeeder extends Seeder
             'price'           => '30',
             'isBooked'        => '0',
             'status'          => 'null',
-            'car_location_id' => '1',
+            'car_location_id' => '5',
 
         ]);
 
@@ -95,7 +134,7 @@ class DatabaseSeeder extends Seeder
             'price'           => '30',
             'isBooked'        => '0',
             'status'          => 'null',
-            'car_location_id' => '1',
+            'car_location_id' => '6',
 
         ]);
 
@@ -105,7 +144,7 @@ class DatabaseSeeder extends Seeder
             'price'           => '10',
             'isBooked'        => '0',
             'status'          => 'null',
-            'car_location_id' => '1',
+            'car_location_id' => '7',
 
         ]);
 
@@ -115,7 +154,7 @@ class DatabaseSeeder extends Seeder
             'price'           => '20',
             'isBooked'        => '0',
             'status'          => 'null',
-            'car_location_id' => '2',
+            'car_location_id' => '8',
 
     ]);
         DB::table('cars')->insert([
@@ -124,7 +163,7 @@ class DatabaseSeeder extends Seeder
             'price'           => '40',
             'isBooked'        => '0',
             'status'          => 'null',
-            'car_location_id' => '2',
+            'car_location_id' => '9',
 
     ]);
         DB::table('cars')->insert([
@@ -133,7 +172,7 @@ class DatabaseSeeder extends Seeder
             'price'           => '30',
             'isBooked'        => '0',
             'status'          => 'null',
-            'car_location_id' => '3',
+            'car_location_id' => '5',
 
     ]);
         DB::table('cars')->insert([
@@ -151,7 +190,7 @@ class DatabaseSeeder extends Seeder
             'price'           => '20',
             'isBooked'        => '0',
             'status'          => 'null',
-            'car_location_id' => '3',
+            'car_location_id' => '2',
 
     ]);
         DB::table('cars')->insert([
@@ -160,7 +199,7 @@ class DatabaseSeeder extends Seeder
             'price'           => '25',
             'isBooked'        => '0',
             'status'          => 'null',
-            'car_location_id' => '3',
+            'car_location_id' => '8',
 
     ]);
         DB::table('cars')->insert([
@@ -169,7 +208,7 @@ class DatabaseSeeder extends Seeder
             'price'           => '20',
             'isBooked'        => '0',
             'status'          => 'null',
-            'car_location_id' => '3',
+            'car_location_id' => '9',
 
     ]);
         DB::table('cars')->insert([
@@ -178,7 +217,7 @@ class DatabaseSeeder extends Seeder
             'price'           => '30',
             'isBooked'        => '0',
             'status'          => 'null',
-            'car_location_id' => '3',
+            'car_location_id' => '5',
 
     ]);
         DB::table('cars')->insert([
@@ -187,7 +226,7 @@ class DatabaseSeeder extends Seeder
             'price'           => '30',
             'isBooked'        => '0',
             'status'          => 'null',
-            'car_location_id' => '3',
+            'car_location_id' => '1',
 
     ]);
         //*****END OF CARS SEED*******

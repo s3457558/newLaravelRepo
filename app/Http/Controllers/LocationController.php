@@ -13,7 +13,7 @@ use App\Http\Requests\ContactFormRequest;
 
 use Illuminate\Support\Facades\Session;
 
-use App\carLocation;
+use App\CarLocation;
 
 use App\Car;
 
