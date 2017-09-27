@@ -9,6 +9,7 @@ use App\Car;
 use App\CarLocation;
 use App\RecordBookingDetails;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class BookingController extends Controller
 {
@@ -28,8 +29,9 @@ class BookingController extends Controller
             'pickup' => 'required',
             'dropoff' => 'required',
             'date' => 'required|after:today',
-            'startTime' => 'required',
+            'startTime' => 'date_format:"H:i"|required|before:endTime',
             'endTime' => 'required',
+
         ]);
 
 
@@ -38,7 +40,7 @@ class BookingController extends Controller
         $carLocations = CarLocation::all();
         $found = false;
         foreach ($carLocations as $carLocation) {
-            if ($carLocation->name == $allRequest['pickup']) {
+            if ($carLocation->id == $allRequest['pickup']) {
                 foreach ($carLocation->cars as $car) {
                     if ($car->name == $allRequest['car_name']) {
                         $found = true;
@@ -53,8 +55,12 @@ class BookingController extends Controller
         }
 
         $record_booking_details = new RecordBookingDetails();
+
+        $test = CarLocation::all()->find($allRequest['pickup']);
+
+
         $record_booking_details->car = $allRequest['car_name'];
-        $record_booking_details->pickup = $allRequest['pickup'];
+        $record_booking_details->pickup = $test->name;
         $record_booking_details->dropoff = $allRequest['dropoff'];
         $record_booking_details->date = $allRequest['date'];
         $record_booking_details->startTime = $allRequest['startTime'];
@@ -65,7 +71,7 @@ class BookingController extends Controller
 
         $bookingDetails = new CarBookingDetails();
         $bookingDetails->car = $allRequest['car_name'];
-        $bookingDetails->pickup = $allRequest['pickup'];
+        $bookingDetails->pickup = $test->name;
         $bookingDetails->dropoff = $allRequest['dropoff'];
         $bookingDetails->date = $allRequest['date'];
         $bookingDetails->startTime = $allRequest['startTime'];

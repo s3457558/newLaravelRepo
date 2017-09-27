@@ -36,7 +36,7 @@
             {!! Form::Label('car', 'Select Your Car:')!!}
             <div class="form-group" align="center">
                 <select class="form-control" name="car_name">
-
+                    <option id="success" value="car_name">Choose a location to select car</option>
                 </select>
             </div>
 
@@ -44,6 +44,7 @@
             {!! Form::label('pickup', 'Pickup') !!}
             <div class="form-group" align="center">
                 <select class="form-control" name="pickup">
+                    <option disabled selected value>Select Your Pickup Location</option>
                     @foreach($carLocations as $carLocation)
                         @if(!$carLocation->cars->isEmpty()))
                         <option id="success" value="{{$carLocation->id}}">{{$carLocation->name}}</option>
@@ -58,6 +59,7 @@
             {!! Form::label('dropoff', 'Drop-off') !!}
             <div class="form-group" align="center">
                 <select class="form-control" name="dropoff">
+                    <option disabled selected value>Select Your Drop-off Location</option>
                     @foreach($carLocations as $carLocation)
                         <option value="{{$carLocation->name}}">{{$carLocation->name}}</option>
                     @endforeach
@@ -110,12 +112,9 @@
                     url: '{!!URL::to('findCarName')!!}',
                     data: {'id': cat_id},
                     success: function (data) {
-                        //console.log('success');
-                        console.log(data);
-                        console.log(data.length);
                         $('select[name="car_name"]').empty();
                         $.each(JSON.parse(data), function (key, value) {
-                            $('select[name="car_name"]').append('<option value="' + key + '">' + value.name + '</option>');
+                            $('select[name="car_name"]').append('<option value="' + value.name + '">' + value.name + '</option>');
                         });
 
                     },

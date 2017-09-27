@@ -52,6 +52,7 @@ Route::post('contact',
 /*location page*/
 Route::get('location','LocationController@create');
 Route::get('findCarName','LocationController@findCarName');
+Route::get('booking.create','LocationController@findCarName');
 
 /*price page*/
 Route::get('price','PriceController@create');
