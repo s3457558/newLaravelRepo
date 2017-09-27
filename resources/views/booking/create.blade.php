@@ -34,8 +34,8 @@
                 <div class="form-group" align="center">
                     <select class="form-control" name="car_name">
                         
-                       @foreach($cars as $car)
-                            <option value="{{$car->name}}">{{$car->name}}</option>
+                       @foreach($cars as $key => $value)
+                            <option value="{{$key}}">{{$value}}</option>
                         @endforeach
                     </select>
                 </div>
@@ -46,7 +46,7 @@
                     <select class="form-control" name="pickup">
                         @foreach($carLocations as $carLocation)
                             @if(!$carLocation->cars->isEmpty()))
-                            <option id ="success" value="{{$carLocation->name}}">{{$carLocation->name}}</option>
+                            <option id ="success" value="{{$carLocation->id}}">{{$carLocation->name}}</option>
                             @endif
                         @endforeach
 
@@ -100,5 +100,33 @@
 
     </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function(){
+
+            $(document).on('change','.form-control',function(){
+                
+                var cat_id=$(this).val();
+                //console.log(cat_id);
+                $.ajax({
+                    headers:{'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+                    type:'get',
+                    url:'{!!URL::to('findCarName')!!}',
+                    data:{'id':cat_id},
+                    success:function(data){
+                        //console.log('success');
+                        console.log(data);
+                        console.log(data.length);
+
+                    },
+                    error:function(){
+
+                    }    
+                });
+            });
+
+        });
+    </script>
 
 @endsection

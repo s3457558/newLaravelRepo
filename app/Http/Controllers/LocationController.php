@@ -27,6 +27,12 @@ class locationController extends Controller
         return view('location')->with('carLocation',CarLocation::all())->with('car',Car::all());
 
     }
+    public function findCarName(Request $request){
+        $cars= Car::select('name','id')->where('car_location_id',$request->id)->take(100)->get();
+
+        // return response()->json($data);
+        return json_encode($cars);
+    }
    
 
 }
