@@ -43,7 +43,7 @@
                 @endif
 
                 @if(!\Illuminate\Support\Facades\Auth::check())
-                    <li> <a class="register" href="upload">JOIN US</a></li>
+                    <li> <a class="register" href="upload">REGISTER</a></li>
                     <li> <a href="login">LOG IN</a></li>
                 @endif
                 @if( Auth::check() && Auth::user()->isAdmin )
