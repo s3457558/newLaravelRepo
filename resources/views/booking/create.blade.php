@@ -34,9 +34,6 @@
                 <div class="form-group" align="center">
                     <select class="form-control" name="car_name">
                         
-                       @foreach($cars as $key => $value)
-                            <option value="{{$key}}">{{$value}}</option>
-                        @endforeach
                     </select>
                 </div>
 
@@ -105,7 +102,7 @@
 
         $(document).ready(function(){
 
-            $(document).on('change','.form-control',function(){
+            $('select[name="pickup"]').on('change',function(){
                 
                 var cat_id=$(this).val();
                 //console.log(cat_id);
@@ -118,6 +115,10 @@
                         //console.log('success');
                         console.log(data);
                         console.log(data.length);
+                        $('select[name="car_name"]').empty();
+                        $.each(JSON.parse(data), function(key, value) {
+                            $('select[name="car_name"]').append('<option value="'+ key +'">'+ value.name +'</option>');
+                        });
 
                     },
                     error:function(){
