@@ -61,7 +61,8 @@
                   'placeholder'=>'Confirm your password')) !!}
         <br>
         {!! Form::submit('Register',
-          array('class'=>'btn btn-primary')) !!}
+          array('class'=>'btn btn-primary',
+                'id'=>'RegisterIn')) !!}
     </div>
 
     <br>

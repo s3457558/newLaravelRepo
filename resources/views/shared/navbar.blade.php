@@ -38,6 +38,7 @@
                         </ul>
                     </li>
 
+
                     <li> <a href="logout">LOG OUT</a></li>
 
                 @endif

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\CarBooking;
+
 use App\CarBookingDetails;
 use Illuminate\Http\Request;
 use App\Car;
@@ -23,6 +23,7 @@ class BookingController extends Controller
     {
 
         $this->validate($request, [
+
             'car_name' => 'required',
             'pickup' => 'required',
             'dropoff' => 'required',

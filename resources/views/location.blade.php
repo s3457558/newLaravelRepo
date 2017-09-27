@@ -1,15 +1,10 @@
 <?php
-
 $hostname = "127.0.0.1";
 $username = "supriya";
 $password = "";
 $databaseName = "testdb";
-
-
 $connect = mysqli_connect($hostname, $username, $password, $databaseName);
-
 $query = "SELECT * FROM `car_locations`";
-
 $result1 = mysqli_query($connect, $query);
 ?>
 
@@ -19,6 +14,7 @@ $result1 = mysqli_query($connect, $query);
 @section('title','location')
 
 @section('content')
+
     <div class="container">
         <div class="content">
             <div class="title">
@@ -55,7 +51,6 @@ $result1 = mysqli_query($connect, $query);
                 <label for="changemode-driving">Driving</label>
             </div>
             <div id="dvDistance"></div>
-
 
 
             <div id="map"></div>

@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 use App\CarBookingDetails;
 use Illuminate\Http\Request;

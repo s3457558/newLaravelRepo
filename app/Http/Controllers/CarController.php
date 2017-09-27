@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Car;
-
+use App\CarLocation;
 class CarController extends Controller
 {
     //
@@ -41,5 +41,9 @@ class CarController extends Controller
 
 //        $request->session()->put('car_detail', $cars);
         return redirect()->route('car.create') ->with('success','Car added successfully');
+    }
+    pubilic function findCarName(Request $request){
+        $data= Car::select('name','id')->where('car_location_id',$request->id)->take(100)->get();
+        return response()->json($data);
     }
 }
