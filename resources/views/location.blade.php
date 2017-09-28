@@ -4,9 +4,11 @@ $username = "supriya";
 $password = "";
 $databaseName = "testdb";
 $connect = mysqli_connect($hostname, $username, $password, $databaseName);
+
 $query = "SELECT * FROM `car_locations`";
 $result1 = mysqli_query($connect, $query);
 ?>
+
 
 
 @extends('layout.master')
@@ -367,7 +369,8 @@ $result1 = mysqli_query($connect, $query);
 
                         modalTitle.innerHTML = '<p>' + carLocationValue.name + '</p>';
                         $.each(carJSONData, function (j, carValue) {
-                            if (carValue.car_location_id == carLocationValue.id && carValue.isBooked == false) {
+                            if (carValue.car_location_id == carLocationValue.id && carValue.isBooked == false
+                                && carValue.status != "Unavailable") {
                                 carItem.innerHTML += '<li>' + carValue.name + '</li>';
                             }
                         });
