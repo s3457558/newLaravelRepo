@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="{{asset('css/location.css')}}">
     <link rel="stylesheet" href="{{asset('css/modalStyle.css')}}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <script crossorigin ="anonymous" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
             src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
     <script src="{{asset('js/script.js')}}"></script>

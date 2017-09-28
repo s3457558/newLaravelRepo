@@ -14,7 +14,7 @@
             </div>
         @endif
 
-
+        <div style="overflow-x:auto;">
         <div class="record_table">
             <table class="table table-bordered">
                 <tr>
@@ -44,6 +44,7 @@
                 @endforeach
                 {{--@endforeach--}}
             </table>
+        </div>
         </div>
     </div>
 @endsection

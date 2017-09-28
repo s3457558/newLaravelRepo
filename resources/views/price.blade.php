@@ -6,8 +6,8 @@
             <div class="title">
                 <h2>Price</h2>
             </div>
-
-           <table class="content display-tablecontainer" >
+            <div style="overflow-x:auto;">
+           <table >
                <tr>
                    <th></th>
 
@@ -52,6 +52,7 @@
                    <td><font face="Arial" size="3" color="#FFFFFF"><strong>$20 per hour</strong></font></td>
                </tr>
            </table>
+            </div>
         </div>
     </div>
 @endsection
