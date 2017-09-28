@@ -211,7 +211,7 @@ $result1 = mysqli_query($connect, $query);
                 var marker = new google.maps.Marker({
                     position: latlng,
                     map: map,
-                    icon: icn,
+                    icon: "images/icon.png",
                     title: name
 
                 });
