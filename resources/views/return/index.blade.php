@@ -18,6 +18,7 @@
             <table class="table table-bordered">
                 <tr>
                     <th>Booking ID</th>
+                    <th>Booking car</th>
                     <th>Booking suburb</th>
                     <th>Booking postcode</th>
                     <th>Booking date</th>
@@ -30,6 +31,7 @@
                     @if($return_car_booking->user_id == \Illuminate\Support\Facades\Auth::user()->id)
                         <tr>
                             <td>{{ $return_car_booking->id }}</td>
+                            <td>{{ $return_car_booking->car_name }}</td>
                             <td>{{ $return_car_booking->suburb}}</td>
                             <td>{{ $return_car_booking->state}}</td>
                             <td>{{ $return_car_booking->date}}</td>
