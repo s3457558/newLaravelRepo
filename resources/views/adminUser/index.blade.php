@@ -13,6 +13,7 @@
             <p>{{ $message }}</p>
         </div>
     @endif
+
     <table class="table table-bordered">
         <tr>
             <th>User_id</th>

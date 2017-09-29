@@ -1,13 +1,12 @@
-@extends('admin.formmaster')
-
+@extends('layout.viewMaster')
 @section('content')
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Edit car detail</h2>
+                <h2>Edit your personal detail</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('adminCar.index') }}"> Back</a>
+                <a class="btn btn-primary" href="{{ route('profile.index') }}"> Back</a>
             </div>
         </div>
     </div>
@@ -21,8 +20,8 @@
             </ul>
         </div>
     @endif
-    {!! Form::model($cars_add_detail, ['method' => 'PATCH','route' => ['adminCar.update', $cars_add_detail->id]]) !!}
-    @include('adminCar.form')
+    {!! Form::model($users_detail_profile, ['method' => 'PATCH','route' => ['profile.update', $users_detail_profile->id]]) !!}
+    @include('profile.form')
     {!! Form::close() !!}
 
 @endsection

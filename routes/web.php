@@ -72,7 +72,8 @@ Route::resource('record', 'RecordController');
 /*customers return the car*/
 Route::resource('return', 'ReturnController');
 
-
+/*customer view profile*/
+Route::resource('profile', 'ViewProfileController');
 /*****************************Data management (admin page)**************************************/
 /*admin access*/
 Route::get('admin', ['middleware' => ['auth', 'admin'], function() {

@@ -26,7 +26,6 @@
                     <th>Booking time</th>
                 </tr>
 
-                {{--@foreach($details as $register)--}}
                 @foreach ($car_details as $car_booking)
                     @if($car_booking->user_id == \Illuminate\Support\Facades\Auth::user()->id)
                         <tr>
@@ -36,12 +35,9 @@
                             <td>{{ $car_booking->Record_state}}</td>
                             <td>{{ $car_booking->Record_date}}</td>
                             <td>{{ $car_booking->Record_time}}</td>
-
                         </tr>
                     @endif
-
                 @endforeach
-                {{--@endforeach--}}
             </table>
             {!! $car_details->render() !!}
         </div>

@@ -38,4 +38,8 @@ class User extends Authenticatable
     public function carBooking(){
         return $this->hasMany('App\CarBookingDetails');
     }
+
+//    public function user(){
+//        return $this->belongsTo('App\User');
+//    }
 }
