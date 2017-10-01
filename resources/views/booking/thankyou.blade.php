@@ -10,7 +10,7 @@
 
             <div class="receipt1">
                 <h2>RECEIPT</h2>
-
+                <div style="overflow-x:auto;">
                 <div class="receipt2">
 
                     <h3>BOOKING ID: {!! Session::get('bookingDetails')->id !!}</h3>
@@ -39,7 +39,7 @@
 
                     <h3>END TIME: {!! Session::get('bookingDetails')->endTime !!}</h3>
 
-
+                </div>
 
                 </div>
 
