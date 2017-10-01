@@ -83,5 +83,30 @@ class ExampleTest extends TestCase
                'status'          => 'null',
                'car_location_id' => '9']);
     }
+    public function testUserInDatabase(){
+        $this->assertDatabaseHas('users',['name'=>'admin admin',
+            'email'=>'admin@admin',
+            'password'=>'$2y$10$tlrCpda27uCyOC5uzYSZ1eCllleIODvruYe9kDu1Fln7sFVb0ZqEy',
+            'username'=>'admin',
+            'postcode'=>'3000',
+            'isAdmin'=>'1',
+            'isRecord'=>'0']);
+            
+        $this->assertDatabaseHas('users',['name'=>'BobbY McGee',
+            'email'=>'gmail@gmail',
+            'password'=>'$2y$10$AchJV7rj.JiYuxIsbtu.eelxcqC6eVF8LzdBNBO3qlNdgo3LBMW02',
+            'username'=>'bobby',
+            'postcode'=>'3000',
+            'isAdmin'=>'0',
+            'isRecord'=>'0']);
+
+        $this->assertDatabaseHas('users',['name'=>'Doug Stanford',
+            'email'=>'gmail1@gmail',
+            //'password'=>'$2y$10$tlrCpda27uCyOC5uzYSZ1eCllleIODvruYe9kDu1Fln7sFVb0ZqEy',
+            'username'=>'user',
+            'postcode'=>'3000',
+            'isAdmin'=>'0',
+            'isRecord'=>'0']);
+            }
     
 }

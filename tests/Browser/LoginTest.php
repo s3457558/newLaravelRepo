@@ -22,20 +22,20 @@ class LoginTest extends DuskTestCase
                     ->press('#makeit');
         });
     }
-    // public function testRegister()
-    // {
-    //         $this->browse(function (Browser $browser) {
-    //         $browser->visit('/capstone/public/register')
-    //                 ->type('username','HelloWorld')
-    //                 ->type('firstname','Changyuan')
-    //                 ->type('lastname','Liu')
-    //                 ->type('postcode','3000')
-    //                 ->type('email','abc@adc.com')
-    //                 ->type('password','Hello!12')
-    //                 ->type('password_confirmation','Hello!12')
-    //                 ->press('#RegisterIn');
+     public function testRegister()
+     {
+             $this->browse(function (Browser $browser) {
+             $browser->visit('/capstone/public/register')
+                     ->type('username','HelloWorld')
+                    ->type('firstname','Changyuan')
+                    ->type('lastname','Liu')
+                     ->type('postcode','3000')
+                     ->type('email','abc@adc.com')
+                     ->type('password','Hello!12')
+                     ->type('password_confirmation','Hello!12')
+                     ->press('#RegisterIn');
                     
-    //     });
+        });
 
-    // }
+     }
 }
