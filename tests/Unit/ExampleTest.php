@@ -46,7 +46,42 @@ class ExampleTest extends TestCase
                'isBooked'        => '0',
                'status'          => 'null',
                'car_location_id' => '8']);
-
+         $this->assertDatabaseHas('cars',['name'            => 'Acura',
+               'car_model'       => 'A',
+               'price'           => '25',
+               'isBooked'        => '0',
+               'status'          => 'null',
+               'car_location_id' => '1']);
+          $this->assertDatabaseHas('cars',['name'            => 'Aston Martin',
+               'car_model'       => 'A',
+               'price'           => '50',
+               'isBooked'        => '0',
+               'status'          => 'null',
+               'car_location_id' => '2']);
+          $this->assertDatabaseHas('cars',['name'            => 'Audi',
+               'car_model'       => 'A5',
+               'price'           => '35',
+               'isBooked'        => '0',
+               'status'          => 'null',
+               'car_location_id' => '3']);
+         // $this->assertDatabaseHas('cars',['name'            => 'Infiniti',
+         //          'car_model'       => 'Q30',
+         //          'price'           => '35',
+         //          'isBooked'        => '0',
+         //        'status'          => 'null',
+         //       'car_location_id' => '4']);
+          $this->assertDatabaseHas('cars',['name'            => 'Nissan',
+               'car_model'       => '370Z',
+               'price'           => '30',
+               'isBooked'        => '0',
+               'status'          => 'null',
+               'car_location_id' => '5']);
+          $this->assertDatabaseHas('cars',['name'            => 'Land Rover',
+               'car_model'       => 'Discovery',
+               'price'           => '40',
+               'isBooked'        => '0',
+               'status'          => 'null',
+               'car_location_id' => '9']);
     }
     
 }
