@@ -17,9 +17,10 @@ class LoginTest extends DuskTestCase
     {
         $this->browse(function (Browser $browser) {
             $browser->visit('/capstone/public/login')
-                    ->type('email','914492235@qq.com')
-                    ->type('password','Hello!12')
-                    ->press('#makeit');
+                    ->type('email','admin@admin')
+                    ->type('password','Hello123!')
+                    ->press('#makeit')
+                    ->assertPathIs('/capstone/public/login');
         });
     }
      public function testRegister()
@@ -33,7 +34,8 @@ class LoginTest extends DuskTestCase
                      ->type('email','abc@adc.com')
                      ->type('password','Hello!12')
                      ->type('password_confirmation','Hello!12')
-                     ->press('#RegisterIn');
+                     ->press('#RegisterIn')
+                     ->assertPathIs('/capstone/public/register');
                     
         });
 
