@@ -26,7 +26,7 @@ class goodTest extends DuskTestCase
                     ->select('pickup','1')
                     ->select('#carName','Toyota')
                     ->select('dropoff','Queen Victoria Market')
-                    ->keys('#date','10032017')
+                    ->keys('#date','11032017')
                     ->keys('#startTime','1011A')
                     ->keys('#endTime','1112A')
                     ->press('#bookButton')
