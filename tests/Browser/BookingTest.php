@@ -23,7 +23,7 @@ class goodTest extends DuskTestCase
                     ->type('password','Hello123!')
                     ->press('#makeit')
                     ->visit('/capstone/public/booking.create')
-                    ->select('pickup','1')
+                    ->select('pickup','2')
                     ->select('#carName','Toyota')
                     ->select('dropoff','Queen Victoria Market')
                     ->keys('#date','11032017')
