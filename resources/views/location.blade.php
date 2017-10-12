@@ -1,6 +1,6 @@
 <?php
 $hostname = "127.0.0.1";
-$username = "supriya";
+$username = "root";
 $password = "";
 $databaseName = "testdb";
 $connect = mysqli_connect($hostname, $username, $password, $databaseName);
@@ -120,7 +120,8 @@ $result1 = mysqli_query($connect, $query);
                 myLatLng = new google.maps. LatLng(latval,lngval);
                 geocoder.geocode( { 'latLng': myLatLng }, function(results, status) {
                     if (status == google.maps.GeocoderStatus.OK) {
-                        document.getElementById('start').value = results[0].formatted_address;  /*take current location name*/
+                        document.getElementById('start').value = results[0].formatted_address;  
+                        /*take current location name*/
                     }
                 });
                 createMap(myLatLng);
@@ -247,7 +248,7 @@ $result1 = mysqli_query($connect, $query);
                 this.endPlaceId = null;
                 this.travelMode = 'WALKING';
                 var startInput = document.getElementById('start');
-                var endInput = document.getElementById('end');  //can change destination or end
+                var endInput = document.getElementById('destination');  //can change destination or end
                 var modeSelector = document.getElementById('selection');
                 this.directionsService = new google.maps.DirectionsService;
                 this.directionsDisplay = new google.maps.DirectionsRenderer;

@@ -14,6 +14,7 @@
                 <p>{{ $message }}</p>
             </div>
         @endif
+        <div style="overflow-x:auto;">
         <div class="record_table">
             <table class="table table-bordered">
                 <tr>
@@ -49,6 +50,7 @@
                 {{--@endforeach--}}
             </table>
             {!! $return_car_details->render() !!}
+            </div>
         </div>
     </div>
 @endsection

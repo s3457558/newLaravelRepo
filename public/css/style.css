@@ -422,12 +422,17 @@ form{
     padding-top: 30px;
 }
 
-th{
+th, td{
     color: #ffffff;
-    padding-top: 50px;
+    padding: 8px;
     font-size: 28px;
+    text-align: left;
 }
 
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
 
 
 

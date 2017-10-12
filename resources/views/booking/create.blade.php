@@ -35,7 +35,7 @@
         <div class="text-center">
             {!! Form::Label('car', 'Select Your Car:')!!}
             <div class="form-group" align="center">
-                <select class="form-control" name="car_name">
+                <select class="form-control" name="car_name" id="carName">
                     <option id="success" value="car_name">Choose a location to select car</option>
                 </select>
             </div>
@@ -88,7 +88,7 @@
                 {!! Form::time('endTime', null,array('required','class'=>'form-control','placeholder'=>'End Time')) !!}
             </div>
 
-            <button class="btn btn-success" type="submit">Book Now!</button>
+            <button class="btn btn-success" type="submit" id="bookButton">Book Now!</button>
             {!! Form::close() !!}
         </div>
 
