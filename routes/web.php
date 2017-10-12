@@ -51,6 +51,9 @@ Route::post('contact',
 
 /*location page*/
 Route::get('location','LocationController@create');
+
+Route::get('location','LocationController@getAvailableCars');
+Route::get('getAvailableCars','LocationController@getAvailableCars');
 Route::get('findCarName','LocationController@findCarName');
 Route::get('booking.create','LocationController@findCarName');
 
