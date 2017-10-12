@@ -1,4 +1,4 @@
-@extends('admin.master')
+@extends('admin.formmaster')
 
 @section('content')
     <div class="row">

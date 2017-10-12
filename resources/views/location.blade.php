@@ -213,7 +213,7 @@ $result1 = mysqli_query($connect, $query);
                 var marker = new google.maps.Marker({
                     position: latlng,
                     map: map,
-                    icon: "images/icon.png",
+                    icon: "images/car-icon.png",
                     title: name
 
                 });
@@ -285,7 +285,6 @@ $result1 = mysqli_query($connect, $query);
                     me.travelMode = mode;
                     me.route();
                 });
-
             };
 
             AutocompleteDirectionsHandler.prototype.setupPlaceChangedListener = function(autocomplete, mode) {

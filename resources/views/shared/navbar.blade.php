@@ -35,9 +35,9 @@
                             <li> <a href="booking.create">BOOKING</a></li>
                             <li> <a href="return">RETURN CARS</a></li>
                             <li> <a href="record">VIEW HISTORY</a></li>
+                            <li> <a href="profile">VIEW PROFILE</a></li>
                         </ul>
                     </li>
-
 
                     <li> <a href="logout">LOG OUT</a></li>
 
@@ -50,6 +50,7 @@
                 @if( Auth::check() && Auth::user()->isAdmin )
                     <li style="float:right;"> <a href="admin.home">ADMIN</a></li>
                 @endif
+
 
 
 

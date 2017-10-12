@@ -4,7 +4,6 @@
 
     <div class="container">
         <div class="content">
-            <div class="content2">
             <div class="title">
                 <h2>Contact Us!</h2>
             </div>

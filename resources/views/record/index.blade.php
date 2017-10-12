@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-lg-12 margin-tb">
                 <div class="pull-left">
-                    <h2>Booking record</h2>
+                    <h2>Booking History</h2>
                 </div>
             </div>
         </div>
@@ -25,7 +25,6 @@
                     <th>Start Time</th>
                     <th>End Time</th>
                 </tr>
-
                 {{--@foreach($details as $register)--}}
                 @foreach ($bookings as $booking)
                     @if($booking->user_id == \Illuminate\Support\Facades\Auth::user()->id
@@ -37,12 +36,9 @@
                             <td>{{ $booking->date}}</td>
                             <td>{{ $booking->startTime}}</td>
                             <td>{{ $booking->endTime}}</td>
-
                         </tr>
                     @endif
-
                 @endforeach
-                {{--@endforeach--}}
             </table>
         </div>
     </div>

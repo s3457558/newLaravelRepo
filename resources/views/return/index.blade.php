@@ -23,6 +23,7 @@
                     <th>Date</th>
                     <th>Start Time</th>
                     <th>End Time</th>
+
                     <th width="280px">Action</th>
                 </tr>
 
@@ -31,7 +32,7 @@
                     @if($return_car_booking->user_id == \Illuminate\Support\Facades\Auth::user()->id
                     &&$return_car_booking->isHistory == 0)
                         <tr>
-                            <td>{{ $return_car_booking->car }}</td>
+                            <td>{{ $return_car_booking->car}}</td>
                             <td>{{ $return_car_booking->pickup}}</td>
                             <td>{{ $return_car_booking->dropoff}}</td>
                             <td>{{ $return_car_booking->date}}</td>
