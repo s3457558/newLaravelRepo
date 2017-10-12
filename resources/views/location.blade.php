@@ -1,16 +1,14 @@
 <?php
-
 $hostname = "127.0.0.1";
-$username = "testlaravel";
-$password = "admin";
-$databaseName = "testlaravel";
-//$port="9000";
-//$connect = mysqli_connect($hostname, $username, $password, $databaseName,$port);
+$username = "root";
+$password = "";
+$databaseName = "testdb";
 $connect = mysqli_connect($hostname, $username, $password, $databaseName);
-$query = "SELECT * FROM `car_locations`";
 
+$query = "SELECT * FROM `car_locations`";
 $result1 = mysqli_query($connect, $query);
 ?>
+
 
 
 @extends('layout.master')
@@ -18,13 +16,15 @@ $result1 = mysqli_query($connect, $query);
 @section('title','location')
 
 @section('content')
+
     <div class="container">
         <div class="content">
             <div class="title">
-                <h2>Find Location</h2>
+                <h2>Find Car</h2>
             </div>
-            <h4>Option 1:</h4>
-            <h4>Search your location to find our car-share:</h4>
+            <br>
+            <h4>Manual Search:</h4>
+            <h4>Enter postcode to find cars nearby:</h4>
             <input id="pac-input" class="controls" type="text" placeholder="Search Box"/>
             {{--<h4>Option 2:</h4>--}}
             {{--<h4>Enter your start location:</h4>--}}
@@ -32,11 +32,11 @@ $result1 = mysqli_query($connect, $query);
             {{--<h4>Enter your end location:</h4>--}}
             {{--<input type="text" id="end-input" class="controls" placeholder="Destination location"/>--}}
 
-            <h4>Option 2:</h4>
-            <h4>Search your choice location:</h4>
-            <h4>Start:</h4>
+            <h4>Current Location Search:</h4>
+            <h4>Find Your Car</h4>
+            <h4>Current Location:</h4>
             <input type="text" id="start" class="controls">
-            <h4>Destination:</h4> <select id="destination" class="controls">
+            <h4>Available Car Locations:</h4> <select id="destination" class="controls">
                 <?php while($row1 = mysqli_fetch_array($result1)):;?>
                 <option value="<?php echo $row1[1];?>"><?php echo $row1[1];?></option>
                 <?php endwhile;?>
@@ -47,15 +47,12 @@ $result1 = mysqli_query($connect, $query);
             <div id="selection" class="controls">
                 <input type="radio" name="type" id="changemode-walking" checked="checked"/>
                 <label for="changemode-walking">Walking</label>
-
                 <input type="radio" name="type" id="changemode-transit"/>
                 <label for="changemode-transit">Transit</label>
-
                 <input type="radio" name="type" id="changemode-driving"/>
                 <label for="changemode-driving">Driving</label>
             </div>
             <div id="dvDistance"></div>
-
 
 
             <div id="map"></div>
@@ -123,7 +120,8 @@ $result1 = mysqli_query($connect, $query);
                 myLatLng = new google.maps. LatLng(latval,lngval);
                 geocoder.geocode( { 'latLng': myLatLng }, function(results, status) {
                     if (status == google.maps.GeocoderStatus.OK) {
-                        document.getElementById('start').value = results[0].formatted_address;  /*take current location name*/
+                        document.getElementById('start').value = results[0].formatted_address;  
+                        /*take current location name*/
                     }
                 });
                 createMap(myLatLng);
@@ -216,7 +214,7 @@ $result1 = mysqli_query($connect, $query);
                 var marker = new google.maps.Marker({
                     position: latlng,
                     map: map,
-                    icon: icn,
+                    icon: "images/car-icon.png",
                     title: name
 
                 });
@@ -250,7 +248,7 @@ $result1 = mysqli_query($connect, $query);
                 this.endPlaceId = null;
                 this.travelMode = 'WALKING';
                 var startInput = document.getElementById('start');
-                var endInput = document.getElementById('end');  //can change destination or end
+                var endInput = document.getElementById('destination');  //can change destination or end
                 var modeSelector = document.getElementById('selection');
                 this.directionsService = new google.maps.DirectionsService;
                 this.directionsDisplay = new google.maps.DirectionsRenderer;
@@ -276,6 +274,8 @@ $result1 = mysqli_query($connect, $query);
                     var end = $('#destination').val();
                     $("#end").val(end);
                 });
+
+
 
             }
 
@@ -340,7 +340,7 @@ $result1 = mysqli_query($connect, $query);
                         var dvDistance = document.getElementById("dvDistance");
                         dvDistance.innerHTML = "";
                         dvDistance.innerHTML += "<h4>"+"Distance: " + distance + "<br />"+"</h4>";
-                        dvDistance.innerHTML += "<h4>"+"Duration:" + duration + "</h4>";
+                        dvDistance.innerHTML += "<h4>"+"Duration: " + duration + "</h4>";
 
                     } else {
                         alert("Unable to find the distance via road.");
@@ -365,12 +365,13 @@ $result1 = mysqli_query($connect, $query);
 
 
                 $.each(carLocationJSONData, function (i, carLocationValue) {
-                    if (carLocationValue.name.localeCompare(carLocationName)) {
+                    if (carLocationValue.name == carLocationName) {
+
                         modalTitle.innerHTML = '<p>' + carLocationValue.name + '</p>';
                         $.each(carJSONData, function (j, carValue) {
-                            if (carValue.car_location_id == carLocationValue.id && carValue.isBooked == false) {
+                            if (carValue.car_location_id == carLocationValue.id && carValue.isBooked == false
+                                && carValue.status != "Unavailable") {
                                 carItem.innerHTML += '<li>' + carValue.name + '</li>';
-
                             }
                         });
                     }
@@ -385,6 +386,7 @@ $result1 = mysqli_query($connect, $query);
                     $(carItem).empty();
 
                 }
+
 
 
                 // When the user clicks anywhere outside of the modal, close it

@@ -7,12 +7,14 @@
     background-color: rgba(0, 0, 0, 0.3);
 
     padding-top: 10px;
-    padding-bottom: 700px;
+    padding-bottom: 900px;
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
     position: relative;
+
+
 }
 .white-text {
     font-family: "MuseoSans-900", Helvetica, Arial, sans-serif;
@@ -82,12 +84,13 @@
 }
 /*login page*/
 .login-form-control {
-    width: 400px;
+    width: 260px;
     display:block;
     height:34px;
     padding:6px 12px;
     font-size:14px;
-    line-height:1.42857143;color:#555;
+    line-height:1.42857143;
+    color:#555;
     background-color:#fff;
     background-image:none;
     border:1px solid #ccc;
@@ -101,6 +104,7 @@
 
 .login-form-group{
     position: relative;
+
 }
 
 .button2 {
@@ -131,7 +135,7 @@ h3 > a {
 }
 /*Register page*/
 .register-form-control {
-    width: 400px;
+    width: 260px;
     display:block;
     height:34px;
     padding:6px 12px;
@@ -160,10 +164,14 @@ h3 > a {
     margin-right: auto;
     margin-left: auto;
 }
+#img > img {
+    width: 80%;
+    height: auto;
+}
 
 /*contact us page*/
 .form-control {
-    width: 400px;
+    width: 265px;
     display:block;
     height:34px;
     padding:6px 12px;
@@ -209,12 +217,13 @@ h3 > a {
 /*thank you page*/
 .receipt1{
     margin: 60px auto;
-    width:600px;
-    height:500px;
+    width:100%;
+    height:100%;
     border: 3px solid white;
 }
 .receipt1 > h2{
     font-style: italic;
+
 }
 
 
@@ -222,7 +231,7 @@ h3 > a {
 .receipt2{
     margin: 45px auto;
     width:450px;
-    height:350px;
+    height:500px;
     border: 3px solid white;
 }
 
@@ -302,6 +311,8 @@ ul > li > a {
 .navbar-default{
     margin-bottom: 0px;
     border: 0px;
+    padding-bottom: 10px;
+
 }
 
 @media (min-width: 768px){
@@ -332,12 +343,10 @@ ul > li > a {
 footer {
     font-family: PT Serif;
     background-color: #8f8f8f;
-    padding: 10px;
-    margin-top: 0px;
-    height: 40px;
     position: absolute;
-    /*bottom: 0;*/
-    width: 100%;
+    bottom: 0;
+    padding: 1rem;
+    width:100%;
 }
 
 footer * {
@@ -413,9 +422,16 @@ form{
     padding-top: 30px;
 }
 
-th{
+th, td{
     color: #ffffff;
-    padding-top: 50px;
+    padding: 8px;
+    font-size: 28px;
+    text-align: left;
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
 }
 
 

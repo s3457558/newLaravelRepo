@@ -4,8 +4,6 @@
 
     <div class="container">
         <div class="content">
-
-
             <div class="title">
                 <h2>Contact Us!</h2>
             </div>
@@ -68,6 +66,7 @@
             @endif
 
             {!! Form::close() !!}
+                </div>
         </div>
     </div>
 @endsection

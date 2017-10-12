@@ -9,10 +9,8 @@ class RecordController extends Controller
 {
     public function index(Request $request)
     {
-        $car_details= RecordBookingDetails::orderBy('id','DESC')->paginate(5);
-        return view('record.index',compact('car_details')) ->with('i', ($request->input('page', 1) - 1) * 5);
+        return view('record.index')->with('bookings', CarBookingDetails::all());
     }
-
     public function create()
     {
         return view('record.create');

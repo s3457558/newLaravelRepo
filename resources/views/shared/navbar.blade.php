@@ -14,7 +14,6 @@
             </a>
 
     </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-left">
                 <li><a href="/">HOME<span class="sr-only"></span></a></li>
@@ -22,20 +21,30 @@
 
                 <li><a href="price">PRICE</a></li>
                 <li><a href="contact">CONTACT US</a></li>
-                <li><a href="location">LOCATION</a></li>
+                <li><a href="location">FIND CAR</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
+
                 @if(!\Illuminate\Support\Facades\Auth::guest())
-                    <li> <a href="booking.create">BOOKING</a></li>
-                    <li> <a href="record">VIEW HISTORY</a></li>
-                    <li> <a href="return">RETURN</a></li>
-                    <li> <a href="profile">VIEW PROFILE</a></li>
-                    <li> <a style="padding-top:0px">Welcome,<br>{{\Illuminate\Support\Facades\Auth::user()->name}}</a></li>
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Welcome,{{\Illuminate\Support\Facades\Auth::user()->name}}
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li> <a href="booking.create">BOOKING</a></li>
+                            <li> <a href="return">RETURN CARS</a></li>
+                            <li> <a href="record">VIEW HISTORY</a></li>
+                            <li> <a href="profile">VIEW PROFILE</a></li>
+                        </ul>
+                    </li>
+
                     <li> <a href="logout">LOG OUT</a></li>
+
                 @endif
 
                 @if(!\Illuminate\Support\Facades\Auth::check())
-                    <li> <a class="register" href="upload">JOIN US</a></li>
+                    <li> <a class="register" href="upload">REGISTER</a></li>
                     <li> <a href="login">LOG IN</a></li>
                 @endif
                 @if( Auth::check() && Auth::user()->isAdmin )
@@ -43,6 +52,6 @@
                 @endif
             </ul>
 
-        </div><!-- /.navbar-collapse -->
+        </div>
     </div>
 </nav>

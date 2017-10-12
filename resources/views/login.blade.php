@@ -16,7 +16,7 @@
     </ul>
 
     {{Form::open(array('url' => 'login')) }}
-loca
+
     <div class="login-form-group">
         {!! Form::label('Email') !!}
         {!! Form::text('email', null,
@@ -36,7 +36,8 @@ loca
 
     <div class="login-form-group">
         {!! Form::submit('LogIn',
-          array('class'=>'button2 btn btn-primary')) !!}
+          array('class'=>'button2 btn btn-primary',
+                'id'=>'makeit')) !!}
     </div>
     <br>
     <div class="login-form-group">

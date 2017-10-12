@@ -51,6 +51,8 @@ Route::post('contact',
 
 /*location page*/
 Route::get('location','LocationController@create');
+Route::get('findCarName','LocationController@findCarName');
+Route::get('booking.create','LocationController@findCarName');
 
 /*price page*/
 Route::get('price','PriceController@create');
@@ -87,6 +89,7 @@ Route::get('admin.home',
 
 /*add car page*/
 Route::resource('car', 'CarController');
+
 Route::get('car.create',
     ['as' => 'car.create', 'uses' =>   'CarController@create']);
 
