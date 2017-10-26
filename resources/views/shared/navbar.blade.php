@@ -50,10 +50,6 @@
                 @if( Auth::check() && Auth::user()->isAdmin )
                     <li style="float:right;"> <a href="admin.home">ADMIN</a></li>
                 @endif
-
-
-
-
             </ul>
 
         </div>

@@ -4,7 +4,7 @@
     <div class="container">
         <div class="content">
             <div class="title">
-                <h2>Add New Cars</h2>
+                <h2>Add New Car and dummy location</h2>
             </div>
 
 
@@ -44,8 +44,8 @@
             </div>
 
             <div class="form-group">
-                {!! Form::label('car_location_id', 'Car location') !!}
-                {!! Form::text('car_location_id', null,array('required','class'=>'form-control','placeholder'=>'Add car price here')) !!}
+                {!! Form::label('car_location_id', 'Car location id') !!}
+                {!! Form::text('car_location_id', null,array('required','class'=>'form-control','placeholder'=>'Add car location id here')) !!}
             </div>
 
             <button class="btn btn-success" type="submit">Submit infor</button>

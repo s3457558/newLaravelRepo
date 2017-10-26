@@ -15,19 +15,27 @@
     @endif
     <table class="table table-bordered">
         <tr>
-            <th>Booking ID</th>      {{--register (username)--}}
-            <th>Booking suburb</th>
-            <th>Booking postcode</th>
+            <th>Booking_id</th>
+            <th>Car</th>
+            <th>Pickup</th>
+            <th>Drop-off</th>
+            <th>Date</th>
+            <th>Start Time</th>
+            <th>End Time</th>
             <th width="280px">Action</th>
         </tr>
         @foreach ($car_booking_details as $booking)
             <tr>
                 <td>{{ $booking->id }}</td>
-                <td>{{ $booking->suburb}}</td>
-                <td>{{ $booking->state}}</td>
+                <td>{{ $booking->car }}</td>
+                <td>{{ $booking->pickup}}</td>
+                <td>{{ $booking->dropoff}}</td>
+                <td>{{ $booking->date}}</td>
+                <td>{{ $booking->startTime}}</td>
+                <td>{{ $booking->endTime}}</td>
                 <td>
                     <a class="btn btn-info" href="{{ route('admin.show',$booking->id) }}">Show</a>
-                    <a class="btn btn-primary" href="{{ route('admin.edit',$booking->id) }}">Edit</a>
+                    {{--<a class="btn btn-primary" href="{{ route('admin.edit',$booking->id) }}">Edit</a>--}}
                     {!! Form::open(['method' => 'DELETE','route' => ['admin.destroy', $booking->id],'style'=>'display:inline']) !!}
                     {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
                     {!! Form::close() !!}

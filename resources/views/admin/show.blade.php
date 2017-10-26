@@ -21,15 +21,44 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Booking_suburb:</strong>
-                {{ $booking->suburb}}
+                <strong>Car:</strong>
+                {{ $booking->car }}
             </div>
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Booking_postcode:</strong>
-                {{ $booking->state}}
+                <strong>Pickup:</strong>
+                {{ $booking->pickup}}
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Drop-off:</strong>
+                {{ $booking->dropoff}}
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Date:</strong>
+                {{ $booking->date}}
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Start Time:</strong>
+                {{ $booking->startTime}}
+            </div>
+        </div>
+
+
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>End Time:</strong>
+                {{ $booking->endTime}}
             </div>
         </div>
     </div>
