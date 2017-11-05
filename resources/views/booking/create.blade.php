@@ -99,13 +99,9 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script type="text/javascript">
-
         $(document).ready(function () {
-
             $('select[name="pickup"]').on('change', function () {
-
-                var cat_id = $(this).val();
-                //console.log(cat_id);
+                console.log(cat_id);
                 $.ajax({
                     headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
                     type: 'get',
@@ -116,10 +112,9 @@
                         $.each(JSON.parse(data), function (key, value) {
                             $('select[name="car_name"]').append('<option value="' + value.name + '">' + value.name + '</option>');
                         });
-
                     },
                     error: function () {
-
+                        console.log(" Submit Button Failed");
                     }
                 });
             });
