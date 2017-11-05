@@ -33,60 +33,52 @@ class ExampleTest extends TestCase
     }
     public function testCarDummyData(){
     	 $this->assertDatabaseHas('cars',['name'=> 'Tesla','car_model'=>'S','price'=> '30','isBooked'=> '0',
-            'status'          => 'null',
-             'car_location_id' => '6']);
+            'status'          => 'null'
+             ]);
     	 $this->assertDatabaseHas('cars',['name'=> 'Toyota Camry', 'car_model'       => '05',
                'price'           => '10',
              'isBooked'        => '0',
-             'status'          => 'null',
-             'car_location_id' => '7']);
+             'status'          => 'null'
+             ]);
     	 $this->assertDatabaseHas('cars',['name'            => 'Honda Civic',
                'car_model'       => '09',
                'price'           => '20',
                'isBooked'        => '0',
-               'status'          => 'null',
-               'car_location_id' => '8']);
-         // $this->assertDatabaseHas('cars',['name'            => 'Acura',
-         //       'car_model'       => 'A',
-         //       'price'           => '25',
-         //       'isBooked'        => '0',
-         //       'status'          => 'null',
-         //       'car_location_id' => '1']);
+               'status'          => 'null']);
+         $this->assertDatabaseHas('cars',['name'            => 'Acura',
+                'car_model'       => 'A',
+                'price'           => '25',
+                'isBooked'        => '0',
+                'status'          => 'null']);
           $this->assertDatabaseHas('cars',['name'            => 'Aston Martin',
                'car_model'       => 'A',
                'price'           => '50',
                'isBooked'        => '0',
-               'status'          => 'null',
-               'car_location_id' => '2']);
+               'status'          => 'null']);
           $this->assertDatabaseHas('cars',['name'            => 'Audi',
                'car_model'       => 'A5',
                'price'           => '35',
                'isBooked'        => '0',
-               'status'          => 'null',
-               'car_location_id' => '3']);
-         // $this->assertDatabaseHas('cars',['name'            => 'Infiniti',
-         //          'car_model'       => 'Q30',
-         //          'price'           => '35',
-         //          'isBooked'        => '0',
-         //        'status'          => 'null',
-         //       'car_location_id' => '4']);
+               'status'          => 'null']);
+          $this->assertDatabaseHas('cars',['name'            => 'Infiniti',
+                   'car_model'       => 'Q30',
+                  'price'           => '35',
+                   'isBooked'        => '0',
+                 'status'          => 'null']);
           $this->assertDatabaseHas('cars',['name'            => 'Nissan',
                'car_model'       => '370Z',
                'price'           => '30',
                'isBooked'        => '0',
-               'status'          => 'null',
-               'car_location_id' => '5']);
+               'status'          => 'null']);
           $this->assertDatabaseHas('cars',['name'            => 'Land Rover',
                'car_model'       => 'Discovery',
                'price'           => '40',
                'isBooked'        => '0',
-               'status'          => 'null',
-               'car_location_id' => '9']);
+               'status'          => 'null']);
     }
     public function testUserInDatabase(){
         $this->assertDatabaseHas('users',['name'=>'admin admin',
             'email'=>'admin@admin',
-            'password'=>'$2y$10$m1zXBqWjN6F9rtA90YJRH.yr9SDIF3Z5dko.c1PXpJvve4lz4k\/5e',
             'username'=>'admin',
             'postcode'=>'3000',
             'isAdmin'=>'1',
@@ -94,7 +86,6 @@ class ExampleTest extends TestCase
             
         $this->assertDatabaseHas('users',['name'=>'BobbY McGee',
             'email'=>'gmail@gmail',
-            //'password'=>'$2y$10$9UXc\/4b6wwlL2bjOuUm9aeQ7e1yjB8gzUNzNhUqypeUMob5LAZDS6',
             'username'=>'bobby',
             'postcode'=>'3000',
             'isAdmin'=>'0',
@@ -102,7 +93,6 @@ class ExampleTest extends TestCase
 
         $this->assertDatabaseHas('users',['name'=>'Doug Stanford',
             'email'=>'gmail1@gmail',
-            //'password'=>'$2y$10$tlrCpda27uCyOC5uzYSZ1eCllleIODvruYe9kDu1Fln7sFVb0ZqEy',
             'username'=>'user',
             'postcode'=>'3000',
             'isAdmin'=>'0',

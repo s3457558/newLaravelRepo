@@ -14,6 +14,7 @@ class goodTest extends DuskTestCase
      * @return void
      */
     /** test */
+    //booking test
     public function testExample()
     {
         
