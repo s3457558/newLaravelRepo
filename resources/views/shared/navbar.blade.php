@@ -39,12 +39,8 @@
                         </ul>
                     </li>
 
-<<<<<<< HEAD
-                    <li> <a href="logout">LOG OUT</a></li>
-=======
 
                     <li id="Lout"> <a href="logout">LOG OUT</a></li>
->>>>>>> origin/YoungBranch
 
                 @endif
 

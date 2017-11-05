@@ -1,9 +1,8 @@
-//testing
 <?php
 $hostname = "127.0.0.1";
-$username = "root";
+$username = "supriya";
 $password = "";
-$databaseName = "testlaravel";
+$databaseName = "testdb";
 $connect = mysqli_connect($hostname, $username, $password, $databaseName);
 
 $query = "SELECT * FROM `car_locations`";
@@ -108,57 +107,7 @@ $result1 = mysqli_query($connect, $query);
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script type="text/javascript">
-<<<<<<< HEAD
-        var map;
-        $(document).ready(function() {
-            geoLocationInit();
-            function geoLocationInit() {
-                if(navigator.geolocation){
-                    navigator.geolocation.getCurrentPosition(success,fail,optn);
-                    var optn ={
-                        enableHighAccuracy: true,
-                        timeout: Infinity,
-                        maximumAge:0
-                    }
-                    /*navigator.geolocation.watchPosition(success,fail,optn);*/
-                }else{
-                    alert("Browser not supported");
-                }
 
-            }
-
-            function success(position){
-                var geocoder = new google.maps.Geocoder();
-                var latval=position.coords.latitude;
-                var lngval=position.coords.longitude;
-                console.log([latval,lngval]);
-                myLatLng = new google.maps. LatLng(latval,lngval);
-                geocoder.geocode( { 'latLng': myLatLng }, function(results, status) {
-                    if (status == google.maps.GeocoderStatus.OK) {
-                        document.getElementById('start').value = results[0].formatted_address;  
-                        /*take current location name*/
-=======
-        $(document).ready(function () {
-            $('button[name="submitBookingDetails"]').on('click', function () {
-                $.ajax({
-                    headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
-                    type: 'get',
-                    url: '{!!URL::to('getAvailableCars')!!}',
-                    data: {'id': 2},
-                    success: function (data) {
-                        $.each(JSON.parse(data), function (key, value) {
-                            console.log("Inside the loop");
-                            console.log(data.length);
-                            console.log(key);
-                        });
-                    },
-                    error: function () {
-                        console.log(" Submit Button Failed");
->>>>>>> bookingBranch
-                    }
-                });
-            });
-        });
 
         var map;
         $(document).ready(function () {
@@ -173,104 +122,7 @@ $result1 = mysqli_query($connect, $query);
                             timeout: Infinity,
                             maximumAge: 0
                         }
-<<<<<<< HEAD
-                    });
-                    map.fitBounds(bounds);
-                });
-            }
-
-            function createMarker(latlng, icn, carLocationName) {   /////new create
-                var marker = new google.maps.Marker({
-                    position: latlng,
-                    map: map,
-                    icon: "images/car-icon.png",
-                    title: name
-
-                });
-                marker.addListener('click', function () {
-
-                    displaySomething(carLocationName);
-
-                });
-
-            }
-
-            function searchCars(lat, lng) {
-                $.post('/api/searchCars', {lat: lat, lng: lng}, function (match) {
-                    $.each(match, function (i, val) {
-                        var clatval = val.lat;
-                        var clngval = val.lng;
-                        var cname = val.name;
-                        var Clatlng = new google.maps.LatLng(clatval, clngval);
-                        var cicn = 'https://developer.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
-                        createMarker(Clatlng, cicn, cname);
-
-
-                    });
-                });
-            }
-
-
-            function AutocompleteDirectionsHandler(map) {
-                this.map = map;
-                this.startPlaceId = null;
-                this.endPlaceId = null;
-                this.travelMode = 'WALKING';
-                var startInput = document.getElementById('start');
-                var endInput = document.getElementById('destination');  //can change destination or end
-                var modeSelector = document.getElementById('selection');
-                this.directionsService = new google.maps.DirectionsService;
-                this.directionsDisplay = new google.maps.DirectionsRenderer;
-                this.directionsDisplay.setMap(map);
-
-                var startAutocomplete = new google.maps.places.Autocomplete(
-                    startInput, {placeIdOnly: true});
-                var endAutocomplete = new google.maps.places.Autocomplete(
-                    endInput, {placeIdOnly: true});
-
-                this.setupClickListener('changemode-walking', 'WALKING');
-                this.setupClickListener('changemode-transit', 'TRANSIT');
-                this.setupClickListener('changemode-driving', 'DRIVING');
-                this.setupPlaceChangedListener(startAutocomplete, 'ORIG');
-                this.setupPlaceChangedListener(endAutocomplete, 'DEST');
-
-                //this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(originInput);
-                //this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(destinationInput);
-                this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(modeSelector);
-
-                /*take the database location_name*/
-                $('#destination').change(function(){
-                    var end = $('#destination').val();
-                    $("#end").val(end);
-                });
-
-
-
-            }
-
-            AutocompleteDirectionsHandler.prototype.setupClickListener = function(id, mode) {
-                var radioButton = document.getElementById(id);
-                var me = this;
-                radioButton.addEventListener('click', function() {
-                    me.travelMode = mode;
-                    me.route();
-                });
-            };
-
-            AutocompleteDirectionsHandler.prototype.setupPlaceChangedListener = function(autocomplete, mode) {
-                var me = this;
-                autocomplete.bindTo('bounds', this.map);
-                autocomplete.addListener('place_changed', function() {
-                    var place = autocomplete.getPlace();
-                    if (!place.place_id) {
-                        window.alert("Please select an option from the dropdown list.");
-                        return;
-                    }
-                    if (mode === 'ORIG') {
-                        me.startPlaceId = place.place_id;
-=======
                         /*navigator.geolocation.watchPosition(success,fail,optn);*/
->>>>>>> bookingBranch
                     } else {
                         alert("Browser not supported");
                     }

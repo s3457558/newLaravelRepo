@@ -18,26 +18,18 @@ class LocationController extends Controller
         return view('location')->with('carLocation', CarLocation::all())->with('car', Car::all());
 
     }
-<<<<<<< HEAD
-    public function findCarName(Request $request)
-    {
-        $cars= Car::select('name','id')->where('car_location_id',$request->id)->take(100)->get();
-=======
 
     public function findCarName(Request $request)
     {
         $cars = Car::select('name', 'id')->where('car_location_id', $request->id)->take(100)->get();
->>>>>>> bookingBranch
 
         // return response()->json($data);
         return json_encode($cars);
     }
-<<<<<<< HEAD
-=======
 
     public function getAvailableCars(Request $request)
     {
-        if($request['date'] ==  null){
+        if ($request['date'] == null) {
             return view('location')->with('carLocation', CarLocation::all())->with('car', Car::all());
         }
         $date = $request['date'];
@@ -58,8 +50,8 @@ class LocationController extends Controller
                 || $this->checkIfBookingsAreOnSameDay($endOfBooking, $existingBookingStartTime)
                 || $this->checkIfBookingsAreOnSameDay($endOfBooking, $existingBookingEndTime)) {
                 if ($startOfBooking->between($existingBookingStartTime, $existingBookingEndTime)
-                    || $endOfBooking->between($existingBookingStartTime, $existingBookingEndTime)){
-                     array_push($availableCars, $existingBookingStartTime->car);
+                    || $endOfBooking->between($existingBookingStartTime, $existingBookingEndTime)) {
+                    array_push($availableCars, $existingBookingStartTime->car);
                 }
             } else {
                 array_push($availableCars, $existingBookingStartTime->car);
@@ -79,13 +71,11 @@ class LocationController extends Controller
 //        return json_encode($availableCars);
     }
 
-    private function checkIfBookingsAreOnSameDay(Carbon $userBooking, Carbon $existingBooking)
-    {
+    private function checkIfBookingsAreOnSameDay(Carbon $userBooking, Carbon $existingBooking) {
         if ($userBooking->day == $existingBooking->day && $userBooking->month == $existingBooking)
             return true;
         return false;
     }
 
 
->>>>>>> bookingBranch
 }
